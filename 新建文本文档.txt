@@ -1,8 +1,26 @@
-400 'LOGIN_FAILED' => '登录失败，请稍后再试',
-410 'CODE_ERROR' =>'验证码输入错误，请重输',
-420 'FILL_IN_ERROR'=>'账号或密码填写错误',
+
 200 'LOGIN_SUCCESSED'=>'登录成功',
 201 'DELETE_SUCCESSED'=>'删除成功',
-401 'DELETE_FAILED'=>'删除失败',
 202 'SHELF_SUCCESSED'=>'上下架操作成功',
+208 'SENTGOODS_SUCCESSED'=>'发货成功'
+209 'CANCEL_FAILED'=>'取消失败'
+
+
+
+
+
+
+
+
+
+
+
+400 'LOGIN_FAILED' => '登录失败，请稍后再试',
+401 'DELETE_FAILED'=>'删除失败',
 402 'SHELF_FAILED'=>'上下架操作失败'
+408 'SENTGOODS_FAILED'=>'发货失败'
+409 'CANCEL_SUCCESSED'=>'取消失败',
+410 'CODE_ERROR' =>'验证码输入错误，请重输',
+420 'FILL_IN_ERROR'=>'账号或密码填写错误',
+
+
