@@ -3,11 +3,13 @@
 201 'DELETE_SUCCESSED'=>'删除成功',
 202 'SHELF_SUCCESSED'=>'上下架操作成功',
 203 'UPDATE_SUCCESSED'=>'更新成功',
+205 'ADD_SUCCESSED'=>'添加成功',
 208 'SENTGOODS_SUCCESSED'=>'发货成功'
 209 'CANCEL_SUCCESSED'=>'取消成功',
 
 
 
+    	
 
 
 
@@ -17,6 +19,7 @@
 401 'DELETE_FAILED'=>'删除失败',
 402 'SHELF_FAILED'=>'上下架操作失败'
 403 'UPDATE_FAILED'=>'更新失败'
+405 'ADD_FAILED'=>'添加失败'
 406 'PERIODTIME_ERROR'=>'时段选择错误',
 407 'LOCATION_ERROR'=>'归属地错误'
 408 'SENTGOODS_FAILED'=>'发货失败'
