@@ -1,4 +1,5 @@
 <?php
+// error_reporting(E_ERROR | E_WARNING | E_PARSE);
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
@@ -19,7 +20,7 @@ return [
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => true,
+    'app_trace'              => false,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -43,7 +44,7 @@ return [
     // 是否开启多语言
     'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
-    'default_filter'         => 'addslashes,htmlspecialchars',
+    'default_filter'         => '',
     // 默认语言
     'default_lang'           => 'zh-cn',
     // 应用类库后缀
@@ -62,7 +63,7 @@ return [
     // 默认控制器名
     'default_controller'     => 'Index',
     // 默认操作名
-    'default_action'         => 'index',
+    'default_action'         => 'login',
     // 默认验证器
     'default_validate'       => '',
     // 默认的空控制器名
@@ -236,15 +237,4 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
-    'Captcha' => [
-    	'length' => 4,
-    	'imageH' => '200',
-    	'imageH' => '50'
-    ],
-    'Message' => [
-    	'LOGIN_FAIL' => '登录失败，请稍后再试',
-    	'CODE_ERROR' => '验证码输入错误，请重新输入',
-    	'ACCOUNT_ERROR' => '账号密码错误，请重新输入',
-    	'SUCCESS' => '恭喜您登录成功'
-    ]
 ];
