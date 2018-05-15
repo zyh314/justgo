@@ -65,7 +65,7 @@ class Index extends Controller
             'employeeid' => $id
         ];
         $res = db('t_employee')->where($where)->find();
-        $this->assign('username',$res['ename']);
+        $this->assign('username',$res['name']);
         // $this->assign('uname',$res);
         $where = [
             'rid' => $res['rid']
