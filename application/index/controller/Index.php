@@ -202,7 +202,15 @@ class Index extends Controller
         cookie(null);
         session(null);
         //退出后重定向回登录界面
+<<<<<<< HEAD
         return $this->success('已注销','Index/Index/index');
+=======
+<<<<<<< HEAD
+        return $this->success('已注销','Index/Index/index');
+=======
+        return $this->success('注销成功','index/Index/index');
+>>>>>>> 4ba18e4b258cf526926ffed5162dfc8d03ee006a
+>>>>>>> 5819713bf2345d49101018d6c66642955a842951
     }
 
 
