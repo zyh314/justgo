@@ -202,7 +202,7 @@ class Index extends Controller
         cookie(null);
         session(null);
         //退出后重定向回登录界面
-        return $this->redirect('/Index/index');
+        return $this->success('注销成功','index/Index/index');
     }
 
 
