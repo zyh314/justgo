@@ -42,7 +42,7 @@ class User extends Controller
     function getAdmin(){
     	$page = input('?post.page')?input('post.page'):'';
     	$count = ($page-1)*5;
-    	$res = db('t_employee a')->join('t_role b','a.rid = b.rid')->limit(5,$count)->select();
+    	$res = db('t_employee a')->join('t_role b','a.roleid = b.roleid')->limit(5,$count)->select();
     	// $this->assign('res0',$res);
     	$res = json_encode($res);
     	echo $res;
@@ -81,7 +81,7 @@ class User extends Controller
        	$where = [
     		'eid' => $eid
     	];
-    	$res = db('t_employee a')->join('t_role b','a.rid = b.rid')->where($where)->find();
+    	$res = db('t_employee a')->join('t_role b','a.roleid = b.roleid')->where($where)->find();
     	// $this->assign('res0',$res);
     	$res = json_encode($res);
     	echo $res;
@@ -126,7 +126,7 @@ class User extends Controller
     function delRole(){
     	$id = input('?post.id')?input('post.id'):'';
        	$where = [
-    		'rid' => $id
+    		'roleid' => $id
     	];
     	$res = db('t_role')->where($where)->delete();
   //   	$res = db('t_role')->limit(10,0)->select();
@@ -145,7 +145,7 @@ class User extends Controller
     	$id = input('?post.id')?input('post.id'):'';
     	$index = input('?post.index')?input('post.index'):'';
        	$where = [
-    		'userid' => $id
+    		'useroleid' => $id
     	];
        	$data = [
     		'hsid' => $index
@@ -157,9 +157,9 @@ class User extends Controller
     function getOnePower(){
     	$id = input('?post.id')?input('post.id'):'';
        	$where = [
-    		'rid' => $id
+    		'roleid' => $id
     	];
-    	$res = db('t_refpurview')->where($where)->select();
+    	$res = db('t_refpower')->where($where)->select();
     	$res = json_encode($res);
     	echo $res;
     }
@@ -213,11 +213,11 @@ class User extends Controller
     function addAdmin(){
     	$ename = input('?post.ename')?input('post.ename'):'';
     	$epassword = input('?post.epassword')?input('post.epassword'):'';
-    	$rid = input('?post.rid')?input('post.rid'):'';
+    	$roleid = input('?post.roleid')?input('post.roleid'):'';
        	$where = [
     		'ename' => $ename,
     		'epassword' => $epassword,
-    		'rid' => $rid
+    		'roleid' => $roleid
     	];
     	$res = db('t_employee')->insert($where);
     	echo $res;
@@ -227,30 +227,30 @@ class User extends Controller
     	$data = json_decode($data);
     	//删除原先权限关联
        	$where = [
-    		'rid' => $data[0]->rid
+    		'roleid' => $data[0]->roleid
     	];
-    	$res = db('t_refpurview')->where($where)->delete();
+    	$res = db('t_refpower')->where($where)->delete();
     	//插入新的权限关联
     	$data1 = [];
         for($i = 0; $i < count($data); $i++){
             array_push($data1, [
                 'pid' => $data[$i]->pid,
-                'rid' => $data[$i]->rid
+                'roleid' => $data[$i]->roleid
             ]);
         }
-        $result   =  db('t_refpurview')->insertAll($data1);
+        $result   =  db('t_refpower')->insertAll($data1);
     	echo $res;
     }
     function editAdmin(){
     	$eid = input('?post.eid')?input('post.eid'):'';
     	$ename = input('?post.ename')?input('post.ename'):'';
-    	$rid = input('?post.rid')?input('post.rid'):'';
+    	$roleid = input('?post.roleid')?input('post.roleid'):'';
        	$where = [
     		'eid' => $eid
     	];
        	$data = [
     		'ename' => $ename,
-    		'rid' => $rid
+    		'roleid' => $roleid
     	];
     	$res = db('t_employee')->where($where)->update($data);
     	echo $res;

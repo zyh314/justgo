@@ -68,9 +68,9 @@ class Index extends Controller
         $this->assign('username',$res['name']);
         // $this->assign('uname',$res);
         $where = [
-            'rid' => $res['rid']
+            'roleid' => $res['roleid']
         ];
-        $res0 = db('t_refpurview a')->join('t_menu b','a.pid = b.pid')->where($where)->select();
+        $res0 = db('t_refpower a')->join('t_menu b','a.pid = b.pid')->where($where)->select();
         $this->assign('menu',$res0);
         // echo json_encode($res0);
         return $this->fetch('/index');
