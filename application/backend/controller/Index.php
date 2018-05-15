@@ -11,6 +11,7 @@ class Index extends Controller
     //登录
     
     function login_chk(){                                                                                            
+        $employeeid = input('?post.employeeid')?input('post.employeeid'):'';
         $password = input('?post.password')?input('post.password'):'';
         $code = input('?post.code')?input('post.code'):'';
         $res =  captcha_check($code);//调用check方法进行验证
