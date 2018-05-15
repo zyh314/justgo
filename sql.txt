@@ -14,7 +14,7 @@ Date: 2018-05-04 23:42:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-
+--
 -- ----------------------------
 -- Table structure for t_collect
 -- ----------------------------
