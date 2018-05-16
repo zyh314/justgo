@@ -74,13 +74,13 @@
     
     function storePower() {
       var zTree = $.fn.zTree.getZTreeObj("treeDemo");
-      var rid = Number(localStorage.edit_role_power_roleid);
+      var roleid = Number(localStorage.edit_role_power_roleid);
       var res =  zTree.getChangeCheckedNodes();
       console.log(res);
       var temp = [];
       for(var i = 0;i < res.length;i++){
         if(res[i].checked == true){
-          temp.push({pid:res[i].pid,rid:rid})
+          temp.push({pid:res[i].pid,roleid:roleid})
         }
       }
       console.log(temp);

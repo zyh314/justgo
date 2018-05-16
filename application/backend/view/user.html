@@ -26,11 +26,6 @@
             height:100%;  
             margin:auto;  
         }  
-
-
-
-
-
     </style>
 </head>
 <body>
@@ -68,15 +63,16 @@ layui.use(['layer','table'], function(){
         elem: '#user_table'
         ,page:true
         ,url:"../user/getUser"
-        ,cols: [[{field:'uname',title:'用户名称'}
+        ,cols: [[{field:'uname',title:'用户账号'}
+            ,{field:'nickname',title:'用户昵称',edit:'text'}
             ,{field:'uphoneNo',title:'用户电话',edit:'text'}
             ,{field:'uemail',title:'用户邮箱',edit:'text'}
             ,{field:'uintegral',title:'用户积分',edit:'text'}
-            ,{field:'ugender',title:'用户性别',edit:'text'}
-            ,{field:'uIcon',title:'用户头像',templet:'#img',edit:'text'}
+            ,{title:'用户性别',toolbar:'#sex',width:130}
+            ,{field:'uIcon',title:'用户头像',templet:'#img'}
             ,{field:'umoney',title:'用户余额',edit:'text'}
-            ,{field:'hsid',title:'使用/锁定',edit:'text'}
-            ,{field:'uregisterTime',title:'注册时间',edit:'text'}
+            // ,{field:'hsid',title:'使用/锁定',edit:'text'}
+            ,{field:'uregisterTime',title:'注册时间'}
             ,{fixed:'right',title:'操作',toolbar:'#tableBar'}
         ]] 
     }); 
@@ -133,9 +129,18 @@ layui.use(['layer','table'], function(){
         }
     });
     table.on('edit(user_table0)', function(obj){ //注：edit是固定事件名，test是table原始容器的属性 lay-filter="对应的值"
-      console.log(obj.value); //得到修改后的值
-      console.log(obj.field); //当前编辑的字段名
-      console.log(obj.data); //所在行的所有相关数据  
+        console.log(obj.value); //得到修改后的值
+        console.log(obj.field); //当前编辑的字段名
+        console.log(obj.data); //所在行的所有相关数据 
+        $.ajax({
+            url:'{:url("backend/User/editUserInfo")}',
+            dataType:'json',
+            type:'POST',
+            data:'userid='+obj.data.userid+'&key='+obj.field+'&value='+obj.value,
+            success:function(res){
+                console.log(res);
+            }.bind(this)
+        }) ; 
     });
 
 
@@ -179,8 +184,15 @@ document.getElementById('add_user').onclick = function(){
 </script>
 
 <script type="text/html" id="tableBar">
-  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="Lock">锁定/解锁</a>
+  <!-- <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="Lock">锁定/解锁</a> -->
   <!-- <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="edit_user_power">修改权限</a> -->
+  <input type="checkbox" name="lock" value="{{d.locking}}" title="锁定" lay-filter="lockDemo" {{ d.locking == '锁定' ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="sex">
+    <!-- <div class="layui-input-block"> -->
+      <input type="radio" name="{{d.uname}}" value="男" title="男" value="{{d.ugender}}" {{ d.ugender == '男' ? 'checked' : '' }}>
+      <input type="radio" name="{{d.uname}}" value="女" title="女" value="{{d.ugender}}" {{ d.ugender == '女' ? 'checked' : '' }}>
+    <!-- </div> -->
 </script>
 
 </html>
