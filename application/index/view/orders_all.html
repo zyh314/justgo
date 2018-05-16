@@ -164,12 +164,13 @@ layui.use(['layer','table'], function(){
 
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-xs" lay-event="orderDetail">查看</a>
+  {{# if(d.orderComment == '未评论'){ }}
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="commentOrder">评论</a>
+  {{#  } }}
   {{#  if(d.orderStatus == '1'){ }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="orderFakeDel">取消订单</a>
-  {{# }else if(d.orderComment == '0' && (d.orderStatus ==3||d.orderStatus ==4)){ }}
-  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="commentOrder">评论</a>
   {{#  }else if(d.orderStatus == '5') { }}
-  <a class="layui-btn layui-btn-danger layui-btn-xs layui-disabled" lay-event="orderDel">删除</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="orderDel">删除</a>
   {{#  } }}
 </script> 
 <script type="text/html" id="goodsImage">
