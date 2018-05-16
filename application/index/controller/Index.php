@@ -53,7 +53,7 @@ class Index extends Controller
         $id = Session::get('user_id');
         if($id){
 	        $where = [
-	            'uname' => $id
+	            'userid' => $id
 	        ];
 	        $res = db('t_user')->where($where)->find();
 	        $this->assign('username',$res['uname']);
@@ -70,29 +70,8 @@ class Index extends Controller
 	        return $this->fetch('/user_center');
         }else{
         	echo json_encode('false');
+            return $this->fetch('/index');
         }
-    }
-
-
-    public function user()
-    {
-    	$page = input('?get.page')?input('get.page'):'';
-    	// echo $page;
-    	if($page == ''){
-	    	$nowpage = [//数字10为每页显示的总条数，true为去掉中间的页码部分，false为显示分页的页码
-	            'page'     => 1,//传入跳转值给当前页
-	        ];
-    	}else{
-    		$nowpage = [//数字10为每页显示的总条数，true为去掉中间的页码部分，false为显示分页的页码
-	            'page'     => $page,//传入跳转值给当前页
-	        ];
-    	};
-    	$start = ($page-1)*5;
-    	$res0 = db('record')->paginate(5);
-    	// $page = db('record')->paginate(5,false,$nowpage);
-    	$this->assign('res0',$res0);
-    	// $this->assign('page',$page);
-        return $this->fetch('/user');
     }
     public function loginChk(){
         $uname = input('?post.uname')?input('post.uname'):'';
@@ -111,19 +90,17 @@ class Index extends Controller
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
-                cookie('user_id',$res['uname'],$time);
+                cookie('user_id',$res['userid'],$time);
                 session("user_id", $res['userid']);
-                session("onlineUser", $res);
-                /*var_dump($res);*/
                 echo json_encode('true');
-//                 return $this->fetch('/index');
+                // return $this->fetch('/index');
             }else{
                 echo json_encode('false');
             }
         }
     }
     function loginSessionChk(){
-        $id = Session::get('adm_id');
+        $id = Session::get('user_id');
         if($id){
             echo json_encode('true');
         }else{
@@ -180,25 +157,25 @@ class Index extends Controller
     {
         return $this->fetch('/zudui_collect');
     }
-    public function all_goods()
+    public function orders_all()
     {
-        return $this->fetch('/all_goods');
+        return $this->fetch('/orders_all');
     }
-    public function goods_unpay()
+    public function orders_unpay()
     {
-        return $this->fetch('/goods_unpay');
+        return $this->fetch('/orders_unpay');
     }
-    public function goods_pay()
+    public function orders_pay()
     {
-        return $this->fetch('/goods_pay');
+        return $this->fetch('/orders_pay');
     }
-    public function goods_fin()
+    public function orders_fin()
     {
-        return $this->fetch('/goods_fin');
+        return $this->fetch('/orders_fin');
     }
-    public function goods_cancel()
+    public function orders_cancel()
     {
-        return $this->fetch('/goods_cancel');
+        return $this->fetch('/orders_cancel');
     }
     public function edit_head()
     {
@@ -214,7 +191,23 @@ class Index extends Controller
     }
     public function edit_money()
     {
+        $id = Session::get('user_id');
+        $where = [
+            'userid' => $id
+        ];
+        $res = db('t_user')->where($where)->find();
+        $this->assign('umoney',$res['umoney']);
         return $this->fetch('/edit_money');
+    }
+    public function loginOut(){
+        cookie(null);
+        session(null);
+        //退出后重定向回登录界面
+<<<<<<< HEAD
+        return $this->success('已注销','Index/Index/index');
+=======
+        return $this->success('注销成功','index/Index/index');
+>>>>>>> a23ae1db387f7748ed3302bc20b88819ac9270d2
     }
 
 

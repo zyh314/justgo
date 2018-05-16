@@ -20,7 +20,7 @@ return [
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
-    'app_trace'              => true,
+    'app_trace'              => false,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -236,29 +236,5 @@ return [
         'type'      => 'bootstrap',
         'var_page'  => 'page',
         'list_rows' => 15,
-    ],
-    
-    //提示信息配置
-    'Message' => [
-    	'LOGIN_FAILED' => '登录失败，请稍后再试',
-    	'CODE_ERROR' =>'验证码输入错误，请重输',
-    	'FILL_IN_ERROR'=>'账号或密码填写错误',
-    	'LOGIN_SUCCESSED'=>'登录成功',
-    	'DELETE_SUCCESSED'=>'删除成功',
-    	'DELETE_FAILED'=>'删除失败',
-    	'SHELF_SUCCESSED'=>'上下架操作成功',
-    	'SHELF_FAILED'=>'上下架操作失败',
-    	'CANCEL_SUCCESSED'=>'取消成功',
-    	'CANCEL_FAILED'=>'取消失败',
-    	'SENTGOODS_SUCCESSED'=>'发货成功',
-    	'SENTGOODS_FAILED'=>'发货失败',
-    	'LOCATION_ERROR'=>'归属地错误',
-    	'UPDATE_SUCCESSED'=>'更新成功',
-    	'UPDATE_FAILED'=>'更新失败',
-    	'PERIODTIME_ERROR'=>'时段选择错误',
-    	'ADD_SUCCESSED'=>'添加成功',
-    	'ADD_FAILED'=>'添加失败',
-    	'PLACEORDER_SUCCESSED'=>'添加成功',
-    	'PLACEORDER_FAILED'=>'添加失败'
     ],
 ];

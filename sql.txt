@@ -1,8 +1,188 @@
-drop database if exists justgo;
-create database justgo default CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
-use justgo;
+﻿/*
+Navicat MySQL Data Transfer
 
-create table if not exists t_menu -- Ȩ��
+Source Server         : our project4
+Source Server Version : 50556
+Source Host           : 116.196.76.60:3306
+Source Database       : justgo
+
+Target Server Type    : MYSQL
+Target Server Version : 50556
+File Encoding         : 65001
+
+Date: 2018-05-04 23:42:32
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for t_collect
+-- ----------------------------
+DROP TABLE IF EXISTS `t_collect`;
+CREATE TABLE `t_collect` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `t_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_collect
+-- ----------------------------
+INSERT INTO `t_collect` VALUES ('1', '1', '1');
+
+-- ----------------------------
+-- Table structure for t_comments
+-- ----------------------------
+DROP TABLE IF EXISTS `t_comments`;
+CREATE TABLE `t_comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `t_id` int(11) DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_comments
+-- ----------------------------
+INSERT INTO `t_comments` VALUES ('1', '2', '1', '好！', '2018-05-04 14:24:45');
+
+-- ----------------------------
+-- Table structure for t_cstatus
+-- ----------------------------
+DROP TABLE IF EXISTS `t_cstatus`;
+CREATE TABLE `t_cstatus` (
+  `csid` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `csname` varchar(8) NOT NULL,
+  PRIMARY KEY (`csid`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_cstatus
+-- ----------------------------
+INSERT INTO `t_cstatus` VALUES ('1', '在售');
+INSERT INTO `t_cstatus` VALUES ('2', '下架');
+INSERT INTO `t_cstatus` VALUES ('3', '过期');
+
+-- ----------------------------
+-- Table structure for t_employee
+-- ----------------------------
+DROP TABLE IF EXISTS `t_employee`;
+CREATE TABLE `t_employee` (
+  `eid` int(10) NOT NULL AUTO_INCREMENT,
+  `ename` varchar(8) NOT NULL,
+  `epassword` varchar(32) NOT NULL,
+  `hsid` int(11) DEFAULT NULL,
+  `rid` int(11) NOT NULL,
+  e_del smallint default 0,
+  PRIMARY KEY (`eid`),
+  KEY `rid` (`rid`),
+  KEY `hsid` (`hsid`),
+  CONSTRAINT `t_employee_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `t_role` (`rid`),
+  CONSTRAINT `t_employee_ibfk_2` FOREIGN KEY (`hsid`) REFERENCES `t_humanStatus` (`hsid`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_employee
+-- ----------------------------
+INSERT INTO `t_employee` VALUES ('123', '老一', 'c6f057b86584942e415435ffb1fa93d4', '1', '1',default);
+INSERT INTO `t_employee` VALUES ('124', '老二', 'c6f057b86584942e415435ffb1fa93d4', '1', '2',default);
+INSERT INTO `t_employee` VALUES ('125', '老三', 'c6f057b86584942e415435ffb1fa93d4', '1', '3',default);
+INSERT INTO `t_employee` VALUES ('126', '老四', 'c6f057b86584942e415435ffb1fa93d4', '1', '4',default);
+INSERT INTO `t_employee` VALUES ('127', '老五', 'c6f057b86584942e415435ffb1fa93d4', '1', '3',default);
+INSERT INTO `t_employee` VALUES ('128', '老六', 'c6f057b86584942e415435ffb1fa93d4', '1', '4',default);
+INSERT INTO `t_employee` VALUES ('129', '老七', 'c6f057b86584942e415435ffb1fa93d4', '1', '3',default);
+INSERT INTO `t_employee` VALUES ('130', '老八', 'c6f057b86584942e415435ffb1fa93d4', '2', '4',default);
+
+-- ----------------------------
+-- Table structure for t_humanStatus
+-- ----------------------------
+DROP TABLE IF EXISTS `t_humanStatus`;
+CREATE TABLE `t_humanStatus` (
+  `hsid` int(11) NOT NULL AUTO_INCREMENT,
+  `hsname` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`hsid`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_humanStatus
+-- ----------------------------
+INSERT INTO `t_humanStatus` VALUES ('1', '使用');
+INSERT INTO `t_humanStatus` VALUES ('2', '锁定');
+
+-- ----------------------------
+-- Table structure for t_orders
+-- ----------------------------
+DROP TABLE IF EXISTS `t_orders`;
+CREATE TABLE `t_orders` (
+  `oid` int(11) NOT NULL AUTO_INCREMENT,
+  `tid` smallint(6) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `oprice` decimal(8,2) DEFAULT NULL,
+  `obuytime` datetime DEFAULT NULL,
+  `osid` int(11) NOT NULL,
+  `oqty` int(11) DEFAULT NULL,
+  PRIMARY KEY (`oid`),
+  KEY `tid` (`tid`),
+  KEY `uid` (`uid`),
+  KEY `osid` (`osid`),
+  CONSTRAINT `t_orders_ibfk_1` FOREIGN KEY (`tid`) REFERENCES `t_tickets` (`tid`),
+  CONSTRAINT `t_orders_ibfk_2` FOREIGN KEY (`uid`) REFERENCES `t_user` (`uid`),
+  CONSTRAINT `t_orders_ibfk_3` FOREIGN KEY (`osid`) REFERENCES `t_orderStatus` (`osid`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_orders
+-- ----------------------------
+INSERT INTO `t_orders` VALUES ('13', '1', '1', '99.00', '2017-03-21 12:35:45', '2', '1');
+INSERT INTO `t_orders` VALUES ('14', '2', '2', '118.00', '2018-03-20 11:35:45', '1', '2');
+INSERT INTO `t_orders` VALUES ('15', '3', '3', '567.00', '2017-05-20 10:35:45', '2', '3');
+INSERT INTO `t_orders` VALUES ('16', '4', '2', '207.00', '2016-03-20 06:35:45', '1', '3');
+INSERT INTO `t_orders` VALUES ('17', '5', '1', '176.00', '2017-08-11 21:35:45', '2', '2');
+INSERT INTO `t_orders` VALUES ('18', '6', '3', '399.00', '2018-03-24 16:35:45', '2', '1');
+
+-- ----------------------------
+-- Table structure for t_orderStatus
+-- ----------------------------
+DROP TABLE IF EXISTS `t_orderStatus`;
+CREATE TABLE `t_orderStatus` (
+  `osid` int(11) NOT NULL AUTO_INCREMENT,
+  `osname` varchar(8) NOT NULL,
+  PRIMARY KEY (`osid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_orderStatus
+-- ----------------------------
+INSERT INTO `t_orderStatus` VALUES ('1', '待支付');
+INSERT INTO `t_orderStatus` VALUES ('2', '已付款');
+INSERT INTO `t_orderStatus` VALUES ('3', '已发货');
+INSERT INTO `t_orderStatus` VALUES ('4', '交易成功');
+INSERT INTO `t_orderStatus` VALUES ('5', '交易关闭');
+
+-- ----------------------------
+-- Table structure for t_praise
+-- ----------------------------
+DROP TABLE IF EXISTS `t_praise`;
+CREATE TABLE `t_praise` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `t_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_praise
+-- ----------------------------
+INSERT INTO `t_praise` VALUES ('1', '1', '1');
+
+-- ----------------------------
+-- Table structure for t_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `t_menu`;
+create table if not exists t_menu -- 权限
 ( 
 	pid int primary key auto_increment,
 	pname varchar(15) not null,
@@ -10,22 +190,306 @@ create table if not exists t_menu -- Ȩ��
 	purl varchar(50)
 )engine=innodb;
 
-INSERT INTO t_menu VALUES -- (��ҳ�б�)
-(1,'�μǹ���',0,null),
-(2,'��ӹ���',0,null),
-(3,'��Ʒ����',0,null),
-(4,'��������',0,null),
-(5,'����ͳ��',0,null),
-(default,'�μǹ���',1,'travels.html'),
-(default,'���۹���',1,'comment.html'),
-(default,'��ӷ�������',2,'zudui.html'),
-(default,'��ӳ�Ա����',2,'chengyuan.html'),
-(default,'��Ʒ����',3,'fabu.html'),
-(default,'��Ʒ�б�',3,'goodsInfo.html'),
-(default,'δ֧������',3,'pendingPage.html'),
-(default,'��֧������',3,'boughtPage.html'),
-(default,'Ա������',4,'admin.html'),
-(default,'��ɫ����',4,'role.html'),
-(default,'�ͻ�����',4,'user.html'),
-(default,'�û�ͳ��',5,'yongHuTongJi.html'),
-(default,'Ӫ��ͳ��',5,'yinXiao.html');
+INSERT INTO t_menu VALUES -- (主页列表)
+(1,'游记管理',0,null),
+(2,'组队管理',0,null),
+(3,'商品管理',0,null),
+(4,'其他管理',0,null),
+(5,'报表统计',0,null),
+(default,'游记管理',1,'travels.html'),
+(default,'评论管理',1,'comment.html'),
+(default,'组队方案管理',2,'zudui.html'),
+(default,'组队成员管理',2,'chengyuan.html'),
+(default,'商品发布',3,'fabu.html'),
+(default,'商品列表',3,'goodsInfo.html'),
+(default,'未支付订单',3,'pendingPage.html'),
+(default,'已支付订单',3,'boughtPage.html'),
+(default,'员工管理',4,'admin.html'),
+(default,'角色管理',4,'role.html'),
+(default,'客户管理',4,'user.html'),
+(default,'用户统计',5,'yongHuTongJi.html'),
+(default,'营销统计',5,'yinXiao.html');
+-- ----------------------------
+-- Table structure for t_user_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user_menu`;
+create table if not exists t_user_menu -- 权限
+( 
+	pid int primary key auto_increment,
+	pname varchar(15) not null,
+	pfid int not null,
+	purl varchar(50)
+)engine=innodb;
+
+INSERT INTO t_user_menu VALUES -- (主页列表)
+(1,'我的收藏',0,null),
+(2,'我的订单',0,null),
+(3,'个人信息',0,null),
+(4,'我的游记、计划',0,null),
+(default,'我的游记',4,'myTravels.html'),
+(default,'我的结伴计划',4,'myZudui.html'),
+(default,'联系客服',4,'server.html'),
+(default,'商品收藏',1,'goods_collect.html'),
+(default,'游记收藏',1,'travels_collect.html'),
+(default,'结伴计划收藏',1,'zudui_collect.html'),
+(default,'全部',2,'all_goods.html'),
+(default,'待支付',2,'goods_unpay.html'),
+(default,'待出行',2,'goods_pay.html'),
+(default,'待评价',2,'goods_fin.html'),
+(default,'取消',2,'goods_cancel.html'),
+(default,'我的头像',3,'edit_head.html'),
+(default,'资料设置',3,'edit_info.html'),
+(default,'修改密码',3,'edit_psw.html'),
+(default,'我的余额',3,'edit_money.html')
+-- ----------------------------
+-- Table structure for t_refPurview
+-- ----------------------------
+DROP TABLE IF EXISTS `t_refPurview`;
+CREATE TABLE `t_refPurview` (
+  `rpid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL,
+  `rid` int(11) NOT NULL,
+  PRIMARY KEY (`rpid`),
+  KEY `pid` (`pid`),
+  KEY `rid` (`rid`),
+  CONSTRAINT `t_refPurview_ibfk_1` FOREIGN KEY (`rid`) REFERENCES `t_role` (`rid`),
+  CONSTRAINT `t_refPurview_ibfk_2` FOREIGN KEY (`pid`) REFERENCES `t_menu` (`pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_refPurview
+-- ----------------------------
+INSERT INTO `t_refPurview` VALUES ('1', '7', '1');
+INSERT INTO `t_refPurview` VALUES ('2', '8', '1');
+INSERT INTO `t_refPurview` VALUES ('3', '9', '1');
+INSERT INTO `t_refPurview` VALUES ('4', '10', '1');
+INSERT INTO `t_refPurview` VALUES ('5', '11', '1');
+INSERT INTO `t_refPurview` VALUES ('6', '12', '1');
+INSERT INTO `t_refPurview` VALUES ('7', '13', '1');
+INSERT INTO `t_refPurview` VALUES ('8', '14', '1');
+INSERT INTO `t_refPurview` VALUES ('9', '15', '1');
+INSERT INTO `t_refPurview` VALUES ('10', '16', '1');
+INSERT INTO `t_refPurview` VALUES ('11', '18', '1');
+INSERT INTO `t_refPurview` VALUES ('12', '19', '1');
+INSERT INTO `t_refPurview` VALUES ('13', '6', '2');
+INSERT INTO `t_refPurview` VALUES ('14', '8', '2');
+INSERT INTO `t_refPurview` VALUES ('15', '9', '2');
+INSERT INTO `t_refPurview` VALUES ('16', '10', '2');
+INSERT INTO `t_refPurview` VALUES ('17', '11', '2');
+INSERT INTO `t_refPurview` VALUES ('18', '12', '2');
+INSERT INTO `t_refPurview` VALUES ('19', '13', '2');
+INSERT INTO `t_refPurview` VALUES ('20', '14', '2');
+INSERT INTO `t_refPurview` VALUES ('21', '15', '2');
+INSERT INTO `t_refPurview` VALUES ('22', '11', '2');
+INSERT INTO `t_refPurview` VALUES ('23', '13', '2');
+INSERT INTO `t_refPurview` VALUES ('24', '9', '2');
+INSERT INTO `t_refPurview` VALUES ('25', '10', '2');
+
+-- ----------------------------
+-- Table structure for t_role
+-- ----------------------------
+DROP TABLE IF EXISTS `t_role`;
+CREATE TABLE `t_role` (
+  `rid` int(11) NOT NULL AUTO_INCREMENT,
+  `rname` varchar(8) NOT NULL,
+  `rintro` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`rid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_role
+-- ----------------------------
+INSERT INTO `t_role` VALUES ('1', '超级管理员', '拥有所有权限');
+INSERT INTO `t_role` VALUES ('2', '经理', '拥有出角色管理外的所有权限');
+INSERT INTO `t_role` VALUES ('3', '业务人员', '门票和活动内容操作权限');
+INSERT INTO `t_role` VALUES ('4', '客服人员', '订单编辑和联系客户权限');
+
+-- ----------------------------
+-- Table structure for t_saleRef
+-- ----------------------------
+DROP TABLE IF EXISTS `t_saleRef`;
+CREATE TABLE `t_saleRef` (
+  `srid` int(11) NOT NULL AUTO_INCREMENT,
+  `tid` smallint(6) DEFAULT NULL,
+  `srqty` int(11) NOT NULL,
+  `srqtylimit` int(11) NOT NULL,
+  `srprice` decimal(8,2) NOT NULL,
+  `srPeriod` int(11) NOT NULL,
+  PRIMARY KEY (`srid`),
+  KEY `tid` (`tid`),
+  CONSTRAINT `t_saleRef_ibfk_1` FOREIGN KEY (`tid`) REFERENCES `t_tickets` (`tid`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_saleRef
+-- ----------------------------
+INSERT INTO `t_saleRef` VALUES ('1', '4', '100', '1', '69.00', '8');
+INSERT INTO `t_saleRef` VALUES ('2', '5', '100', '1', '88.00', '10');
+INSERT INTO `t_saleRef` VALUES ('3', '6', '100', '1', '399.00', '12');
+INSERT INTO `t_saleRef` VALUES ('4', '7', '100', '3', '35.00', '14');
+INSERT INTO `t_saleRef` VALUES ('5', '8', '100', '1', '45.00', '16');
+
+-- ----------------------------
+-- Table structure for t_scenic
+-- ----------------------------
+DROP TABLE IF EXISTS `t_scenic`;
+CREATE TABLE `t_scenic` (
+  `sid` int(11) NOT NULL AUTO_INCREMENT,
+  `lid` tinyint(4) NOT NULL,
+  `simage` varchar(200) NOT NULL,
+  `sintro` text,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_scenic
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for t_shoppingCar
+-- ----------------------------
+DROP TABLE IF EXISTS `t_shoppingCar`;
+CREATE TABLE `t_shoppingCar` (
+  `scid` int(11) NOT NULL AUTO_INCREMENT,
+  `uid` int(11) NOT NULL,
+  `tid` smallint(6) NOT NULL,
+  `num` int(11) DEFAULT NULL,
+  `sprice` decimal(8,2) DEFAULT NULL,
+  PRIMARY KEY (`scid`),
+  KEY `uid` (`uid`),
+  KEY `tid` (`tid`),
+  CONSTRAINT `t_shoppingCar_ibfk_1` FOREIGN KEY (`uid`) REFERENCES `t_user` (`uid`),
+  CONSTRAINT `t_shoppingCar_ibfk_2` FOREIGN KEY (`tid`) REFERENCES `t_tickets` (`tid`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_shoppingCar
+-- ----------------------------
+INSERT INTO `t_shoppingCar` VALUES ('1', '1', '1', '2', '99.00');
+INSERT INTO `t_shoppingCar` VALUES ('2', '2', '2', '1', '59.00');
+INSERT INTO `t_shoppingCar` VALUES ('3', '3', '1', '1', '99.00');
+INSERT INTO `t_shoppingCar` VALUES ('4', '2', '1', '1', '99.00');
+INSERT INTO `t_shoppingCar` VALUES ('5', '1', '3', '2', '189.00');
+INSERT INTO `t_shoppingCar` VALUES ('6', '3', '5', '3', '88.00');
+
+-- ----------------------------
+-- Table structure for t_tickets
+-- ----------------------------
+DROP TABLE IF EXISTS `t_tickets`;
+CREATE TABLE `t_tickets` (
+  `tid` smallint(6) NOT NULL AUTO_INCREMENT,
+  `tname` varchar(45) NOT NULL,
+  `tqty` smallint(6) NOT NULL,
+  `cprice` decimal(8,2) NOT NULL,
+  `sid` int(11) DEFAULT NULL,
+  `cimg` varchar(99) NOT NULL,
+  `csid` int(11) DEFAULT NULL,
+  `saleType` enum('普购','秒杀') DEFAULT NULL,
+  `cpubtime` datetime DEFAULT NULL,
+  `cshelftime` datetime DEFAULT NULL,
+  PRIMARY KEY (`tid`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_tickets
+-- ----------------------------
+INSERT INTO `t_tickets` VALUES ('1', '三坊七巷', '500', '99.00', '7', './view/img/g01.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('2', '鼓浪屿', '500', '59.00', '2', './view/img/g02.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('3', '宽窄巷子', '500', '189.00', '2', './view/img/g03.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('4', '都江堰', '500', '69.00', '5', './view/img/g04.jpg', '1', '秒杀', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('5', '百草堂', '500', '88.00', '6', './view/img/g05.jpg', '1', '秒杀', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('6', '关帝庙', '500', '399.00', '4', './view/img/g06.jpg', '1', '秒杀', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('7', '九龙谷', '500', '35.00', '9', './view/img/g07.jpg', '1', '秒杀', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('8', '九鲤湖', '500', '45.00', '2', './view/img/g08.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('9', '月牙湾', '500', '69.00', '5', './view/img/g09.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('10', '敦煌石窟', '500', '88.00', '9', './view/img/g10.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('11', '乌镇', '500', '78.00', '9', './view/img/g11.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('12', '中华恐龙园', '500', '485.00', '4', './view/img/g12.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('13', '丽江古城', '500', '19.00', '5', './view/img/g13.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('14', '桃花岛', '500', '269.00', '2', './view/img/g14.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('15', '趵突泉', '50', '599.00', '3', './view/img/g15.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('16', '黄果树瀑布', '500', '199.00', '5', './view/img/g16.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('17', '泰山', '500', '90.00', '5', './view/img/g17.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('18', '少林寺', '500', '172.00', '8', './view/img/g18.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('19', '乌衣巷', '500', '92.00', '5', './view/img/g19.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('20', '一线天', '500', '469.00', '3', './view/img/g20.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('21', '拙政园', '500', '69.00', '2', './view/img/g21.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('22', '故宫', '500', '2469.00', '4', './view/img/g22.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('23', '什刹海', '500', '269.00', '4', './view/img/g23.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('24', '八大处', '500', '169.00', '8', './view/img/g24.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('25', '香山', '500', '469.00', '8', './view/img/g25.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('26', '紫竹院', '500', '299.00', '6', './view/img/g26.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('27', '八达岭长城', '500', '1129.00', '4', './view/img/g27.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('28', '颐和园', '500', '31.00', '8', './view/img/g28.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('29', '左海公园', '500', '25.00', '1', './view/img/g29.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+INSERT INTO `t_tickets` VALUES ('30', '西湖断桥', '500', '39.90', '6', './view/img/g30.jpg', '1', '普购', '2017-03-20 00:00:00', '2017-03-20 00:00:00');
+
+-- ----------------------------
+-- Table structure for t_user
+-- ----------------------------
+DROP TABLE IF EXISTS `t_user`;
+CREATE TABLE `t_user` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `uname` varchar(8) DEFAULT NULL,
+  `nickname` varchar(8) default '未命名',
+  `uphoneNo` int(11) DEFAULT NULL,
+  `uemail` varchar(30) DEFAULT NULL,
+  `uintegral` int(11) DEFAULT NULL,
+  `upassword` varchar(32) NOT NULL,
+  `ugender` enum('女','男') DEFAULT NULL,
+  `uIcon` varchar(255) DEFAULT '../../../public/static/images/users/default-user-avatar.png',
+  `umoney` decimal(8,2) DEFAULT 0,
+  `hsid` int(11) default 1,
+  `uregisterTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`uid`),
+  KEY `hsid` (`hsid`),
+  CONSTRAINT `t_user_ibfk_1` FOREIGN KEY (`hsid`) REFERENCES `t_humanStatus` (`hsid`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+
+
+-- ----------------------------
+-- Records of t_user
+-- ----------------------------
+INSERT INTO `t_user` VALUES ('1','a12', '小公举', '2147483647', '123@qq.com', '10', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('2','a1234', '大狗熊', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '1', '2018-03-14 17:35:20');
+INSERT INTO `t_user` VALUES ('3','a1235', '怪叔叔', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-04-14 17:35:20');
+INSERT INTO `t_user` VALUES ('4','a1236', '烧鸡', '2147483647', default, '20', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-05-20 17:35:20');
+INSERT INTO `t_user` VALUES ('5','a1237', '叫兽', '2147483647', default, '30', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '2', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('6','a1238', '大公子', '2147483647', default, '40', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-11-11 17:35:20');
+INSERT INTO `t_user` VALUES ('7','a1239', '何仙姑', '2147483647', default, '50', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-06-01 17:35:20');
+INSERT INTO `t_user` VALUES ('8','a1240', '老头砸', '2147483647', default, '60', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '2', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('9','a12312', '小孙贼', '2147483647', default, '70', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-09-09 17:35:20');
+INSERT INTO `t_user` VALUES ('10','a12313', '麦兜兜', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('12','a12314', '葫芦娃', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '2', '2018-03-14 17:35:20');
+INSERT INTO `t_user` VALUES ('13','a12315', '灰太狼', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-04-14 17:35:20');
+INSERT INTO `t_user` VALUES ('14','a12316', '美羊羊', '2147483647', default, '80', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-05-20 17:35:20');
+INSERT INTO `t_user` VALUES ('15','a12317', '孙悟空', '2147483647', default, '90', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '2', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('16','a12318', '小叮当', '2147483647', default, '0', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-11-11 17:35:20');
+INSERT INTO `t_user` VALUES ('17','a12319', '美女蛇', '2147483647', default, '110', '670b14728ad9902aecba32e22fa4f6bd', '女', default, '125.50', '1', '2018-06-01 17:35:20');
+INSERT INTO `t_user` VALUES ('18','a12320', '哩吧啦', '2147483647', default, '10', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '427.00', '1', '2018-02-14 17:35:20');
+INSERT INTO `t_user` VALUES ('19','a12321', '小山田心子', '2147483647', default, '120', '670b14728ad9902aecba32e22fa4f6bd', '男', default, '256.00', '1', '2018-09-09 17:35:20');
+
+-- ----------------------------
+-- Table structure for travels
+-- ----------------------------
+DROP TABLE IF EXISTS `travels`;
+CREATE TABLE `travels` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(48) DEFAULT NULL,
+  `image` varchar(50) DEFAULT NULL,
+  `userid` int(11) NOT NULL,
+  `content` text,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of travels
+-- ----------------------------
+INSERT INTO `travels` VALUES ('1', '游记标题', '图片', '1', '这是一篇游记', '2018-05-04 14:23:52');
+INSERT INTO `travels` VALUES ('2', '游记二', '图片', '3', 'this is 游记', '2018-05-04 14:25:35');
+
+
+
+
+
