@@ -210,12 +210,12 @@ class User extends Controller
         $res = db('t_employee')->insert($where);
         echo json_encode($res);
     }
-    function adminAccountSame(){
-        $account = input('?post.account')?input('post.account'):'';
+    function userNameSame(){
+        $uname = input('?post.uname')?input('post.uname'):'';
         $where0 = [
-            'account' => $account
+            'uname' => $uname
         ];
-        $res0 = db('t_employee')->where($where0)->select();
+        $res0 = db('t_user')->where($where0)->select();
         if(count($res0)>0){
             echo json_encode('true');
         }else{

@@ -48,7 +48,7 @@ class Index extends Controller
         cookie(null);
         session(null);
         //退出后重定向回登录界面
-        return $this->success('/login');
+        return $this->success('','backend/Index/login');
     }
 
     //登录结束
