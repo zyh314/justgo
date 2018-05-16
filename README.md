@@ -1,4 +1,4 @@
-﻿ThinkPHP 5.0
+ThinkPHP 5.0
 ===============
 
 [![Total Downloads](https://poser.pugx.org/topthink/think/downloads)](https://packagist.org/packages/topthink/think)
@@ -31,8 +31,6 @@ ThinkPHP5在保持快速开发和大道至简的核心理念不变的同时，PH
 详细开发文档参考 [ThinkPHP5完全开发手册](http://www.kancloud.cn/manual/thinkphp5)
 
 ## 目录结构
-
-
 
 初始的目录结构如下：
 

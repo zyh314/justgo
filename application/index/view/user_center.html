@@ -3,9 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>个人中心</title>
+  <title>说走就走后台</title>
   <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
-  <link rel="stylesheet" href="__STATIC__/layui/css/layui_front.css"  media="all">
   <link rel="stylesheet" type="text/css" href="__CSS__/backend.css">
 </head>
 <body class="layui-layout-body">
@@ -15,10 +14,9 @@
             <a href="#" class="nav_logo"></a>
         </div>
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
-            <li class="layui-nav-item"><a href="{:url('index/index/index')}">首页</a></li>
-            <li class="layui-nav-item "><a href="{:url('index/index/travels')}">写游记</a></li>
-            <!-- <li class="layui-nav-item "><a href="{:url('index/index/user_center')}">目的地</a></li> -->
-            <li class="layui-nav-item"><a href="{:url('index/index/goods')}">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item"><a href="#">首页</a></li>
+            <li class="layui-nav-item "><a href="#">目的地</a></li>
+            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -36,7 +34,7 @@
                 </a>
                 {/if}
                 {if condition = '$username != "请登录"'}
-                <a href = "{:url('index/index/user_center')}">
+                <a href = "{:url('index/index/user_center')}" target="ifr">
                     <img src="{$userHead}" class="layui-nav-img">{$username}
                 </a>
                 {/if}
@@ -83,7 +81,7 @@
   <div class="layui-body">
     <!-- 内容主体区域 -->
     <div style="padding: 15px;">
-    	<iframe id = 'frm1' name = 'ifr' src = "{:url('index/index/orders_all')}"></iframe>
+    	<iframe id = 'frm1' name = 'ifr' src = "{:url('backend/index/travels')}"></iframe>
     </div>
   </div>
 </div>
@@ -97,18 +95,7 @@
 layui.use('element', function(){
 	var element = layui.element;
 });
-    // $.ajax({
-    //   url:'{:url("index/index/loginSessionChk")}',
-    //   dataType:'json',
-    //   type:'GET',
-    //   success:function(res){
-    //     if(res == 'true'){
-    //       // window.location.reload();
-    //     }else{
-    //       alert('登录失败')
-    //     }
-    //   }
-    // })
+
 </script>
 </body>
 </html>

@@ -224,7 +224,9 @@
 					dataType:'json',
 					success:function(data){
 						if(data.code==203){ 
-		    				layer.msg(data.message, {icon: 6});
+		    				var index = parent.layer.getFrameIndex(window.name);
+		    				parent.layer.close(index);
+		    				parent.layer.msg(data.message, {icon: 6});
 		    			}else{ 
 		    				layer.msg(data.message, {icon: 5});
 		    			}

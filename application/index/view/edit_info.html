@@ -15,13 +15,13 @@
   <div class="layui-form-item"  style = "display : none">
     <label class="layui-form-label">用户ID</label>
     <div class="layui-input-block">
-      <input id = 'eid' type="text" name="userid" class="layui-input">
+      <input id = 'eid' type="text" name="uid" class="layui-input">
     </div>
   </div>
   <div class="layui-form-item">
     <label class="layui-form-label">用户昵称</label>
     <div class="layui-input-block">
-      <input id = 'nickname' type="text" name="nickname" placeholder="请输入" autocomplete="off" class="layui-input" lay-verify="required|username">
+      <input id = 'uname' type="text" name="uname" placeholder="请输入" autocomplete="off" class="layui-input" lay-verify="required|username">
     </div>
   </div>
   <div class="layui-form-item">
@@ -46,7 +46,7 @@
   </div> -->
   <div class="layui-form-item">
     <div class="layui-input-block">
-      <button class="layui-btn" lay-submit lay-filter="*" id = 'edit_info'>修改</button>
+      <button class="layui-btn" lay-submit lay-filter="*" id = 'add_admin_sub'>修改</button>
     </div>
   </div>
   <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
@@ -70,8 +70,8 @@ layui.use(['form', 'layedit', 'laydate'], function(){
     success:function(data){
       // console.log(data)
       // data = data.data;
-      $('#userid').val(data.userid);
-      $('#nickname').val(data.nickname);
+      $('#uid').val(data.uid);
+      $('#uname').val(data.uname);
       $('#uphoneNo').val(data.uphoneNo);
       $('#uemail').val(data.uemail);
       form.render();
@@ -115,12 +115,12 @@ layui.use(['form', 'layedit', 'laydate'], function(){
     // console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
     console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
     $.ajax({
-      url:'{:url("index/User/editUser")}',
+      url:'{:url("index/User/editAdmin")}',
       dataType:'json',
       type:'POST',
       data:data.field,
       success:function(res){
-        window.location.reload();
+        window.parent.location.reload();
       }
     })
   })

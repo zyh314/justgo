@@ -5,392 +5,270 @@ use \think\Db;
 use \think\Config;
 use \think\Session;
 use \think\Redis;
-use \think\Cache;
-
-//引用七牛CDN的命名空间
-use Qiniu\Auth; //七牛云上传文件头部
-use Qiniu\Storage\UploadManager;
-
-//use \think\Cache; //收索缓存
 
 class Goods extends Controller
 {
 	protected $beforeActionList = [
-	        'checkSession' => ['only'=>'deleteitem,creation,myquestionnaire']
-	    ];
-	
-	/*判断session*/
-	public function checkSession(){
-		$onlineUser = Session::get('onlineUser');
-		if(empty($onlineUser)){
-    		$this->error('登录过期，请重新登录','index/index/login');
+		'checkSession' => ['except' => 'del,user']
+	];
+	function checkSession(){
+		return '进行验证';
+	}
+    public function index()
+    {
+        return $this->fetch('/index');
+    }
+    public function backend()
+    {
+        return $this->fetch('/backend');
+    }
+    public function login()
+    {
+        return $this->fetch('/login');
+    }
+    public function user()
+    {
+    	$page = input('?get.page')?input('get.page'):'';
+    	// echo $page;
+    	if($page == ''){
+	    	$nowpage = [//数字10为每页显示的总条数，true为去掉中间的页码部分，false为显示分页的页码
+	            'page'     => 1,//传入跳转值给当前页
+	        ];
+    	}else{
+    		$nowpage = [//数字10为每页显示的总条数，true为去掉中间的页码部分，false为显示分页的页码
+	            'page'     => $page,//传入跳转值给当前页
+	        ];
+    	};
+    	$start = ($page-1)*5;
+    	$res0 = db('record')->paginate(5);
+    	// $page = db('record')->paginate(5,false,$nowpage);
+    	$this->assign('res0',$res0);
+    	// $this->assign('page',$page);
+        return $this->fetch('/user');
+    }
+    public function login_chk(){
+  //   	$username = isset($_POST['username']);
+    	// $psw = isset($_POST['psw']);
+		// $username = isset($_POST['username'])?$_POST['username']:"";
+		// $psw = isset($_POST['psw'])?$_POST['psw']:"";
+    	$username = input('?post.username')?input('post.username'):'';
+    	$psw = input('?post.psw')?input('post.psw'):'';
+    	$where = [
+    		'Id' => $username,
+    		'psw' => $psw
+    	];
+    	$res = db('admin')->where($where)->find();
+    	// echo Db::table('admin')->getLastSql();
+    	var_dump($res);
+    }
+    public function search(){
+    	$word = input('?post.word')?input('post.word'):'';
+    	$where = [
+    		'info' => ['like','%'.$word.'%']
+    	];
+    	$res = db('record')->where($where)->paginate(5);
+    	$this->assign('res0',$res);
+        return $this->fetch('/user');
+    	// echo Db::table('admin')->getLastSql();
+    	// var_dump($res);
+    }
+    public function del(){
+    	$userInfo = Session::get('userInfo');
+    	if(!$userInfo){
+    		return;
+    	}
+    	$id = input('?post.id')?input('post.id'):'';
+    	$where = [
+    		'record_id' => $id
+    	];
+    	$res = db('record')->where($where)->delete();
+    	// $this->assign('res0',$res);
+        return $this->fetch('/user');
+    	// echo Db::table('admin')->getLastSql();
+    	// var_dump($res);
+    }
+    
+    /*旅行商城*/
+    public function travelmall(){
+    	$province = db('t_location')->where('locateid','IN',function($query){
+    	    $query->table('t_goods')->field('locateid')->group('locateid');
+    	})->select();
+    	
+    	/*热销*/
+    	$sellgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('soldqty desc')->limit(0,4)->select();
+    	
+    	/*新品*/
+    	$newgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('cpubtime desc')->limit(0,4)->select();
+    	/*人气*/
+    	$popular = db('t_goods')->where('goodsid','IN',function($query){
+    		$query->table('t_goodsMark')->field('goodsid')->group('goodsid')->order('count(goodsid) desc');
+    	})->limit(0,4)->select();
+    	
+    	$this->assign('sellgoods',$sellgoods);
+    	$this->assign('province',$province);
+    	$this->assign('newgoods',$newgoods);
+    	$this->assign('popular',$popular);
+    	
+    	return $this->fetch('/travelmall');
+    }
+    
+    /*商品详情*/
+    public function traveldetails(){
+    	$goodsid = input('?get.goodsid')?input('get.goodsid'):'';
+    	$goodsdetail = db('t_goods')->join('t_location b','t_goods.locateid=b.locateid')->where('goodsid',$goodsid)->find();
+    	
+    	$this->assign('goodsdetail',$goodsdetail);
+    	return $this->fetch('/traveldetails');
+    }
+    
+    /*获取评论分页总条数*/
+	public function getcounts(){
+ 		$goodsid = input('?get.goodsid')?input('get.goodsid'):'';
+   		$count = db('t_goodscomments')->where('goodsid',$goodsid)->count();
+   		echo json_encode($count);
+	}
+   
+   /*评论翻页*/
+	public function pageTurning(){
+	  	$goodsid = input('?post.goodsid')?input('post.goodsid'):'';
+	  	$nowpage = input('?post.nowpage')?input('post.nowpage'):'';
+	  	$limit = input('?post.limit')?input('post.limit'):'';
+  	
+  		$goodscomments = db('t_goodscomments')->join('t_user','t_user.userid = t_goodscomments.userid')->where('goodsid',$goodsid)->limit(($nowpage-1)*$limit,$limit)->select();
+  		echo json_encode($goodscomments);
+	}
+    
+    /*商品选择*/
+    public function travelgoods(){
+    	$keyword = input('?get.keyword')?input('get.keyword'):'';
+    	$key = input('?get.key')?input('get.key'):'';
+    	
+    	if($keyword || $key){
+    		if($keyword){
+    			
+    			
+    		}else{
+    			if($key=='moreSell'){
+    				$travelgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('soldqty desc')->paginate(10,false,['query' => ['key' => $key]]);
+    			}
+    			else if($key == 'moreNew'){
+    				$travelgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('cpubtime desc')->paginate(10,false,['query' => ['key' => $key]]);
+    			}
+    			else{
+    				$travelgoods = db('t_goods')->where('goodsid','IN',function($query){
+			    		$query->table('t_goodsMark')->field('goodsid')->group('goodsid')->order('count(goodsid) desc');
+			    	})->paginate(10,false,['query' => ['key' => $key]]);
+    			}
+    		}
+    	}else{
+    		$travelgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->paginate(10);
+    	}
+    	$page = $travelgoods->render();
+    	$bestSold = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('soldqty desc')->limit(0,5)->select();
+    	
+    	$this->assign('page',$page);
+    	$this->assign('travelgoods',$travelgoods);
+    	$this->assign('bestSold',$bestSold);
+    	return $this->fetch('/travelgoods');
+    }
+    
+    
+    /*跳转支付页面*/
+    public function travelpay(){
+    	return $this->fetch('/travelpay');
+    }
+    
+    /*加入购物车*/
+    public function add2cart(){
+    	$goodsid = input('?post.goodsid')?input('post.goodsid'):'';
+    	$quantity = input('?post.quantity')?input('post.quantity'):'';
+    	$userid = Session::get('onlineUser')['userid'];
+		
+		/*查询购物车是否已有此商品*/
+		$result = db('t_shoppingcart')->where(['userid'=>$userid,'goodsid'=>$goodsid])->find();
+		if($result){
+			/*更新数据库数量*/
+			$response = db('t_shoppingcart')->where(['userid'=>$userid,'goodsid'=>$goodsid])->setInc('quantity',$quantity);
+		}else{
+			/*上传到数据库*/
+			$response = db('t_shoppingcart')->data(['scarid'=>"default",'userid'=>$userid,'goodsid'=>$goodsid,'quantity'=>$quantity])->insert();
 		}
-	}
-	
-	 /*获取商品列表*/
-	public function getgoods(){
-		$keyword =  input('?get.keyword')?input('get.keyword'):"";
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		if($keyword!=''){
-			$count = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->where(['name'=>['like','%'.$keyword.'%']])->whereOr(['locate'=>['like','%'.$keyword.'%']])->count();
-			$result = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->where(['name'=>['like','%'.$keyword.'%']])->whereOr(['locate'=>['like','%'.$keyword.'%']])->limit(($page-1)*$limit,$limit)->select();
-		}
-		else{
-			$count = db('t_goods')->count();
-			$result = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->limit(($page-1)*$limit,$limit)->select();
-		}
-		$feedback = [
-			'code'=>0,
-			'count'=>$count,
-			'data'=>$result
-		];
-		echo json_encode($feedback);
-	}
-	
-	/*显示商品详情*/
-	public function goodsdetails(){
-		$goodsid =  input('?get.goodsid')?input('get.goodsid'):"";
-		$result = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->where('goodsid',$goodsid)->select();
-        $this->assign('thedetails',$result);
-		return $this->fetch('/goodsdetails');
-	}
-	
-	/*编辑商品*/
-	public function edit(){
-		$goodsid =  input('?get.goodsid')?input('get.goodsid'):"";
-		
-		$result = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->where('goodsid',$goodsid)->find();
-		$res = db('t_location')->where('fid',0)->select();
-		
-        $this->assign('location',$res);
-        $this->assign('thedetails',$result);
-		
-		return $this->fetch('/goodsedit');
-	}
-	
-	/*获取编辑商品详情*/
-	public function foredit(){
-		$goodsid =  input('?post.goodsid')?input('post.goodsid'):"";
-		$result = db('t_goods')->join('t_location','t_location.locateid = t_goods.locateid')->where('goodsid',$goodsid)->find();
-		echo json_encode($result);
-	}
-	
-	/*提交编辑商品*/
-	public function editcomplete(){
-		$goodsid = input('?post.goodsid')?input('post.goodsid'):"";
-		$origin = db('t_goods')->where('goodsid',$goodsid)->find();
-		
-		$name =  input('?post.title')?input('post.title'):"";
-		$price =  input('?post.price')?input('post.price'):"";
-		$quantity =  input('?post.quantity')?input('post.quantity'):"";
-		$cities =  input('?post.city')?input('post.city'):"";
-		$saleway =  input('?post.saleway')?input('post.saleway'):"";
-		$saleprice =  input('?post.saleprice')?input('post.saleprice'):null;
-		$limit =  input('?post.limit')?input('post.limit'):null;
-		$period =  input('?post.period')?input('post.period'):null;
-		$intro =  input('?post.intro')?input('post.intro'):"";
-		
-		if($cities==""){
+    	
+    	/*发送回馈*/
+		if($response){
 			$feedback = [
-	    		'code'=>407,
-	    		'message'=>Config::get('Message')['LOCATION_ERROR'], 
+	    		'code'=>205,
+	    		'message'=>Config::get('Message')['ADD_SUCCESSED'], 
 	    		'data'=>[]
 	    	];
-		}
-		else if($saleway=="秒杀"&&$period==""){
+		}else{
 			$feedback = [
-	    		'code'=>406,
-	    		'message'=>Config::get('Message')['PERIODTIME_ERROR'], 
+	    		'code'=>405,
+	    		'message'=>Config::get('Message')['ADD_FAILED'], 
 	    		'data'=>[]
 	    	];
 		}
-		else{
-			$res = db('t_goods')->where('goodsid',$goodsid)->update(['name' => $name,'price' => $price,'quantity' => $quantity,'locateid' => $cities,'saleType' =>$saleway,'saleprice' => $saleprice,'salelimit' => $limit,'salePeriod' => $period,'intro' => $intro]);
-			if($res){
-				$feedback = [
-		    		'code'=>203,
-		    		'message'=>Config::get('Message')['UPDATE_SUCCESSED'], 
-		    		'data'=>$res
-		    	];
-			}else{
-				$feedback = [
-		    		'code'=>403,
-		    		'message'=>Config::get('Message')['UPDATE_FAILED'], 
-		    		'data'=>$res
-		    	];
-			}
-		}
 		echo json_encode($feedback);
-	}
-	
-	/*删除商品*/
-	public function delete(){
-   		$goodsid =  input('?post.id')?input('post.id'):"";
-   		$res = db('t_goods')->where('goodsid',$goodsid)->delete();
-   		if($res){
+    }
+    
+    
+    /*存储订单信息*/
+    public function orderInfoConfirm(){
+    	$dataArr = input('?post.data')?input('post.data'):'';
+    	$dataArr = json_decode($dataArr);
+    	session("cartArr", $dataArr);
+    	if(Session::get('cartArr')){
+    		echo json_encode(true);
+    	}else{
+    		echo json_encode(false);
+    	}
+    }
+    
+    /*跳转订单确认页*/
+   public function travelconfirm(){
+   	return $this->fetch('/travelconfirm');
+   }
+    
+    /*获取订单信息*/
+    public function payorderinfo(){
+    	$cartArr = Session::get('cartArr');
+    	$goodsArr = array();
+    	for($i=0;$i<count($cartArr);$i++){
+    		$goodsArr[$i] = db('t_goods')->where('goodsid',$cartArr[$i]->goodsid)->find();
+    		$goodsArr[$i]['quantity'] = $cartArr[$i]->quantity;
+    	};
+    	$onlineUser = Session::get('onlineUser');
+    	$temp = [
+    		'goodsArr'=>$goodsArr,
+    		'onlineUser'=>$onlineUser
+    	];
+    	echo json_encode($temp);
+    }
+    
+    /*生成订单*/
+   public function placeorder(){
+   		$userid = Session::get('onlineUser')['userid'];
+   		$ordernote = input('?post.ordernote')?input('post.ordernote'):'';
+   		$goodsArr = json_decode(input('?post.data')?input('post.data'):'',true);
+   		
+   		foreach($goodsArr as $value){
+   			$response = db('t_orders')->data(['orderid'=>"default",'goodsid'=>$value['goodsid'],'userid'=>$userid,'orderprice'=>$value['price'],'buytime'=>date("Y-m-d H:i:s",time()),'orderStatus'=>"default",'orderqty'=>$value['quantity'],'orderComment'=>"default",'ordernote'=>$ordernote])->insert();
+   		}
+   		if($response){
    			$feedback = [
-	    		'code'=>201,
-	    		'message'=>Config::get('Message')['DELETE_SUCCESSED'], 
+	    		'code'=>211,
+	    		'message'=>Config::get('Message')['PLACEORDER_SUCCESSED'], 
 	    		'data'=>[]
 	    	];
    		}else{
+   			
    			$feedback = [
-	    		'code'=>401,
-	    		'message'=>Config::get('Message')['DELETE_FAILED'], 
+	    		'code'=>411,
+	    		'message'=>Config::get('Message')['PLACEORDER_FAILED'], 
 	    		'data'=>[]
 	    	];
    		}
    		echo json_encode($feedback);
-   	}
-   	
-   	/*上下架*/
-   	public function shelf(){
-   		$goodids = input('?post.data')?input('post.data'):"";
-   		$goodids = json_decode($goodids);
-   		foreach($goodids as $value){
-			if($value->goodstatus=='在售'){
-				$res = db('t_goods')->where('goodsid',$value->goodsid)->setField('goodstatus', '未上架');
-   			}else{
-   				$res = db('t_goods')->where('goodsid',$value->goodsid)->setField('goodstatus', '在售');
-   			}
-   		}
-		/*反馈*/
-   		if($res){
-   			$feedback = [
-	    		'code'=>202,
-	    		'message'=>Config::get('Message')['SHELF_SUCCESSED'], 
-	    		'data'=>[]
-	    	];
-   		}else{
-   			$feedback = [
-	    		'code'=>402,
-	    		'message'=>Config::get('Message')['SHELF_FAILED'], 
-	    		'data'=>[]
-	    	];
-   		}
-   		echo json_encode($feedback);
-   	}
-   	
-   	/*获取归属地*/
-   	public function getcities(){
-   		$fid = input('?post.fid')?input('post.fid'):"";
-   		$res = db('t_location')->where('fid',$fid)->select();
-   		echo json_encode($res);
-   	}
-   	
-   	/*商品上传*/
-   	public function uploadgoods(){
-   		$file = request()->file('file'); //获取上传文件
-		if($file){
-			//上传到本地服务器
-			$info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
-			//上传到远程CDN
-			$accessKey = 'P5HPpgD5FN3X69wKqWI39EwPLIpVckU_TafwyQ0U';
-			$accessSecret = "MJlWWOCFukUEEaYknsfJWO979H88GV9wTgaz1eJI";
-			$bucket = 'justgotravel';
-			
-			$authRes = new Auth($accessKey,$accessSecret);
-			$token = $authRes->UploadToken($bucket);
-			
-			if($token){
-				$manager = new UploadManager();
-				$localFile = "uploads/".$info->getSaveName();
-				$localFileName = $info->getFileName();
-				
-				$manager->putfile($token,$localFileName,$localFile); //三个参数：token;上传后的文件名称;上传文件的本地路径
-			}
-			
-			if($info){
-				/*获得图片路径*/
-				/*$image =$info->getSaveName();*/
-				$image = "http://p8int7f8g.bkt.clouddn.com/".$info->getFilename();
-	            //获取表单数据
-	            $saleType = input('?post.sale')?input('post.sale'):"";
-		   		$name = input('?post.title')?input('post.title'):"";
-		   		$price = input('?post.price')?input('post.price'):"";
-		   		$quantity = input('?post.quantity')?input('post.quantity'):"";
-		   		$file = input('?post.file')?input('post.file'):"";
-		   		$locateid = input('?post.locateid')?input('post.locateid'):"";
-		   		$intro = input('?post.intro')?input('post.intro'):"";
-		   		$saleprice = input('?post.saleprice')?input('post.saleprice'):"";
-		   		$salelimit = input('?post.qtylimit')?input('post.qtylimit'):"";
-		   		$salePeriod = input('?post.modules')?input('post.modules'):"";
-		   		$goodstatus = input('?post.shelf')?input('post.shelf'):"";
-		   		if($goodstatus=="on"){
-		   			$goodstatus = "在售";
-		   			$cshelftime = date("Y-m-d H:i:s",time());
-		   		}else{
-		   			$goodstatus = "未上架";
-		   			$cshelftime = '';
-		   		}
-		   		/*上传到数据库*/
-		   		$res = db('t_goods')->data(['goodsid'=>"default",'quantity'=>$quantity,'soldqty'=>0,'price'=>$price,'goodstatus'=>$goodstatus,'saleType'=>$saleType,'cpubtime'=>date("Y-m-d H:i:s",time()),'cshelftime'=>$cshelftime,'salelimit'=>$salelimit,'saleprice'=>$saleprice,'salePeriod'=>$salePeriod,'name'=>$name,'locateid'=>$locateid,'image'=>$image,'intro'=>$intro])->insert();
-		   		/*页面显示*/
-		   		if($res){
-		   			$this->success('上传成功', 'backend/index/fabu');
-		   		}else{
-		   			$this->error('上传失败', 'backend/index/fabu');
-		   		}
-			}
-			else{
-	            // 上传失败获取错误信息
-	            /*echo $file->getError();*/
-	            $this->error('上传失败', 'backend/index/fabu');
-        	}
-		}
-   	}
-   	
-   	/*获取未支付订单列表*/
-	public function getpending(){
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		$count = db('t_orders')->where('orderStatus',2)->count();
-		$result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orderStatus.orderStatus',1)->limit(($page-1)*$limit,$limit)->select();
-		$feedback = [
-			  'code'=>0,
-			  'msg'=>"",
-			  'count'=>$count,
-			  'data'=>$result
-			];
-		echo json_encode($feedback);
-	}
-	
-	/*获取全部未付款订单列表*/
-	public function allunpaid(){
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		$count = db('t_orders')->where('orderStatus=1 OR orderStatus=5')->count();
-		$result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orderStatus.orderStatus=1 OR t_orderStatus.orderStatus=5')->limit(($page-1)*$limit,$limit)->select();
-		$feedback = [
-			  'code'=>0,
-			  'msg'=>"",
-			  'count'=>$count,
-			  'data'=>$result
-			];
-		echo json_encode($feedback);
-	}
-	/*获取全部订单列表*/
-	public function allOrders(){
-        $id = Session::get('user_id');
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		$count = db('t_orders')->where('t_orders.userid',$id)->count();
-		$result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orders.userid',$id)->limit(($page-1)*$limit,$limit)->select();
-		$feedback = [
-			  'code'=>0,
-			  'msg'=>"",
-			  'count'=>$count,
-			  'data'=>$result
-			];
-		echo json_encode($feedback);
-	}
-	
-	/*获取已支付订单列表*/
-	public function getUnpaid(){
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		$count = db('t_orders')->where('orderStatus',2)->count();
-		$result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orderStatus.orderStatus',2)->limit(($page-1)*$limit,$limit)->select();
-		$feedback = [
-			  'code'=>0,
-			  'msg'=>"",
-			  'count'=>$count,
-			  'data'=>$result
-			];
-		echo json_encode($feedback);
-	}
-	
-	/*全部已支付订单*/
-	public function getallpaid(){
-		$page =  input('?get.page')?input('get.page'):"";
-		$limit =  input('?get.limit')?input('get.limit'):"";
-		$count = db('t_orders')->where('orderStatus=2 OR orderStatus=3 OR orderStatus=4')->count();
-		$result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orderStatus.orderStatus=2 OR t_orderStatus.orderStatus=3 OR t_orderStatus.orderStatus=4')->limit(($page-1)*$limit,$limit)->select();
-		$feedback = [
-			  'code'=>0,
-			  'msg'=>"",
-			  'count'=>$count,
-			  'data'=>$result
-			];
-		echo json_encode($feedback);
-	}
-	
-	/*取消订单*/
-	public function ordercancel(){
-   		$orderid = input('?post.orderid')?input('post.orderid'):"";
-		$res = db('t_orders')->where('orderid',$orderid)->setField('orderStatus', 5);
-		/*反馈*/
-   		if($res){
-   			$feedback = [
-	    		'code'=>209,
-	    		'message'=>Config::get('Message')['CANCEL_SUCCESSED'], 
-	    		'data'=>[]
-	    	];
-   		}else{
-   			$feedback = [
-	    		'code'=>409,
-	    		'message'=>Config::get('Message')['CANCEL_FAILED'], 
-	    		'data'=>[]
-	    	];
-   		}
-   		echo json_encode($feedback);
-   	}
-   	
-	/*批量关闭交易*/
-	public function plentyclose(){
-   		$orders = input('?post.data')?input('post.data'):"";
-   		$orders = json_decode($orders);
-   		foreach($orders as $value){
-			$res = db('t_orders')->where('orderid',$value->orderid)->setField('orderStatus', 5);
-   		}
-		/*反馈*/
-   		if($res){
-   			$feedback = [
-	    		'code'=>209,
-	    		'message'=>Config::get('Message')['CANCEL_SUCCESSED'], 
-	    		'data'=>[]
-	    	];
-   		}else{
-   			$feedback = [
-	    		'code'=>409,
-	    		'message'=>Config::get('Message')['CANCEL_FAILED'], 
-	    		'data'=>[]
-	    	];
-   		}
-   		echo json_encode($feedback);
-   	}
-	
-	/*显示订单详情*/
-	public function orderdetails(){
-		$orderid =  input('?get.orderid')?input('get.orderid'):"";
-		$result = db('t_orders')->join('t_user','t_user.userid = t_orders.userid')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->where('t_orders.orderid',$orderid)->select();
-        $this->assign('orderdetails',$result);
-		return $this->fetch('/orderdetails');
-	}
-	
-	/*发货*/
-	public function sendgoods(){
-   		$orderid = input('?post.orderid')?input('post.orderid'):"";
-		$res = db('t_orders')->where('orderid',$orderid)->setField('orderStatus', 3);
-		/*反馈*/
-   		if($res){
-   			$feedback = [
-	    		'code'=>208,
-	    		'message'=>Config::get('Message')['SENTGOODS_SUCCESSED'], 
-	    		'data'=>[]
-	    	];
-   		}else{
-   			$feedback = [
-	    		'code'=>408,
-	    		'message'=>Config::get('Message')['SENTGOODS_FAILED'], 
-	    		'data'=>[]
-	    	];
-   		}
-   		echo json_encode($feedback);
-   	}
-	
-	
-	
+   		
+   }
 }
-
