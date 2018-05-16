@@ -11,8 +11,8 @@ class Index extends Controller
     //登录
     
     function login_chk(){                                                                                            
-        $eid = input('?post.eid')?input('post.eid'):'';
-        $epassword = input('?post.epassword')?input('post.epassword'):'';
+        $employeeid = input('?post.employeeid')?input('post.employeeid'):'';
+        $password = input('?post.password')?input('post.password'):'';
         $code = input('?post.code')?input('post.code'):'';
         $res =  captcha_check($code);//调用check方法进行验证
         $res = true;
@@ -21,14 +21,14 @@ class Index extends Controller
             // return;
         }elseif ($res == true) {
             $where = [
-                'eid' => $eid,
-                'epassword' => $epassword
+                'employeeid' => $employeeid,
+                'password' => $password
             ];
             $res = db('t_employee')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
-                cookie('adm_id',$res['eid'],$time);
-                session("adm_id", $res['eid']);
+                cookie('adm_id',$res['employeeid'],$time);
+                session("adm_id", $res['employeeid']);
                 echo json_encode('true');
                 // return $this->fetch('/index');
             }else{
@@ -62,7 +62,7 @@ class Index extends Controller
     {
         $id = Session::get('adm_id');
         $where = [
-            'eid' => $id
+            'employeeid' => $id
         ];
         $res = db('t_employee')->where($where)->find();
         $this->assign('username',$res['ename']);
