@@ -46,7 +46,7 @@ layui.use(['layer','table'], function(){
         elem: '#role_table'
         ,page:true
         ,url:"../user/getRole"
-        ,cols: [[{field:'rid',title:'角色ID'}
+        ,cols: [[{field:'roleid',title:'角色ID'}
             ,{field:'rname',title:'角色名称',edit:'text'}
             ,{field:'rintro',title:'角色简介',edit:'text'}
             ,{fixed:'right',title:'操作',toolbar:'#tableBar'}
@@ -62,7 +62,7 @@ layui.use(['layer','table'], function(){
         var tr = obj.tr; //获得当前行 tr 的DOM对象
 
         if(layEvent === 'edit_role_power'){ //查看
-            localStorage.edit_role_power_roleid=data.rid;
+            localStorage.edit_role_power_roleid=data.roleid;
 
             layui.use(['layer','table'], function(){ 
             var layer = layui.layer;
@@ -119,13 +119,13 @@ layui.use(['layer','table'], function(){
 
 
     layer.roleDel = function(data){
-        console.log(data.rid);
+        console.log(data.roleid);
 
         $.ajax({
             url:'{:url("backend/User/delRole")}',
             dataType:'json',
             type:'POST',
-            data:'id='+data.rid,
+            data:'id='+data.roleid,
             success:function(res){
                 console.log(res);
                 // table.render();

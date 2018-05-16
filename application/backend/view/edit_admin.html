@@ -15,19 +15,19 @@
   <div class="layui-form-item"  style = "display : none">
     <label class="layui-form-label">用户ID</label>
     <div class="layui-input-block">
-      <input id = 'eid' type="text" name="eid" class="layui-input">
+      <input id = 'employeeid' type="text" name="employeeid" class="layui-input">
     </div>
   </div>
   <div class="layui-form-item">
     <label class="layui-form-label">用户名称</label>
     <div class="layui-input-block">
-      <input id = 'ename' type="text" name="ename" placeholder="请输入" autocomplete="off" class="layui-input" lay-verify="required|username">
+      <input id = 'name' type="text" name="name" placeholder="请输入" autocomplete="off" class="layui-input" lay-verify="required|username">
     </div>
   </div>
   <div class="layui-form-item">
     <label class="layui-form-label">用户权限</label>
     <div class="layui-input-block">
-      <select id = 'add_admin_role' name = 'rid'>
+      <select id = 'add_admin_role' name = 'roleid'>
       	<option></option>
       </select>
     </div>
@@ -61,7 +61,7 @@ layui.use(['form', 'layedit', 'laydate'], function(){
       data = data.data;
         $("#add_admin_role").html("");
         $.each(data, function(key, val) {
-            var option1 = $("<option>").val(val.rid).text(val.rname);
+            var option1 = $("<option>").val(val.roleid).text(val.rname);
             $("#add_admin_role").append(option1);
         }); 
 
@@ -71,11 +71,11 @@ layui.use(['form', 'layedit', 'laydate'], function(){
           url:'{:url("backend/User/getAdminOne")}',
           dataType:'json',
           type:'POST',
-          data:'eid='+localStorage.editAdminId,
+          data:'employeeid='+localStorage.editAdminId,
           success:function(data){
-            $('#eid').val(data.eid);
-            $('#ename').val(data.ename);
-            $('#add_admin_role').val(data.rid);
+            $('#employeeid').val(data.employeeid);
+            $('#name').val(data.name);
+            $('#add_admin_role').val(data.roleid);
             form.render('select');
           }
         })

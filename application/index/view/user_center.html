@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>说走就走后台</title>
+  <title>个人中心</title>
   <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+  <link rel="stylesheet" href="__STATIC__/layui/css/layui_front.css"  media="all">
   <link rel="stylesheet" type="text/css" href="__CSS__/backend.css">
 </head>
 <body class="layui-layout-body">
@@ -35,7 +36,7 @@
                 </a>
                 {/if}
                 {if condition = '$username != "请登录"'}
-                <a href = "{:url('index/index/user_center')}" target="ifr">
+                <a href = "{:url('index/index/user_center')}">
                     <img src="{$userHead}" class="layui-nav-img">{$username}
                 </a>
                 {/if}
@@ -96,7 +97,18 @@
 layui.use('element', function(){
 	var element = layui.element;
 });
-
+    // $.ajax({
+    //   url:'{:url("index/index/loginSessionChk")}',
+    //   dataType:'json',
+    //   type:'GET',
+    //   success:function(res){
+    //     if(res == 'true'){
+    //       // window.location.reload();
+    //     }else{
+    //       alert('登录失败')
+    //     }
+    //   }
+    // })
 </script>
 </body>
 </html>

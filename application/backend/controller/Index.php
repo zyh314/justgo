@@ -48,7 +48,7 @@ class Index extends Controller
         cookie(null);
         session(null);
         //退出后重定向回登录界面
-        return $this->success('/login');
+        return $this->success('','backend/Index/login');
     }
 
     //登录结束
@@ -65,12 +65,12 @@ class Index extends Controller
             'employeeid' => $id
         ];
         $res = db('t_employee')->where($where)->find();
-        $this->assign('username',$res['ename']);
+        $this->assign('username',$res['name']);
         // $this->assign('uname',$res);
         $where = [
-            'rid' => $res['rid']
+            'roleid' => $res['roleid']
         ];
-        $res0 = db('t_refpurview a')->join('t_menu b','a.pid = b.pid')->where($where)->select();
+        $res0 = db('t_refpower a')->join('t_menu b','a.pid = b.pid')->where($where)->select();
         $this->assign('menu',$res0);
         // echo json_encode($res0);
         return $this->fetch('/index');

@@ -42,18 +42,18 @@ class User extends Controller
     function getAdmin(){
     	$page = input('?post.page')?input('post.page'):'';
     	$count = ($page-1)*5;
-    	$res = db('t_employee a')->join('t_role b','a.rid = b.rid')->limit(5,$count)->select();
+    	$res = db('t_employee a')->join('t_role b','a.roleid = b.roleid')->limit($count,5)->select();
     	// $this->assign('res0',$res);
     	$res = json_encode($res);
     	echo $res;
         // return $this->fetch('/user');
     }
     function chkPsw(){
-    	$eid = input('?post.eid')?input('post.eid'):'';
-    	$epassword = input('?post.epassword')?input('post.epassword'):'';
+    	$employeeid = input('?post.employeeid')?input('post.employeeid'):'';
+    	$password = input('?post.password')?input('post.password'):'';
        	$where = [
-    		'eid' => $eid,
-    		'epassword' => $epassword
+    		'employeeid' => $employeeid,
+    		'password' => $password
     	];
     	$res = db('t_employee')->where($where)->find();
     	// $this->assign('res0',$res);
@@ -61,27 +61,12 @@ class User extends Controller
     	echo $res;
         // return $this->fetch('/user');
     }
-    public function username_login_chk(){
-  //   	$username = isset($_POST['username']);
-    	// $psw = isset($_POST['psw']);
-		// $username = isset($_POST['username'])?$_POST['username']:"";
-		// $psw = isset($_POST['psw'])?$_POST['psw']:"";
-    	$username = input('?post.username')?input('post.username'):'';
-    	$psw = input('?post.psw')?input('post.psw'):'';
-    	$where = [
-    		'Id' => $username,
-    		'psw' => $psw
-    	];
-    	$res = db('admin')->where($where)->find();
-    	// echo Db::table('admin')->getLastSql();
-    	var_dump($res);
-    }
     function getAdminOne(){
-    	$eid = input('?post.eid')?input('post.eid'):'';
+    	$employeeid = input('?post.employeeid')?input('post.employeeid'):'';
        	$where = [
-    		'eid' => $eid
+    		'employeeid' => $employeeid
     	];
-    	$res = db('t_employee a')->join('t_role b','a.rid = b.rid')->where($where)->find();
+    	$res = db('t_employee a')->join('t_role b','a.roleid = b.roleid')->where($where)->find();
     	// $this->assign('res0',$res);
     	$res = json_encode($res);
     	echo $res;
@@ -126,18 +111,9 @@ class User extends Controller
     function delRole(){
     	$id = input('?post.id')?input('post.id'):'';
        	$where = [
-    		'rid' => $id
+    		'roleid' => $id
     	];
     	$res = db('t_role')->where($where)->delete();
-  //   	$res = db('t_role')->limit(10,0)->select();
-  //   	$num = db('t_role')->count();
-  //   	$res1 = [
-		//   'code'=> 0,
-		//   'msg'=> "",
-		//   'count'=> $num,
-		//   'data'=> $res
-		// ] ;
-  //   	$res1 = json_encode($res1);
     	echo $res;
     }
     //锁定用户
@@ -157,16 +133,16 @@ class User extends Controller
     function getOnePower(){
     	$id = input('?post.id')?input('post.id'):'';
        	$where = [
-    		'rid' => $id
+    		'roleid' => $id
     	];
-    	$res = db('t_refpurview')->where($where)->select();
+    	$res = db('t_refpower')->where($where)->select();
     	$res = json_encode($res);
     	echo $res;
     }
     function delAdmin(){
-    	$eid = input('?post.eid')?input('post.eid'):'';
+    	$employeeid = input('?post.employeeid')?input('post.employeeid'):'';
        	$where = [
-    		'eid' => $eid
+    		'employeeid' => $employeeid
     	];
     	$res = db('t_employee')->where($where)->delete();
     	echo $res;
@@ -201,7 +177,7 @@ class User extends Controller
     	$ugender = input('?post.ugender')?input('post.ugender'):'';
     	$uphoneNo = input('?post.uphoneNo')?input('post.uphoneNo'):'';
        	$where = [
-    		'uname' => $uname,
+    		'nickname' => $uname,
     		'uemail' => $uemail,
     		'upassword' => $upassword,
     		'ugender' => $ugender,
@@ -211,61 +187,131 @@ class User extends Controller
     	echo $res;
     }
     function addAdmin(){
-    	$ename = input('?post.ename')?input('post.ename'):'';
-    	$epassword = input('?post.epassword')?input('post.epassword'):'';
-    	$rid = input('?post.rid')?input('post.rid'):'';
-       	$where = [
-    		'ename' => $ename,
-    		'epassword' => $epassword,
-    		'rid' => $rid
-    	];
-    	$res = db('t_employee')->insert($where);
-    	echo $res;
+        $account = input('?post.account')?input('post.account'):'';
+        $name = input('?post.name')?input('post.name'):'';
+        $password = input('?post.password')?input('post.password'):'';
+        $roleid = input('?post.roleid')?input('post.roleid'):'';
+        $locking = input('?post.locking')?input('post.locking'):'';
+        $where0 = [
+            'account' => $account
+        ];
+        $res0 = db('t_employee')->where($where0)->select();
+        if(count($res0)>0){
+            echo json_encode('accountSame');
+            return;
+        }
+        $where = [
+            'account' => $account,
+            'name' => $name,
+            'password' => $password,
+            'roleid' => $roleid,
+            'locking' => $locking
+        ];
+        $res = db('t_employee')->insert($where);
+        echo json_encode($res);
+    }
+    function userNameSame(){
+        $uname = input('?post.uname')?input('post.uname'):'';
+        $where0 = [
+            'uname' => $uname
+        ];
+        $res0 = db('t_user')->where($where0)->select();
+        if(count($res0)>0){
+            echo json_encode('true');
+        }else{
+            echo json_encode('false');
+        }
     }
     function storePower(){
     	$data = input('?post.data')?input('post.data'):'';
     	$data = json_decode($data);
     	//删除原先权限关联
        	$where = [
-    		'rid' => $data[0]->rid
+    		'roleid' => $data[0]->roleid
     	];
-    	$res = db('t_refpurview')->where($where)->delete();
+    	$res = db('t_refpower')->where($where)->delete();
     	//插入新的权限关联
     	$data1 = [];
         for($i = 0; $i < count($data); $i++){
             array_push($data1, [
                 'pid' => $data[$i]->pid,
-                'rid' => $data[$i]->rid
+                'roleid' => $data[$i]->roleid
             ]);
         }
-        $result   =  db('t_refpurview')->insertAll($data1);
+        $result   =  db('t_refpower')->insertAll($data1);
     	echo $res;
     }
     function editAdmin(){
-    	$eid = input('?post.eid')?input('post.eid'):'';
-    	$ename = input('?post.ename')?input('post.ename'):'';
-    	$rid = input('?post.rid')?input('post.rid'):'';
-       	$where = [
-    		'eid' => $eid
-    	];
-       	$data = [
-    		'ename' => $ename,
-    		'rid' => $rid
-    	];
-    	$res = db('t_employee')->where($where)->update($data);
-    	echo $res;
+        $employeeid = input('?post.employeeid')?input('post.employeeid'):'';
+        $name = input('?post.name')?input('post.name'):'';
+        $roleid = input('?post.roleid')?input('post.roleid'):'';
+        $where = [
+            'employeeid' => $employeeid
+        ];
+        $data = [
+            'name' => $name,
+            'roleid' => $roleid
+        ];
+        $res = db('t_employee')->where($where)->update($data);
+        echo $res;
+    }
+    //修改用户信息
+    function editUserInfo(){
+        $userid = input('?post.userid')?input('post.userid'):'';
+        $key = input('?post.key')?input('post.key'):'';
+        $value = input('?post.value')?input('post.value'):'';
+        $where = [
+            'userid' => $userid
+        ];
+        $data = [
+            $key => $value
+        ];
+        $res = db('t_user')->where($where)->update($data);
+        echo $res;
+    }
+    function useAdmin(){
+        $data = input('?post.data')?input('post.data'):'';
+        $data = json_decode($data);
+        foreach ($data as $key => $value) {
+            echo json_encode($value->chk);
+            if($value->chk == 'true'){
+                $where = [
+                    'employeeid' => $value->employeeid
+                ];
+                $data0 = [
+                    'locking' => '使用'
+                ];
+                $res = db('t_employee')->where($where)->update($data0);
+            }
+        }
+    }
+    function lockAdmin(){
+    	$data = input('?post.data')?input('post.data'):'';
+        $data = json_decode($data);
+        foreach ($data as $key => $value) {
+            echo json_encode($value->chk);
+            if($value->chk == 'true'){
+                $where = [
+                    'employeeid' => $value->employeeid
+                ];
+                $data0 = [
+                    'locking' => '锁定'
+                ];
+                $res = db('t_employee')->where($where)->update($data0);
+            }
+        }
     }
     function editAdminPsw(){
-    	$eid = input('?post.eid')?input('post.eid'):'';
-    	$epassword = input('?post.epassword')?input('post.epassword'):'';
-       	$where = [
-    		'eid' => $eid
-    	];
-       	$data = [
-    		'epassword' => $epassword
-    	];
-    	$res = db('t_employee')->where($where)->update($data);
-    	echo $res;
+        $eid = input('?post.eid')?input('post.eid'):'';
+        $epassword = input('?post.epassword')?input('post.epassword'):'';
+        $where = [
+            'employeeid' => $eid
+        ];
+        $data = [
+            'password' => $epassword
+        ];
+        $res = db('t_employee')->where($where)->update($data);
+        echo $res;
     }
     function getAdminCount(){
     	$res = db('t_employee')->count();
