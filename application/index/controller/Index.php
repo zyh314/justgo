@@ -70,6 +70,7 @@ class Index extends Controller
 	        return $this->fetch('/user_center');
         }else{
         	echo json_encode('false');
+            return $this->fetch('/index');
         }
     }
     public function loginChk(){

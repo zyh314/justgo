@@ -36,7 +36,7 @@
                 </a>
                 {/if}
                 {if condition = '$username != "请登录"'}
-                <a href = "{:url('index/index/user_center')}" target="ifr">
+                <a href = "{:url('index/index/user_center')}">
                     <img src="{$userHead}" class="layui-nav-img">{$username}
                 </a>
                 {/if}
@@ -97,7 +97,18 @@
 layui.use('element', function(){
 	var element = layui.element;
 });
-
+    // $.ajax({
+    //   url:'{:url("index/index/loginSessionChk")}',
+    //   dataType:'json',
+    //   type:'GET',
+    //   success:function(res){
+    //     if(res == 'true'){
+    //       // window.location.reload();
+    //     }else{
+    //       alert('登录失败')
+    //     }
+    //   }
+    // })
 </script>
 </body>
 </html>

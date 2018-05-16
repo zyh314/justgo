@@ -18,6 +18,7 @@
 </head>
 <body>
 <div id = 'app'>
+    <input type="" name="" v-model = 'test'>
 <div>
 <div class = 'nav'>当前位置：/系统管理/员工管理</div>
 <div class = 'btn_line_box'>
@@ -79,6 +80,7 @@
 var myVue = new Vue({          
     el: "#app",          
     data: {
+        test:0,
         adminArr:[] ,
         page:[] 
     },         
@@ -294,6 +296,12 @@ var myVue = new Vue({
     }   
 
 });  
+
+
+myVue.$watch('test', function (newValue, oldValue) {
+ console.log(newValue, oldValue) // 输出 2 1
+ console.log(this.test) // 输出 2
+})
 layui.use('layer', function(){ //独立版的layer无需执行这一句
   var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
   //触发事件
