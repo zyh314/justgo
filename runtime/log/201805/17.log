@@ -11273,3 +11273,60 @@
 [ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.000920s ]
 
 ---------------------------------------------------------------
+[ 2018-05-17T17:36:36+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/goods.html
+[ log ] localhost/JustGo0/public/index/index/goods.html [运行时间：0.051810s][吞吐率：19.30req/s] [内存消耗：1,354.84kb] [文件加载：47]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:36:39+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/goods.html
+[ log ] localhost/JustGo0/public/index/index/goods.html [运行时间：0.046756s][吞吐率：21.39req/s] [内存消耗：1,355.06kb] [文件加载：47]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
