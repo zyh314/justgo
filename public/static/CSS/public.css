@@ -1,0 +1,91 @@
+.nav_logo{
+    background: url(../images/header-sprites15@2x.png) no-repeat;
+    background-size: 280px;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    background-position: 0px 6px!important;
+}
+
+#main{
+    height: 800px;
+}
+
+#footer{
+    clear: both;
+    background-color: #3c3c3c;
+    color: #c2c2c2;
+    line-height: 22px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    height: 200px;
+}
+
+.ft_info dt {
+    height: 30px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.ft_content{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.ft_info{
+    padding: 30px 8px 40px 8px;
+}
+
+.ft-info-intro {
+    width: 200px;
+    margin-right: 68px;
+}
+
+#footer .ft-info-intro strong {
+    color: #ff9d00;
+    font-weight: normal;
+}
+
+#footer .ft-info-intro {
+    width: 200px;
+    margin-right: 68px;
+}
+
+#footer .ft-info-col {
+    float: left;
+    display: inline;
+}
+
+.ft-info-about {
+    width: 128px;
+    margin-right: 85px;
+}
+
+#footer .ft-info-col {
+    float: left;
+    display: inline;
+}
+
+#footer .ft-info-service {
+    width: 135px;
+    margin-right: 80px;
+}
+
+#footer .ft-info-col {
+    float: left;
+    display: inline;
+}
+
+#footer .ft-info-service ul {
+    margin-right: -35px;
+}
+
+#footer .ft-info-service li {
+    float: left;
+    width: 85px;
+}
+
+.ft-info-col a{
+    color: #c2c2c2;
+}
