@@ -1,12 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html";i:1526478820;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html";i:1526549910;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>个人中心</title>
+  <title>说走就走后台</title>
   <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
-  <link rel="stylesheet" href="__STATIC__/layui/css/layui_front.css"  media="all">
   <link rel="stylesheet" type="text/css" href="__CSS__/backend.css">
 </head>
 <body class="layui-layout-body">
@@ -16,10 +15,9 @@
             <a href="#" class="nav_logo"></a>
         </div>
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
-            <li class="layui-nav-item"><a href="<?php echo url('index/index/index'); ?>">首页</a></li>
-            <li class="layui-nav-item "><a href="<?php echo url('index/index/travels'); ?>">写游记</a></li>
-            <!-- <li class="layui-nav-item "><a href="<?php echo url('index/index/user_center'); ?>">目的地</a></li> -->
-            <li class="layui-nav-item"><a href="<?php echo url('index/index/goods'); ?>">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item"><a href="#">首页</a></li>
+            <li class="layui-nav-item "><a href="#">目的地</a></li>
+            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -36,7 +34,7 @@
                     请登录
                 </a>
                 <?php endif; if($username != "请登录"): ?>
-                <a href = "<?php echo url('index/index/user_center'); ?>">
+                <a href = "<?php echo url('index/index/user_center'); ?>" target="ifr">
                     <img src="<?php echo $userHead; ?>" class="layui-nav-img"><?php echo $username; ?>
                 </a>
                 <?php endif; ?>
@@ -54,7 +52,7 @@
             </li>
         </ul>
     </div>
-  <div class="layui-side layui-bg-gray" id="user_menu">
+  <div class="layui-side layui-bg-black" id="user_menu">
     <div class="layui-side-scroll">
 	    <ul class="layui-nav layui-nav-tree"  lay-filter="test">
 <?php if(is_array($user_menu) || $user_menu instanceof \think\Collection || $user_menu instanceof \think\Paginator): $i = 0; $__LIST__ = $user_menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;if($vo['pfid'] == 0): ?>
@@ -78,7 +76,7 @@
   <div class="layui-body">
     <!-- 内容主体区域 -->
     <div style="padding: 15px;">
-    	<iframe id = 'frm1' name = 'ifr' src = "<?php echo url('index/index/orders_all'); ?>"></iframe>
+    	<iframe id = 'frm1' name = 'ifr' src = "<?php echo url('backend/index/travels'); ?>"></iframe>
     </div>
   </div>
 </div>
@@ -92,18 +90,7 @@
 layui.use('element', function(){
 	var element = layui.element;
 });
-    // $.ajax({
-    //   url:'<?php echo url("index/index/loginSessionChk"); ?>',
-    //   dataType:'json',
-    //   type:'GET',
-    //   success:function(res){
-    //     if(res == 'true'){
-    //       // window.location.reload();
-    //     }else{
-    //       alert('登录失败')
-    //     }
-    //   }
-    // })
+
 </script>
 </body>
 </html>

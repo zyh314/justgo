@@ -12,7 +12,6 @@ class Index extends Controller
 		'checkSession' => ['except' => 'del,user']
 	];
 	function checkSession(){
-        echo json_encode('test00');
 		return '进行验证';
 	}
     public function index()

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\first.html";i:1526455745;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\first.html";i:1526549485;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

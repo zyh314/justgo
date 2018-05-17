@@ -11330,3 +11330,789 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2018-05-17T17:39:20+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/goods.html
+[ log ] localhost/JustGo0/public/index/index/goods.html [运行时间：0.045732s][吞吐率：21.87req/s] [内存消耗：1,432.49kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'goods',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:39:33+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/travelmall.html
+[ log ] localhost/JustGo0/public/index/index/travelmall.html [运行时间：0.043057s][吞吐率：23.22req/s] [内存消耗：1,432.17kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:41:05+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/travelmall.html
+[ log ] localhost/JustGo0/public/index/index/travelmall.html [运行时间：0.046182s][吞吐率：21.65req/s] [内存消耗：1,432.30kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:43:54+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/travelmall.html
+[ log ] localhost/JustGo0/public/index/index/travelmall.html [运行时间：0.068506s][吞吐率：14.60req/s] [内存消耗：1,432.27kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:43:56+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/index.html
+[ log ] localhost/JustGo0/public/index/index/index.html [运行时间：0.071565s][吞吐率：13.97req/s] [内存消耗：1,940.44kb] [文件加载：56]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)[D:\WEB\PHP\JustGo0\thinkphp\library\think\db\Connection.php:287]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:44:23+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/index.html
+[ log ] localhost/JustGo0/public/index/index/index.html [运行时间：0.086087s][吞吐率：11.62req/s] [内存消耗：2,131.67kb] [文件加载：58]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001517s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.019921s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000926s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:44:24+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/first.html
+[ log ] localhost/JustGo0/public/index/index/first.html [运行时间：0.077227s][吞吐率：12.95req/s] [内存消耗：1,544.88kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:44:25+08:00 ] ::1 ::1 GET /JustGo0/public/index/goods/travelmall.html
+[ log ] localhost/JustGo0/public/index/goods/travelmall.html [运行时间：0.146833s][吞吐率：6.81req/s] [内存消耗：2,315.26kb] [文件加载：58]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelmall[ D:\WEB\PHP\JustGo0\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\travelmall.html [ array (
+  0 => 'sellgoods',
+  1 => 'province',
+  2 => 'newgoods',
+  3 => 'popular',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001619s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_location` [ RunTime:0.016323s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.016287s ]
+[ sql ] [ SQL ] SELECT * FROM `t_location` WHERE  `locateid` IN ( SELECT `locateid` FROM `t_goods` GROUP BY locateid ) [ RunTime:0.017554s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001196s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY soldqty desc LIMIT 0,4 [ RunTime:0.002088s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001535s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY cpubtime desc LIMIT 0,4 [ RunTime:0.002278s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001452s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodsMark` [ RunTime:0.015701s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.001391s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:45:26+08:00 ] ::1 ::1 GET /JustGo0/public/index/goods/travelmall.html
+[ log ] localhost/JustGo0/public/index/goods/travelmall.html [运行时间：0.156733s][吞吐率：6.38req/s] [内存消耗：2,315.66kb] [文件加载：58]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelmall[ D:\WEB\PHP\JustGo0\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\travelmall.html [ array (
+  0 => 'sellgoods',
+  1 => 'province',
+  2 => 'newgoods',
+  3 => 'popular',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001200s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_location` [ RunTime:0.014104s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.016962s ]
+[ sql ] [ SQL ] SELECT * FROM `t_location` WHERE  `locateid` IN ( SELECT `locateid` FROM `t_goods` GROUP BY locateid ) [ RunTime:0.015560s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001041s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY soldqty desc LIMIT 0,4 [ RunTime:0.000873s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000964s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY cpubtime desc LIMIT 0,4 [ RunTime:0.001009s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001219s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodsMark` [ RunTime:0.018919s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.001582s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:45:28+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/user_center.html
+[ log ] localhost/JustGo0/public/index/index/user_center.html [运行时间：0.095405s][吞吐率：10.48req/s] [内存消耗：2,161.91kb] [文件加载：58]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_center',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/goods/travelmall.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_center[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+  3 => 'user_menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001332s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.013032s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000625s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001356s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user_menu` [ RunTime:0.013082s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user_menu` [ RunTime:0.000682s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:45:28+08:00 ] ::1 ::1 GET /JustGo0/public/backend/index/travels.html
+[ log ] localhost/JustGo0/public/backend/index/travels.html [运行时间：0.064385s][吞吐率：15.53req/s] [内存消耗：1,525.77kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'travels',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\backend\controller\Index->travels[ D:\WEB\PHP\JustGo0\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/backend\view\travels.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:45:42+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/user_center.html
+[ log ] localhost/JustGo0/public/index/index/user_center.html [运行时间：0.118964s][吞吐率：8.41req/s] [内存消耗：2,040.45kb] [文件加载：56]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_center',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/goods/travelmall.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_center[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+  3 => 'user_menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001141s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.017402s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.001019s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001627s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user_menu` [ RunTime:0.017545s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user_menu` [ RunTime:0.000804s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:45:42+08:00 ] ::1 ::1 GET /JustGo0/public/backend/index/travels.html
+[ log ] localhost/JustGo0/public/backend/index/travels.html [运行时间：0.065932s][吞吐率：15.17req/s] [内存消耗：1,413.70kb] [文件加载：50]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'travels',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\backend\controller\Index->travels[ D:\WEB\PHP\JustGo0\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/backend\view\travels.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:46:05+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/user_center.html
+[ log ] localhost/JustGo0/public/index/index/user_center.html [运行时间：0.101819s][吞吐率：9.82req/s] [内存消耗：2,040.23kb] [文件加载：56]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_center',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/goods/travelmall.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_center[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+  3 => 'user_menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001134s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.013955s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000548s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000928s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user_menu` [ RunTime:0.013870s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user_menu` [ RunTime:0.000533s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:46:05+08:00 ] ::1 ::1 GET /JustGo0/public/backend/index/travels.html
+[ log ] localhost/JustGo0/public/backend/index/travels.html [运行时间：0.061904s][吞吐率：16.15req/s] [内存消耗：1,413.70kb] [文件加载：50]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'travels',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\backend\controller\Index->travels[ D:\WEB\PHP\JustGo0\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/backend\view\travels.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:46:07+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/orders_all.html
+[ log ] localhost/JustGo0/public/index/index/orders_all.html [运行时间：0.052487s][吞吐率：19.05req/s] [内存消耗：1,549.34kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'orders_all',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->orders_all[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\orders_all.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:46:07+08:00 ] ::1 ::1 GET /JustGo0/public/index/goods/allOrders
+[ log ] localhost/JustGo0/public/index/goods/allOrders [运行时间：0.044292s][吞吐率：22.58req/s] [内存消耗：1,425.27kb] [文件加载：49]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'allOrders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/orders_all.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:49:14+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/user_center.html
+[ log ] localhost/JustGo0/public/index/index/user_center.html [运行时间：0.099666s][吞吐率：10.03req/s] [内存消耗：2,040.23kb] [文件加载：56]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user_center',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/goods/travelmall.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user_center[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+  3 => 'user_menu',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001410s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.015076s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001019s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user_menu` [ RunTime:0.012491s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user_menu` [ RunTime:0.000535s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T17:49:14+08:00 ] ::1 ::1 GET /JustGo0/public/backend/index/travels.html
+[ log ] localhost/JustGo0/public/backend/index/travels.html [运行时间：0.059689s][吞吐率：16.75req/s] [内存消耗：1,413.70kb] [文件加载：50]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'backend',
+    1 => 'index',
+    2 => 'travels',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\backend\controller\Index->travels[ D:\WEB\PHP\JustGo0\application\backend\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/backend\view\travels.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:49:15+08:00 ] ::1 ::1 GET /JustGo0/public/index/index/orders_all.html
+[ log ] localhost/JustGo0/public/index/index/orders_all.html [运行时间：0.044801s][吞吐率：22.32req/s] [内存消耗：1,425.45kb] [文件加载：50]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'orders_all',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/user_center.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->orders_all[ D:\WEB\PHP\JustGo0\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\WEB\PHP\JustGo0\public/../application/index\view\orders_all.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T17:49:15+08:00 ] ::1 ::1 GET /JustGo0/public/index/goods/allOrders
+[ log ] localhost/JustGo0/public/index/goods/allOrders [运行时间：0.076309s][吞吐率：13.10req/s] [内存消耗：1,992.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\WEB\PHP\JustGo0\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'allOrders',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=loginCode; pgv_pvi=5487508480; pgv_si=s4224440320; user_id=1; adm_id=1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/JustGo0/public/index/index/orders_all.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->allOrders[ D:\WEB\PHP\JustGo0\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001208s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_orders` [ RunTime:0.015218s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_orders` WHERE  `t_orders`.`userid` = 1 LIMIT 1 [ RunTime:0.000582s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001469s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_orders` INNER JOIN `t_orderStatus` `t_orderStatus` ON `t_orderStatus`.`orderStatus`=`t_orders`.`orderStatus` INNER JOIN `t_goods` `t_goods` ON `t_goods`.`goodsid`=`t_orders`.`goodsid` WHERE  `t_orders`.`userid` = 1 [ RunTime:0.002509s ]
+
+---------------------------------------------------------------

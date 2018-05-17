@@ -330,4 +330,24 @@ class Goods extends Controller
   	echo json_encode($feedback);
   	
   }
+
+
+
+  // 个人中心
+  
+  /*获取全部订单列表*/
+  public function allOrders(){
+        $id = Session::get('user_id');
+    $page =  input('?get.page')?input('get.page'):"";
+    $limit =  input('?get.limit')?input('get.limit'):"";
+    $count = db('t_orders')->where('t_orders.userid',$id)->count();
+    $result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orders.userid',$id)->limit(($page-1)*$limit,$limit)->select();
+    $feedback = [
+        'code'=>0,
+        'msg'=>"",
+        'count'=>$count,
+        'data'=>$result
+      ];
+    echo json_encode($feedback);
+  }
 }
