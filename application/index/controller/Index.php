@@ -206,6 +206,4 @@ class Index extends Controller
         //退出后重定向回登录界面
         return $this->success('注销成功','index/Index/index');
     }
-
-
 }
