@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526549910;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526572057;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,7 +39,7 @@
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
                 <?php if($username == "请登录"): ?>
-                <a href="#" id="login">
+                <a id="login">
                     <img src="<?php echo $userHead; ?>" class="layui-nav-img">
                     请登录
                 </a>
@@ -142,7 +142,8 @@ document.getElementById('login').onclick = function(){
             shadeClose: true,
             shade: 0.8,
             area: ['380px', '90%'],
-            content: 'index/index/login' //iframe的url
+            content: "<?php echo url('index/index/login'); ?>" //iframe的url
+            // content: 'index/index/login' //iframe的url
         });
       //触发事件
     });

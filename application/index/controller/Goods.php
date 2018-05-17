@@ -90,6 +90,20 @@ class Goods extends Controller
     
     /*旅行商城*/
     public function travelmall(){
+        $id = Session::get('user_id');
+        if($id){
+          $where = [
+              'userid' => $id
+          ];
+          $res = db('t_user')->where($where)->find();
+          $this->assign('username',$res['uname']);
+          $this->assign('userHead',$res['uIcon']);
+          $this->assign('userBtn0','注销');
+        }else{
+          $this->assign('username','请登录');
+          $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+          $this->assign('userBtn0','注册');
+        }
     	$province = db('t_location')->where('locateid','IN',function($query){
     	    $query->table('t_goods')->field('locateid')->group('locateid');
     	})->select();
@@ -226,6 +240,20 @@ class Goods extends Controller
     
     /*跳转订单确认页*/
    public function travelconfirm(){
+    $id = Session::get('user_id');
+    if($id){
+      $where = [
+          'userid' => $id
+      ];
+      $res = db('t_user')->where($where)->find();
+      $this->assign('username',$res['uname']);
+      $this->assign('userHead',$res['uIcon']);
+      $this->assign('userBtn0','注销');
+    }else{
+      $this->assign('username','请登录');
+      $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+      $this->assign('userBtn0','注册');
+    }
    	return $this->fetch('/travelconfirm');
    }
     

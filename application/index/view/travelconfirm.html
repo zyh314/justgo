@@ -20,52 +20,50 @@
 
 <!--导航开始-->
 <div class="layui-layout layui-layout-admin">
-	<div class="layui-header">
-		<div class="layui-logo layui-layout-left">
-			<a href="#" class="nav_logo"></a>
-		</div>
-		<ul class="layui-nav layui-layout-left" lay-filter="demo">
-			<li class="layui-nav-item">
-				<a href="#">首页</a>
-			</li>
-			<li class="layui-nav-item ">
-				<a href="#">目的地</a>
-			</li>
-			<li class="layui-nav-item layui-this">
-				<a href="#">旅行商城<span class="layui-badge-dot"></span></a>
-			</li>
-			<li class="layui-nav-item">
-				<a href="javascript:;">社区</a>
-				<dl class="layui-nav-child">
-					<!-- 二级菜单 -->
-					<dd>
-						<a href="#">结伴</a>
-					</dd>
-					<dd>
-						<a href="#">游记</a>
-					</dd>
-				</dl>
-			</li>
-		</ul>
-		<ul class="layui-nav layui-layout-right" id="nav_user" lay-filter="nav_user">
-			<li class="layui-nav-item">
-				<a href="javascript:;">
-					<img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
-				</a>
-				<dl class="layui-nav-child">
-					<dd>
-						<a href="">基本资料</a>
-					</dd>
-					<dd>
-						<a href="">安全设置</a>
-					</dd>
-				</dl>
-			</li>
-			<li class="layui-nav-item">
-				<a href="#" id="loginOut">注销</a>
-			</li>
-		</ul>
-	</div>
+    <div class="layui-header">
+        <div class="layui-logo layui-layout-left">
+            <a href="#" class="nav_logo"></a>
+        </div>
+        <ul class="layui-nav layui-layout-left"  lay-filter="demo">
+            <li class="layui-nav-item"><a href="{:url('index/index/index')}">首页</a></li>
+            <li class="layui-nav-item "><a href="#">目的地</a></li>
+            <li class="layui-nav-item"><a href="{:url('index/goods/travelmall')}">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">社区</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="#">结伴</a></dd>
+                    <dd><a href="#">游记</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
+            <li class="layui-nav-item">
+                {if condition = '$username == "请登录"'}
+                <a href="#" id="login">
+                    <img src="{$userHead}" class="layui-nav-img">
+                    请登录
+                </a>
+                {/if}
+                {if condition = '$username != "请登录"'}
+                <a href = "{:url('index/index/user_center')}">
+                    <img src="{$userHead}" class="layui-nav-img">{$username}
+                </a>
+                {/if}
+            <!--     <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl> -->
+            </li>
+            <li class="layui-nav-item">
+                {if condition = '$userBtn0 == "注销"'}
+                <a href="{:url('index/index/loginOut')}" id="loginOut">注销</a>
+                {/if}
+                {if condition = '$userBtn0 == "注册"'}
+                <a href="#" id="register">注册</a>
+                {/if}
+            </li>
+        </ul>
+    </div>
 </div>
 <!--导航结束-->
 
@@ -237,8 +235,8 @@
 				url:"{:url('index/goods/payorderinfo')}",
 				dataType:'json',
 				success:function(res){
-					/*console.log(res.onlineUser);
-					console.log(res.goodsArr);*/
+					console.log(res.onlineUser);
+					console.log(res.goodsArr);
 					this.onlineUser = res.onlineUser;
 					this.goodsArr = res.goodsArr;
 					for(var i=0; i<res.goodsArr.length; i++)
@@ -268,6 +266,37 @@
 	
 	
 
+//注册
+document.getElementById('register').onclick = function(){
+    layui.use(['layer','table'], function(){ 
+    var layer = layui.layer;
+        layer.open({
+            type: 2,
+            title: '注册',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['380px', '90%'],
+            content: '../index/register' //iframe的url
+        });
+      //触发事件
+    });
+}
+//登录
+document.getElementById('login').onclick = function(){
+    layui.use(['layer','table'], function(){ 
+    var layer = layui.layer;
+        layer.open({
+            type: 2,
+            title: '登录',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['380px', '90%'],
+            content: "{:url('index/index/login')}" //iframe的url
+            // content: 'index/index/login' //iframe的url
+        });
+      //触发事件
+    });
+}
 
 </script>
 

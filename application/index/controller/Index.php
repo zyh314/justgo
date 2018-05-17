@@ -96,6 +96,7 @@ class Index extends Controller
                 $time=3600*24*7;
                 cookie('user_id',$res['userid'],$time);
                 session("user_id", $res['userid']);
+                session("onlineUser", $res);
                 echo json_encode('true');
                 // return $this->fetch('/index');
             }else{
