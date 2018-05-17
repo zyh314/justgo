@@ -48,6 +48,10 @@ class Index extends Controller
     {
         return $this->fetch('/travels');
     }
+    public function travelmall()
+    {
+        return $this->fetch('/travelmall');
+    }
     public function user_center()
     {
         $id = Session::get('user_id');
