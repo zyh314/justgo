@@ -22,17 +22,18 @@
   <div class="layui-tab-content" style="height: 100px;">
   	<!--全部未付款订单-->
     <div class="layui-tab-item">
-    	<table class="layui-table" lay-data="{width: 1092, height:432, url:'../goods/allunpaid', page:true, id:'allunpaid'}" lay-filter="demo">
+    	<table class="layui-table"  lay-size="lg" lay-data="{width: 1092, height:432, url:'../goods/allunpaid', page:true, id:'allunpaid'}" lay-filter="demo">
 				<thead>
 					<tr>
 					  <th lay-data="{field:'orderid', width:80, sort: true, fixed: true}">订单ID</th>
-					  <th lay-data="{field:'userid', width:80}">用户id</th>
-					  <th lay-data="{field:'image', width:80}">图片</th>
+					  <th lay-data="{field:'uname', width:80}">用户名</th>
+					  <th lay-data="{field:'image', width:120, templet:'#goodsImage'}">图片</th>
 					  <th lay-data="{field:'name', width:100}">景点名</th>
-					  <th lay-data="{field:'price', width:80}">单价</th>
+					  <th lay-data="{field:'orderprice', width:80}">单价</th>
 					  <th lay-data="{field:'orderqty', width:120, sort: true}">购买数量</th>
-					  <th lay-data="{field:'orderprice', width:80, sort: true}">总价</th>
+					  <!--<th lay-data="{field:'orderprice', width:80, sort: true}">总价</th>-->
 					  <th lay-data="{field:'osname', width:90, fixed: 'right'}">订单状态</th>
+					  <th lay-data="{field:'ordernote', width:120}">订单备注</th>
 					  <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}"></th>
 					</tr>
 				</thead>
@@ -43,18 +44,19 @@
     	<div class="layui-btn-group demoTable">
     		<button class="layui-btn" data-type="getCheckData">批量取消订单</button>
     	</div>
-    	<table class="layui-table" lay-data="{width: 1092, height:432, url:'../goods/getpending', page:true, id:'idTest'}" lay-filter="demo">
+    	<table class="layui-table" lay-size="lg" lay-data="{width: 1092, height:432, url:'../goods/getpending', page:true, id:'idTest'}" lay-filter="demo">
 				<thead>
 					<tr>
 						<th lay-data="{type:'checkbox', fixed: 'left'}"></th>
 					  <th lay-data="{field:'orderid', width:80, sort: true, fixed: true}">订单ID</th>
-					  <th lay-data="{field:'userid', width:80}">用户id</th>
-					  <th lay-data="{field:'image', width:80, templet:'#goodsImage'}">图片</th>
+					  <th lay-data="{field:'uname', width:80}">用户名</th>
+					  <th lay-data="{field:'image', width:120, templet:'#goodsImage'}">图片</th>
 					  <th lay-data="{field:'name', width:100}">景点名</th>
-					  <th lay-data="{field:'price', width:80}">单价</th>
+					  <th lay-data="{field:'orderprice', width:80}">单价</th>
 					  <th lay-data="{field:'orderqty', width:120, sort: true}">购买数量</th>
-					  <th lay-data="{field:'orderprice', width:80, sort: true}">总价</th>
+					  <!--<th lay-data="{field:'orderprice', width:80, sort: true}">总价</th>-->
 					  <th lay-data="{field:'osname', width:90, fixed: 'right'}">订单状态</th>
+					  <th lay-data="{field:'ordernote', width:120}">订单备注</th>
 					  <th lay-data="{fixed: 'right', width:178, align:'center', toolbar: '#barDemo'}"></th>
 					</tr>
 				</thead>

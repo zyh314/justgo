@@ -8,84 +8,54 @@ use \think\Redis;
 
 class Index extends Controller
 {
-    //登录
-    
-    function login_chk(){                                                                                            
-        $employeeid = input('?post.employeeid')?input('post.employeeid'):'';
-        $password = input('?post.password')?input('post.password'):'';
-        $code = input('?post.code')?input('post.code'):'';
-        $res =  captcha_check($code);//调用check方法进行验证
-        $res = true;
-        if($res == false){
-            echo json_encode('codeErr');
-            // return;
-        }elseif ($res == true) {
-            $where = [
-                'employeeid' => $employeeid,
-                'password' => $password
-            ];
-            $res = db('t_employee')->where($where)->find();
-            if ($res) {
-                $time=3600*24*7;
-                cookie('adm_id',$res['employeeid'],$time);
-                session("adm_id", $res['employeeid']);
-                echo json_encode('true');
-                // return $this->fetch('/index');
-            }else{
-                echo json_encode('false');
-            }
-        }
-    }
-    function loginSessionChk(){
-        $id = Session::get('adm_id');
-        if($id){
-            echo json_encode('true');
-        }else{
-            echo json_encode('false');
-        }
-    }
-    public function loginOut(){
-        cookie(null);
-        session(null);
-        //退出后重定向回登录界面
-        return $this->success('','backend/Index/login');
-    }
-
-    //登录结束
 	protected $beforeActionList = [
-		'checkSession' => ['except' => 'del,user']
+		'checkSession' => ['only' => 'del,user']
 	];
 	function checkSession(){
 		return '进行验证';
+//		$onlineUser = Session::get('onlineUser');
+//		if(empty($onlineUser)){
+//  		$this->error('登录过期，请重新登录','index/index/login');
+//		}
 	}
     public function index()
     {
-        $id = Session::get('adm_id');
-        $where = [
-            'employeeid' => $id
-        ];
-        $res = db('t_employee')->where($where)->find();
-        $this->assign('username',$res['name']);
-        // $this->assign('uname',$res);
-        $where = [
-            'roleid' => $res['roleid']
-        ];
-        $res0 = db('t_refpower a')->join('t_menu b','a.pid = b.pid')->where($where)->select();
-        $this->assign('menu',$res0);
-        // echo json_encode($res0);
+        $res = db('t_menu')->select();
+        $this->assign('menu',$res);
         return $this->fetch('/index');
-    }
-    public function login()
-    {
-        return $this->fetch('/login');
     }
     public function backend()
     {
         return $this->fetch('/backend');
     }
-    public function add_admin()
+    public function login()
     {
-        return $this->fetch('/add_admin');
+        return $this->fetch('/login');
+    }
+    public function show_menu()
+    {
+    	$res = db('t_menu')->select();
+        // var_dump($res);
+        $res = json_encode($res);
+        // $res = 'hello';
+        // $this->assign('menu','hello');
+        // return $this->fetch('/index');
+        // echo $res;
+    }
+    public function login_chk(){
+  //   	$username = isset($_POST['username']);
+    	// $psw = isset($_POST['psw']);
+		// $username = isset($_POST['username'])?$_POST['username']:"";
+		// $psw = isset($_POST['psw'])?$_POST['psw']:"";
+    	$username = input('?post.username')?input('post.username'):'';
+    	$psw = input('?post.psw')?input('post.psw'):'';
+    	$where = [
+    		'Id' => $username,
+    		'psw' => $psw
+    	];
+    	$res = db('admin')->where($where)->find();
+    	// echo Db::table('admin')->getLastSql();
+    	var_dump($res);
     }
     public function search(){
     	$word = input('?post.word')?input('post.word'):'';
@@ -95,6 +65,8 @@ class Index extends Controller
     	$res = db('record')->where($where)->paginate(5);
     	$this->assign('res0',$res);
         return $this->fetch('/user');
+    	// echo Db::table('admin')->getLastSql();
+    	// var_dump($res);
     }
     public function del(){
     	$userInfo = Session::get('userInfo');
@@ -130,6 +102,8 @@ class Index extends Controller
     }
     public function fabu()
     {
+    	$res = db('t_location')->where('fid',0)->select();
+        $this->assign('location',$res);
         return $this->fetch('/fabu');
     }
     public function goodsInfo()
@@ -138,11 +112,11 @@ class Index extends Controller
     }
     public function pendingPage()
     {
-        return $this->fetch('/pendingPage');
+        return $this->fetch('/pending');
     }
     public function boughtPage()
     {
-        return $this->fetch('/boughtPage');
+        return $this->fetch('/paid');
     }
     public function admin()
     {
@@ -163,10 +137,6 @@ class Index extends Controller
     public function yinXiao()
     {
         return $this->fetch('/yinXiao');
-    }
-    public function register()
-    {
-        return $this->fetch('/register');
     }
 }
 

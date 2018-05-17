@@ -10,10 +10,7 @@
 </head>
 <body ng-app = 'adminApp' ng-controller = 'admin'>
 <!-- <div class = 'iframeClose'>×</div> -->
-<div>
-  <span>余额：</span>
-  <span>{$umoney}</span>
-</div>
+
 <form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
   <div class="layui-form-item">
     <label class="layui-form-label">充值金额</label>
@@ -63,14 +60,38 @@ layui.use(['form', 'layedit', 'laydate'], function(){
   });  
 
    form.on("submit(*)" , function(data){
+    // console.log(data.elem) //被执行事件的元素DOM对象，一般为button对象
+    // console.log(data.form) //被执行提交的form对象，一般在存在form标签时才会返回
+    console.log(data.field) //当前容器的全部表单字段，名值对形式：{name: value}
+    data.field.newPswChk = hex_md5(data.field.newPswChk);
+    data.field.oriPsw = hex_md5(data.field.oriPsw);
+    
     $.ajax({
-      url:'{:url("index/User/editUserMoney")}',
+      url:'{:url("backend/User/chkPsw")}',
       dataType:'json',
       type:'POST',
-      data:'money='+data.field.money,
+      data:'eid='+localStorage.editAdminPsw+'&epassword='+data.field.oriPsw,
       success:function(res){
-        window.location.reload();
-      }
+        if(typeof(res) == 'object'){
+          $.ajax({
+            url:'{:url("backend/User/editAdminPsw")}',
+            dataType:'json',
+            type:'POST',
+            data:'eid='+localStorage.editAdminPsw+'&epassword='+data.field.newPswChk,
+            success:function(res){
+              localStorage.editPsw = '';
+              window.parent.location.reload();
+
+            }
+          })
+        }else{
+          layer.msg('密码不正确', function(){
+            return '密码不正确';
+          });
+        }
+        console.log(typeof(res)); 
+        
+      }.bind(this)
     }) 
   })
    
