@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Tahoma;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style: none;
+    /*float: left;*/
+}
+button{
+    outline:none;
+}
+body{
+    color: #333;
+    background-color: #fff;
+    padding: 15px 30px;
+}
+table{
+    border-collapse: collapse;
+}
+table tr{
+    height: 30px;
+    line-height: 30px;
+}
+table th{
+    width: 150px;
+}
+.btn_line_box{
+    height: 30px;
+    margin: 10px 0;
+}
+.btn_one{
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    background: #fe6767;
+    color: #fff;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    float: left;
+    margin-right: 30px;
+}
+.btn_one:hover{
+    box-shadow: 0 0 5px #555;
+}
+.btn_page{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    background: #fe6767;
+    color: #fff;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    float: left;
+    margin-right: 30px;
+}
+.btn_page:hover{
+    box-shadow: 0 0 5px #555;
+}
+.table0{
+    border: 1px solid #aaa;
+}
+.table0 td{
+    text-align: center;
+}
+.table0 tr:first-child{
+    background-color: #ddd;
+    text-align: center;
+}
+.ul_chk{
+    margin-left: 30px;
+}
+#power_edit_iframe{
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+}
+#add_role_iframe{
+    display: none;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+}
+#add_admin_iframe{
+    display: none;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px;
+}
+.iframeClose{
+    top:10px;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #888;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    right: 15px;
+}
+.iframeClose:hover{
+    box-shadow: 0 0 5px #555;
+}
+.btn{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #fe6767;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    color: #fff;
+    right: 30px;
+}
+.btn:hover{
+    box-shadow: 0 0 5px #555;
+}
+#role_input{
+    margin:70px 0;
+}
+#admin_input{
+    margin:50px 0;
+}
+.input_table{
+
+}
+.good_img{
+    width:30px;
+    height: 30px;
+}
+.good_table input{
+    width: 60px;
+}
+#imgShow{
+    position: fixed;
+    right: 100px;
+    top:100px;
+}
+#show{
+    width: 100px;
+    height: 100px;
+}
