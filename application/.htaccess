@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <IfModule mod_rewrite.c>
 <<<<<<< HEAD:application/.htaccess
   Options +FollowSymlinks -Multiviews
@@ -14,3 +15,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
 >>>>>>> ysl:thinkphp/public/.htaccess
 </IfModule>
+=======
+deny from all
+>>>>>>> 4d6fb807e3051f8c69b96fca95d5bdc0a4716e19
