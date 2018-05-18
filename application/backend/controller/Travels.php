@@ -5,11 +5,8 @@ use \think\Db;
 use \think\Config;
 use \think\Session;
 use \think\Redis;
-<<<<<<< HEAD
 //后端游记管理
-=======
 
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 class Travels extends Controller
 {
 	protected $beforeActionList = [
@@ -18,7 +15,6 @@ class Travels extends Controller
 	public function checkSession(){
 		return '进行验证';
 	}
-<<<<<<< HEAD
     //后台显示评论
     public function showComment()
     {
@@ -202,6 +198,4 @@ class Travels extends Controller
 
 
 
-=======
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 }
