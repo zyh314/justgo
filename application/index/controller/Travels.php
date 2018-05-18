@@ -9,7 +9,6 @@ use \think\Redis;
 use Qiniu\Auth; //七牛云上传文件头部
 use Qiniu\Storage\UploadManager;
 //前端前端管理
-
 class Travels extends Controller
 {
 	protected $beforeActionList = [
@@ -297,7 +296,6 @@ class Travels extends Controller
         $response = ['pages'=>$pages,'data'=>$data,'dingArr'=>$dingArr];
 	    echo json_encode($response);
     }
-
 
 
 

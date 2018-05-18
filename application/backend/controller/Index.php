@@ -123,7 +123,6 @@ class Index extends Controller
     }
     public function boughtPage()
     {
-        return $this->fetch('/boughtPage');
         return $this->fetch('/pending');
     }
     public function boughtPage()
