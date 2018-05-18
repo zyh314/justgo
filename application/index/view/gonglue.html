@@ -14,7 +14,7 @@
 </head>
 <body>
 <!--导航开始-->
-<!-- <div class="layui-layout layui-layout-admin">
+<div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo layui-layout-left">
             <a href="#" class="nav_logo"></a>
@@ -25,7 +25,7 @@
             <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
-                <dl class="layui-nav-child"> 二级菜单
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
                     <dd><a href="#">结伴</a></dd>
                     <dd><a href="#">游记</a></dd>
                 </dl>
@@ -45,16 +45,18 @@
             <li class="layui-nav-item"><a href="#" id="loginOut">注销</a></li>
         </ul>
     </div>
-</div> -->
+</div>
 <!--导航结束-->
 <div class="main">
-    <!--收藏展示-->
-    <div id="loadMore"></div>
+    <!--游记展示-->
+    <div id="loadMore">
+
+    </div>
 </div>
 </body>
 <script>
     // 导航
-    /*layui.use('element', function(){
+    layui.use('element', function(){
         var element = layui.element;
         element.on('nav(demo)', function(elem){
             console.log(elem); //得到当前点击的DOM对象
@@ -62,7 +64,7 @@
         element.on('navDelete(nav_user)',function (elem) {
             console.log(elem);
         });
-    });*/
+    });
 
     //加载更多
     layui.use('flow', function(){
@@ -70,11 +72,13 @@
         flow.load({
             elem: '#loadMore' //流加载容器
             ,done: function(page, next){ //执行下一页的回调
-                var limit = 10,pages,data,content;
+                var limit = 5;
+                var pages;
+                var data;
+                var content;
                 //limit 一页显示条数；page 当前页；pages 总页数
                 $.ajax({
-                    url:"{:url('index/goods/countMark')}",
-                    /*url:"../travels/countTravel",*/
+                    url:"../travels/countTravel",
                     dataType:"json",
                     type:"post",
                     data:{limit:limit,page:page},

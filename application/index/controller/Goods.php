@@ -421,4 +421,48 @@ class Goods extends Controller
       ];
     echo json_encode($feedback);
   }
+
+  /*获取收藏总条数*/
+  public function countMark(){
+    $nowpage = input('?post.page')?input('post.page'):"";
+    $limit = input('?post.limit')?input('post.limit'):"";
+    $data = db('t_goodsmark')->where('userid',Session::get('user_id'))->limit(($nowpage-1)*$limit,$limit)->select();
+    $countMark = db('t_goodsmark')->where('userid',Session::get('user_id'))->count();
+    
+    echo json_encode($countMark);
+
+
+    $limit = input('?post.limit')?input('post.limit'):"";//一页几条
+        $curPage = input('?post.page')?input('post.page'):"";//当前页
+      $count = db("t_travels")->count();//总共有几篇游记
+      $pages = ceil($count/$limit);//总共有几页
+        $data = db('t_travels')->limit(($curPage-1)*$limit,$limit)->select();//查询游记数据
+        //定义空数组装游记点赞数量
+        $dingArr = array();
+        //点赞数量根据travelsid从redis获取
+        foreach ($data as $key=>$value){
+            $travelsid = $value['travelsid'];
+            $redis = new \Redis();
+            //本地连接127.0.0.1 6379是redis的端口
+            $con = $redis -> connect('127.0.0.1',6379);
+            if ($con){
+                $countDing = $redis->hLen($travelsid);
+                array_push($dingArr,$countDing);
+            }
+        }
+
+        $response = ['pages'=>$pages,'data'=>$data,'dingArr'=>$dingArr];
+      echo json_encode($response);
+
+
+
+
+
+
+
+
+
+
+
+  }
 }
