@@ -36,6 +36,12 @@ class User extends Controller
     }
     function getUserOne(){
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        $uid = Session::get('user_id');
+       	$where = [
+    		'uname' => $uid
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 =======
         $uid = Session::get('user_id');
        	$where = [

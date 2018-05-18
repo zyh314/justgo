@@ -57,7 +57,10 @@ class Index extends Controller
         $id = Session::get('user_id');
         if($id){
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $where = [
                 'userid' => $id
             ];
@@ -76,6 +79,9 @@ class Index extends Controller
             return $this->fetch('/user_center');
         }else{
             echo json_encode('false');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 	        $where = [
 	            'userid' => $id
@@ -113,13 +119,19 @@ class Index extends Controller
                 'upassword' => $upassword
             ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $res1 = db('t_user')->where($where)->find();
             if ($res1) {
                 $time=3600*24*7;
                 Cookie::set('user_id',$res1['userid'],$time);
                 Session::set("user_id", $res1['userid']);
                 echo json_encode('true');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $res = db('t_user')->where($where)->find();
             if ($res) {
@@ -342,6 +354,7 @@ class Index extends Controller
         return $this->success('注销成功','index/Index/index');
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     //个人中心
     public function myCenter()
     {
@@ -353,6 +366,8 @@ class Index extends Controller
         }
 
     };
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 =======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 }

@@ -119,6 +119,9 @@ class Index extends Controller
     public function boughtPage()
     {
         return $this->fetch('/boughtPage');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
         return $this->fetch('/pending');
     }

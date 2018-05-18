@@ -11,6 +11,9 @@ use \think\Redis;
 use Qiniu\Auth; //七牛云上传文件头部
 use Qiniu\Storage\UploadManager;
 //前端前端管理
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 
 class Travels extends Controller
@@ -306,6 +309,9 @@ class Travels extends Controller
 
 
 
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     public function index()
     {

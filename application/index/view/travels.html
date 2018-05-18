@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>说走就走</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     <title>wangEditor demo list</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,12 +27,19 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     <link rel="stylesheet" href="__CSS__/layui.css"  media="all">
     <link rel="stylesheet" href="__CSS__/public.css">
     <script src="__JS__/layui.js"></script>
     <script src="__JS__/jquery.js"></script>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 =======
 >>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
@@ -70,6 +80,7 @@
 </div>
 <!--导航结束-->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="layui-upload">
     <button type="button" class="layui-btn" id="test1">上传图片</button>
     <div class="layui-upload-list">
@@ -77,6 +88,8 @@
         <p id="demoText"></p>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 
 <!--上传头图-->
 <div id="topic">
@@ -155,6 +168,37 @@
         // 读取 html
         alert(editor.txt.html())
     }, false);
+<<<<<<< HEAD
+    //上传图片
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+=======
+<div class="layui-upload">
+    <button type="button" class="layui-btn" id="test1">上传图片</button>
+    <div class="layui-upload-list">
+        <img class="layui-upload-img" id="demo1">
+        <p id="demoText"></p>
+    </div>
+</div>
+
+<div id="editor">
+
+</div>
+<button id="btn1">获取html</button>
+</body>
+<script type="text/javascript" src="__JS__/wangEditor.js"></script>
+<script type="text/javascript">
+    //富文本
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
+    editor.create();
+    //获取富文本框内容
+    document.getElementById('btn1').addEventListener('click', function () {
+        // 读取 html
+        alert(editor.txt.html())
+    }, false);
     //上传图片
 >>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
@@ -168,6 +212,7 @@
         //普通图片上传
         var uploadInst = upload.render({
 <<<<<<< HEAD
+<<<<<<< HEAD
             elem: '#test1'
             ,url: '/upload/'
             ,before: function(obj){
@@ -176,6 +221,8 @@
                     $('#demo1').attr('src', result); //图片链接（base64）
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             elem: '.headPicBtn'
             ,url: '{:url("index/travels/uploadHeadPic")}'
             ,before: function(obj){
@@ -191,21 +238,36 @@
                 obj.preview(function(index, file, result){
                     $('#demo1').attr('src', result); //图片链接（base64）
 >>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
                 });
             }
             ,done: function(res){
                 //如果上传失败
 <<<<<<< HEAD
+<<<<<<< HEAD
                 if(res.code > 0){
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
                 if(res.state !== 1){
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
                     return layer.msg('上传失败');
                 }
 <<<<<<< HEAD
                 //上传成功
+=======
+=======
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+<<<<<<< HEAD
+                //上传成功
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 =======
 =======
                 if(res.code > 0){
@@ -225,9 +287,12 @@
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
     })
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     });
 
     //出发时间
@@ -249,6 +314,9 @@
 =======
     })
 >>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
 >>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 
 </script>
