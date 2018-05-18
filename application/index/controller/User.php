@@ -35,9 +35,7 @@ class User extends Controller
     	echo $res;
     }
     function getUserOne(){
-        $uid = Session::get('user_id');
-       	$where = [
-    		'uname' => $uid
+
         $userid = Session::get('user_id');
        	$where = [
     		'userid' => $userid

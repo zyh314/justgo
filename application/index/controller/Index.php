@@ -33,10 +33,6 @@ class Index extends Controller
         }
         return $this->fetch('/index');
     }
-    public function login()
-    {
-        return $this->fetch('/login');
-    }
     public function register()
     {
         return $this->fetch('/register');
@@ -44,10 +40,6 @@ class Index extends Controller
     public function first()
     {
         return $this->fetch('/first');
-    }
-    public function travels()
-    {
-        return $this->fetch('/travels');
     }
     public function travelmall()
     {
@@ -57,24 +49,8 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
-            $where = [
-                'userid' => $id
-            ];
-            $res = db('t_user')->where($where)->find();
-            $this->assign('username',$res['uname']);
-            $this->assign('userHead',$res['uIcon']);
-            $this->assign('userBtn0','注销');
-        }else{
-            $this->assign('username','请登录');
-            $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
-            $this->assign('userBtn0','注册');
-        }
-        if($id){
             $res0 = db('t_user_menu')->select();
             $this->assign('user_menu',$res0);
-            return $this->fetch('/user_center');
-        }else{
-            echo json_encode('false');
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -82,18 +58,12 @@ class Index extends Controller
 	        $this->assign('username',$res['uname']);
 	        $this->assign('userHead',$res['uIcon']);
 	        $this->assign('userBtn0','注销');
+            return $this->fetch('/user_center');
         }else{
+            echo json_encode('false');
         	$this->assign('username','请登录');
         	$this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
 	        $this->assign('userBtn0','注册');
-        }
-        if($id){
-	        $res0 = db('t_user_menu')->select();
-	        $this->assign('user_menu',$res0);
-	        return $this->fetch('/user_center');
-        }else{
-        	echo json_encode('false');
-            return $this->fetch('/index');
         }
     }
     public function loginChk(){
@@ -111,12 +81,7 @@ class Index extends Controller
                 'uname' => $uname,
                 'upassword' => $upassword
             ];
-            $res1 = db('t_user')->where($where)->find();
-            if ($res1) {
-                $time=3600*24*7;
-                Cookie::set('user_id',$res1['userid'],$time);
-                Session::set("user_id", $res1['userid']);
-                echo json_encode('true');
+
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
@@ -335,11 +300,5 @@ class Index extends Controller
         $res = db('t_user')->where($where)->find();
         $this->assign('umoney',$res['umoney']);
         return $this->fetch('/edit_money');
-    }
-    public function loginOut(){
-        cookie(null);
-        session(null);
-        //退出后重定向回登录界面
-        return $this->success('注销成功','index/Index/index');
     }
 }

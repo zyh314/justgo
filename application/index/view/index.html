@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
     <script src="__STATIC__/layui/layui.js"></script>
     <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+
 <style type="text/css">
 #frm1{
     width: 99%;
@@ -28,7 +29,7 @@
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
-            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <!-- <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li> -->
             <li class="layui-nav-item"><a href="{:url('index/goods/travelmall')}">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
@@ -42,7 +43,6 @@
             <li class="layui-nav-item">
                 {if condition = '$username == "请登录"'}
                 <a href="#" id="login">
-                <a id="login">
                     <img src="{$userHead}" class="layui-nav-img">
                     请登录
                 </a>
@@ -56,10 +56,6 @@
                         <dd><a href="">基本资料</a></dd>
                         <dd><a href="">安全设置</a></dd>
                     </dl> -->
-            <!--     <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl> -->
             </li>
             <li class="layui-nav-item">
                 {if condition = '$userBtn0 == "注销"'}
@@ -74,20 +70,7 @@
 </div>
 <!--导航结束-->
 <div id="main">
-    <!--轮播-->
-    <div class="layui-carousel" id="test2" style="margin-top: 15px;">
-        <div carousel-item="">
-            <div>条目1</div>
-            <div>条目2</div>
-            <div>条目3</div>
-            <div>条目4</div>
-        </div>
-    </div>
-</div>
-<a  href="{:url('index/index/showTravels')}?id=4">click me</a>
-<button id="testBtn">点我</button>
     <iframe id = 'frm1' name = 'ifr' src = "{:url('index/index/first')}"></iframe>
-
 </div>
 <!--页脚-->
 <div id="footer">
@@ -134,6 +117,8 @@
 </div>
 <!--页脚结束-->
 </body>
+<script src="__STATIC__/layui/layui.js"></script>
+<script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
 <script>
     layui.use('element', function(){
         var element = layui.element;
@@ -196,9 +181,7 @@
         });
     }
 
-    <script src="__STATIC__/layui/layui.js"></script>
-    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
-<script>
+
 
 //注册
 document.getElementById('register').onclick = function(){
@@ -231,6 +214,5 @@ document.getElementById('login').onclick = function(){
       //触发事件
     });
 }
-
 </script>
 </html>
