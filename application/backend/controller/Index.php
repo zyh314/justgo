@@ -9,10 +9,6 @@ use \think\Redis;
 class Index extends Controller
 {
 	protected $beforeActionList = [
-		'checkSession' => ['except' => 'del,user']
-	];
-	function checkSession(){
-		return '进行验证';
 		'checkSession' => ['only' => 'del,user']
 	];
 	function checkSession(){
@@ -46,9 +42,6 @@ class Index extends Controller
         // return $this->fetch('/index');
         // echo $res;
     }
-
-
-
     public function login_chk(){
   //   	$username = isset($_POST['username']);
     	// $psw = isset($_POST['psw']);
@@ -119,11 +112,6 @@ class Index extends Controller
     }
     public function pendingPage()
     {
-        return $this->fetch('/pendingPage');
-    }
-    public function boughtPage()
-    {
-        return $this->fetch('/boughtPage');
         return $this->fetch('/pending');
     }
     public function boughtPage()

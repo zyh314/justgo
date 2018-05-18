@@ -1,7 +1,6 @@
 <?php
 namespace app\index\controller;
 use \think\Controller;
-use think\Cookie;
 use \think\Db;
 use \think\Config;
 use \think\Session;
@@ -82,7 +81,6 @@ class Index extends Controller
         $uname = input('?post.uname')?input('post.uname'):'';
         $upassword = input('?post.upassword')?input('post.upassword'):'';
         $code = input('?post.code')?input('post.code'):'';
-        //$res =  captcha_check($code);//调用check方法进行验证
         $res =  captcha_check($code);//调用check方法进行验证
         $res = true;
         if($res == false){
@@ -93,12 +91,6 @@ class Index extends Controller
                 'uname' => $uname,
                 'upassword' => $upassword
             ];
-            $res1 = db('t_user')->where($where)->find();
-            if ($res1) {
-                $time=3600*24*7;
-                Cookie::set('user_id',$res1['userid'],$time);
-                Session::set("user_id", $res1['userid']);
-                echo json_encode('true');
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
@@ -111,8 +103,6 @@ class Index extends Controller
                 echo json_encode('false');
             }
         }
-
-
     }
     function loginSessionChk(){
         $id = Session::get('user_id');
@@ -122,6 +112,7 @@ class Index extends Controller
             echo json_encode('false');
         }
     }
+<<<<<<< HEAD
     public function login()
     {
         return $this->fetch('/login');
@@ -220,6 +211,8 @@ class Index extends Controller
         return $this->fetch('/index');
     }
 
+=======
+>>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
     public function search(){
     	$word = input('?post.word')?input('post.word'):'';
     	$where = [
@@ -246,8 +239,6 @@ class Index extends Controller
     	// echo Db::table('admin')->getLastSql();
     	// var_dump($res);
     }
-
-
     public function myTravels()
     {
         return $this->fetch('/myTravels');

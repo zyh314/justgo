@@ -20,7 +20,11 @@ return [
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
+<<<<<<< HEAD
     'app_trace'              => false,
+=======
+    'app_trace'              => true,
+>>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -237,6 +241,7 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+<<<<<<< HEAD
 
     'Message' => [
         'LOGIN_FAILED' => '400 登录失败，请稍后再试',
@@ -256,6 +261,11 @@ return [
         'NO_LOGIN'=>'406 请先登录哦(づ￣ 3￣)づ',
         'PINGLUN_SUCCESSED' => '207 评论成功',
         'PINGLUN_FAILED' => '407 评论失败',
+=======
+    
+    //提示信息配置
+    'Message' => [
+>>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
     	'LOGIN_FAILED' => '登录失败，请稍后再试',
     	'CODE_ERROR' =>'验证码输入错误，请重输',
     	'FILL_IN_ERROR'=>'填写错误',
@@ -278,6 +288,7 @@ return [
 <<<<<<< HEAD
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
+<<<<<<< HEAD
 <<<<<<< HEAD
     	'PAID_SUCCESS'=>'付款成功'
 =======
@@ -302,5 +313,10 @@ return [
 >>>>>>> parent of 1b59046... 518
 =======
 >>>>>>> parent of 1b59046... 518
+=======
+    	'PAID_SUCCESS'=>'付款成功',
+        'COLLECT_SUCCESSED'=>'收藏成功',
+        'COLLECT_CANCELLED'=>'取消收藏'
+>>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
     ],
 ];

@@ -107,14 +107,10 @@ layui.use(['form', 'layedit', 'laydate'], function(){
       data:data.field,
       success:function(res){
         if(res == 'true'){
-<<<<<<< HEAD
-          window.parent.location.reload();
-=======
         	 alert('登录成功')
         window.parent.location.reload();
 //      location.href = "{:url('index/index/index')}";
           
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
         }else{
           alert('登录失败')
         }
