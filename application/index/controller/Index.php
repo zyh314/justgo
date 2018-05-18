@@ -356,4 +356,15 @@ class Index extends Controller
         //退出后重定向回登录界面
         return $this->success('注销成功','index/Index/index');
     }
+    //个人中心
+    public function myCenter()
+    {
+        $userid = Session::get('user_id');
+        if ($userid){
+            return $this->fetch('/myCenter');
+        }else{
+            $this->error('请先登录',"/justgo/public/index/index/myCenter");
+        }
+
+    };
 }
