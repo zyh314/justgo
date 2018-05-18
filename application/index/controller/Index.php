@@ -165,10 +165,6 @@ class Index extends Controller
         }
 
     }
-
-
-
-
     public function user()
     {
     	$page = input('?get.page')?input('get.page'):'';
