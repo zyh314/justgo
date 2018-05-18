@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526455872;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526605370;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,10 +25,9 @@
             <a href="#" class="nav_logo"></a>
         </div>
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
-            <li class="layui-nav-item"><a href="<?php echo url('index/index/index'); ?>">首页</a></li>
-            <li class="layui-nav-item "><a href="<?php echo url('index/index/travels'); ?>">写游记</a></li>
-            <!-- <li class="layui-nav-item "><a href="<?php echo url('index/index/user_center'); ?>">目的地</a></li> -->
-            <li class="layui-nav-item"><a href="<?php echo url('index/index/goods'); ?>">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item"><a href="#">首页</a></li>
+            <li class="layui-nav-item "><a href="#">目的地</a></li>
+            <li class="layui-nav-item"><a href="<?php echo url('index/goods/travelmall'); ?>" target="ifr">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -40,7 +39,7 @@
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
                 <?php if($username == "请登录"): ?>
-                <a href="#" id="login">
+                <a id="login">
                     <img src="<?php echo $userHead; ?>" class="layui-nav-img">
                     请登录
                 </a>
@@ -143,7 +142,8 @@ document.getElementById('login').onclick = function(){
             shadeClose: true,
             shade: 0.8,
             area: ['380px', '90%'],
-            content: '../index/login' //iframe的url
+            content: "<?php echo url('index/index/login'); ?>" //iframe的url
+            // content: 'index/index/login' //iframe的url
         });
       //触发事件
     });

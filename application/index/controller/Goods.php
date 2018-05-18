@@ -90,6 +90,20 @@ class Goods extends Controller
     
     /*旅行商城*/
     public function travelmall(){
+        $id = Session::get('user_id');
+        if($id){
+          $where = [
+              'userid' => $id
+          ];
+          $res = db('t_user')->where($where)->find();
+          $this->assign('username',$res['uname']);
+          $this->assign('userHead',$res['uIcon']);
+          $this->assign('userBtn0','注销');
+        }else{
+          $this->assign('username','请登录');
+          $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+          $this->assign('userBtn0','注册');
+        }
     	$province = db('t_location')->where('locateid','IN',function($query){
     	    $query->table('t_goods')->field('locateid')->group('locateid');
     	})->select();
@@ -229,6 +243,20 @@ class Goods extends Controller
     
     /*跳转订单确认页*/
    public function travelconfirm(){
+    $id = Session::get('user_id');
+    if($id){
+      $where = [
+          'userid' => $id
+      ];
+      $res = db('t_user')->where($where)->find();
+      $this->assign('username',$res['uname']);
+      $this->assign('userHead',$res['uIcon']);
+      $this->assign('userBtn0','注销');
+    }else{
+      $this->assign('username','请登录');
+      $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+      $this->assign('userBtn0','注册');
+    }
    	return $this->fetch('/travelconfirm');
    }
     
@@ -332,5 +360,25 @@ class Goods extends Controller
   	
   	echo json_encode($feedback);
   	
+  }
+
+
+
+  // 个人中心
+  
+  /*获取全部订单列表*/
+  public function allOrders(){
+        $id = Session::get('user_id');
+    $page =  input('?get.page')?input('get.page'):"";
+    $limit =  input('?get.limit')?input('get.limit'):"";
+    $count = db('t_orders')->where('t_orders.userid',$id)->count();
+    $result = db('t_orders')->join('t_orderStatus','t_orderStatus.orderStatus = t_orders.orderStatus')->join('t_goods','t_goods.goodsid = t_orders.goodsid')->where('t_orders.userid',$id)->limit(($page-1)*$limit,$limit)->select();
+    $feedback = [
+        'code'=>0,
+        'msg'=>"",
+        'count'=>$count,
+        'data'=>$result
+      ];
+    echo json_encode($feedback);
   }
 }

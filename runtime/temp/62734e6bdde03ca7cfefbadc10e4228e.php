@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\login.html";i:1526455872;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\login.html";i:1526549910;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,7 +108,10 @@ layui.use(['form', 'layedit', 'laydate'], function(){
       data:data.field,
       success:function(res){
         if(res == 'true'){
-          window.parent.location.reload();
+        	 alert('登录成功')
+        window.parent.location.reload();
+//      location.href = "<?php echo url('index/index/index'); ?>";
+          
         }else{
           alert('登录失败')
         }

@@ -12,7 +12,6 @@ class Index extends Controller
 		'checkSession' => ['except' => 'del,user']
 	];
 	function checkSession(){
-        echo json_encode('test00');
 		return '进行验证';
 	}
     public function index()
@@ -48,6 +47,10 @@ class Index extends Controller
     public function travels()
     {
         return $this->fetch('/travels');
+    }
+    public function travelmall()
+    {
+        return $this->fetch('/travelmall');
     }
     public function user_center()
     {
@@ -93,6 +96,7 @@ class Index extends Controller
                 $time=3600*24*7;
                 cookie('user_id',$res['userid'],$time);
                 session("user_id", $res['userid']);
+                session("onlineUser", $res);
                 echo json_encode('true');
                 // return $this->fetch('/index');
             }else{
