@@ -270,20 +270,8 @@ return [
     	'ADD_SUCCESSED'=>'添加成功',
     	'ADD_FAILED'=>'添加失败',
     	'PLACEORDER_SUCCESSED'=>'添加成功',
-<<<<<<< HEAD
-    	'PLACEORDER_FAILED'=>'添加失败',
-    	'INSUFFICIENT_BALANCE'=>'余额不足',
-<<<<<<< HEAD
     	'PAID_SUCCESS'=>'付款成功',
         'COLLECT_SUCCESSED'=>'收藏成功',
         'COLLECT_CANCELLED'=>'取消收藏'
-=======
-    	'PAID_SUCCESS'=>'付款成功'
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
->>>>>>> 7c42764b069f88dad4d3794d48cc66e74d8184f6
-=======
-    	// 'PAID_SUCCESS'=>'付款成功'
-        'PINGLUN_FAILED' => '407 评论失败'
->>>>>>> 8312a21778f249e28bcea9446143b82f5c50b51a
     ],
 ];

@@ -111,12 +111,10 @@ class Goods extends Controller
     	
     	/*热销*/
     	$sellgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('soldqty desc')->limit(0,4)->select();
-    	
     	/*新品*/
     	$newgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('cpubtime desc')->limit(0,4)->select();
     	/*人气*/
     	$popular = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('markqty desc')->limit(0,4)->select();
-    	
     	$this->assign('sellgoods',$sellgoods);
     	$this->assign('province',$province);
     	$this->assign('newgoods',$newgoods);
@@ -146,17 +144,9 @@ class Goods extends Controller
     	$goodsid = input('?get.goodsid')?input('get.goodsid'):'';
     	$goodsdetail = db('t_goods')->join('t_location b','t_goods.locateid=b.locateid')->where('goodsid',$goodsid)->find();
     	$mark = db('t_goodsmark')->where(['goodsid'=>$goodsid,'userid'=>Session::get('onlineUser')['userid']])->find();
-<<<<<<< HEAD
     	$marksrc=$mark?"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F.png":"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F%20%281%29.png";
-    	
     	$this->assign('goodsdetail',$goodsdetail);
     	$this->assign('marksrc',$marksrc);
-=======
-    	// $mark=$mark?true:false;
-    	
-    	$this->assign('goodsdetail',$goodsdetail);
-    	$this->assign('mark',$mark);
->>>>>>> 8312a21778f249e28bcea9446143b82f5c50b51a
     	return $this->fetch('/traveldetails');
     }
 
