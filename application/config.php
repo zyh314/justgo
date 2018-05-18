@@ -278,11 +278,14 @@ return [
 <<<<<<< HEAD
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
+<<<<<<< HEAD
     	'PAID_SUCCESS'=>'付款成功'
 =======
 <<<<<<< HEAD
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
+=======
+>>>>>>> parent of 1b59046... 518
 <<<<<<< HEAD
     	'PAID_SUCCESS'=>'付款成功',
         'COLLECT_SUCCESSED'=>'收藏成功',
@@ -295,6 +298,9 @@ return [
     	// 'PAID_SUCCESS'=>'付款成功'
         'PINGLUN_FAILED' => '407 评论失败'
 >>>>>>> 8312a21778f249e28bcea9446143b82f5c50b51a
+<<<<<<< HEAD
+>>>>>>> parent of 1b59046... 518
+=======
 >>>>>>> parent of 1b59046... 518
     ],
 ];

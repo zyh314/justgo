@@ -120,6 +120,9 @@ class Goods extends Controller
     	})->limit(0,4)->select();
 =======
     	$popular = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('markqty desc')->limit(0,4)->select();
+<<<<<<< HEAD
+>>>>>>> parent of 1b59046... 518
+=======
 >>>>>>> parent of 1b59046... 518
     	
     	$this->assign('sellgoods',$sellgoods);
@@ -136,12 +139,15 @@ class Goods extends Controller
     	$goodsdetail = db('t_goods')->join('t_location b','t_goods.locateid=b.locateid')->where('goodsid',$goodsid)->find();
     	$mark = db('t_goodsmark')->where(['goodsid'=>$goodsid,'userid'=>Session::get('onlineUser')['userid']])->find();
 <<<<<<< HEAD
+<<<<<<< HEAD
     	$mark=$mark?true:false;
     	
     	$this->assign('goodsdetail',$goodsdetail);
     	$mark->assign('mark',$mark);
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 1b59046... 518
     	$marksrc=$mark?"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F.png":"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F%20%281%29.png";
     	
     	$this->assign('goodsdetail',$goodsdetail);
@@ -152,6 +158,9 @@ class Goods extends Controller
     	$this->assign('goodsdetail',$goodsdetail);
     	$this->assign('mark',$mark);
 >>>>>>> 8312a21778f249e28bcea9446143b82f5c50b51a
+<<<<<<< HEAD
+>>>>>>> parent of 1b59046... 518
+=======
 >>>>>>> parent of 1b59046... 518
     	return $this->fetch('/traveldetails');
     }
