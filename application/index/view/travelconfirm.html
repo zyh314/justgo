@@ -204,21 +204,25 @@
 									$.post("pay", {pendingorders:JSON.stringify(res.data[0]),totalprice:res.data[1],password:value}, 
 									function (data){
 										console.log(data);
-										/*查看提示*/
-					                    layer.confirm('付款成功', { 
-					                    	icon: 1
-					                        ,title: "查看提示"  
-					                        ,btn: ['立即查看','继续购物']
-					                        ,closeBtn: 0
-					                        ,yes:function(index, layero){
-					  							location.href="{:url('index/goods/usercenter')}"
-					  							layer.close(index);
-					  						}
-					  						,cancel: function(){ 
-			   									location.href="{:url('index/goods/travelmall')}"
-					  							layer.close(index);
-			  								}
-					                    });
+										if(data.code==2000){
+											/*付款成功，查看提示*/
+						                    layer.confirm('付款成功', { 
+						                    	icon: 1
+						                        ,title: "查看提示"  
+						                        ,btn: ['立即查看','继续购物']
+						                        ,closeBtn: 0
+						                        ,yes:function(index, layero){
+						  							location.href="{:url('index/goods/usercenter')}"
+						  							layer.close(index);
+						  						}
+						  						,cancel: function(){ 
+				   									location.href="{:url('index/goods/travelmall')}"
+						  							layer.close(index);
+				  								}
+						                    });
+										}else{
+											layer.alert(data.message, {icon: 2});
+										}
 					               	});  
 									layer.close(index);
 								});

@@ -11330,3 +11330,3719 @@
 [ info ] [ LOG ] INIT File
 
 ---------------------------------------------------------------
+[ 2018-05-17T21:34:34+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/ [运行时间：0.127562s][吞吐率：7.84req/s] [内存消耗：2,007.37kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T21:34:34+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/captcha.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/captcha.html [运行时间：0.120532s][吞吐率：8.30req/s] [内存消耗：1,488.80kb] [文件加载：41]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T21:34:49+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.084834s][吞吐率：11.79req/s] [内存消耗：2,481.70kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '62',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => '000',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002438s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.001307s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000744s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:35:03+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.083615s][吞吐率：11.96req/s] [内存消耗：2,481.70kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '62',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => '000',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002017s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.001257s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000526s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:43:32+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.093963s][吞吐率：10.64req/s] [内存消耗：2,481.70kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '62',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => '000',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002583s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.001720s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000663s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:45:51+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.090155s][吞吐率：11.09req/s] [内存消耗：2,481.70kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '62',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => '000',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018339s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.001435s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000702s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:46+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9 [运行时间：0.116635s][吞吐率：8.57req/s] [内存消耗：2,747.34kb] [文件加载：58]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004237s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.002307s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.001818s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:46+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9 [运行时间：0.138241s][吞吐率：7.23req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006737s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.016213s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.005011s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:47+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.110029s][吞吐率：9.09req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001286s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002920s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.002333s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:50+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html [运行时间：0.069665s][吞吐率：14.35req/s] [内存消耗：1,790.09kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'orderinfoconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'data' => '[{"goodsid":"9","quantity":"1"}]',
+)
+[ info ] [ RUN ] app\index\controller\Goods->orderInfoConfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:50+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.137272s][吞吐率：7.28req/s] [内存消耗：2,061.41kb] [文件加载：53]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T21:47:52+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.120907s][吞吐率：8.27req/s] [内存消耗：2,469.67kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002300s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001521s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.000637s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T21:48:04+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.164633s][吞吐率：6.07req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003635s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.006092s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.000835s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:12+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9 [运行时间：0.073574s][吞吐率：13.59req/s] [内存消耗：2,583.18kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001644s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001367s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.007721s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:12+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9 [运行时间：0.127291s][吞吐率：7.86req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002397s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001618s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.000727s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:12+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.101664s][吞吐率：9.84req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001406s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002120s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.002700s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:13+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html [运行时间：0.050198s][吞吐率：19.92req/s] [内存消耗：1,791.75kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'orderinfoconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'data' => '[{"goodsid":"9","quantity":"1"}]',
+)
+[ info ] [ RUN ] app\index\controller\Goods->orderInfoConfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:13+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.074144s][吞吐率：13.49req/s] [内存消耗：1,907.38kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:14+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.136482s][吞吐率：7.33req/s] [内存消耗：2,471.32kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002515s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.015420s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.000769s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:20+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html [运行时间：0.133907s][吞吐率：7.47req/s] [内存消耗：2,536.43kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'placeorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '1288',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsArr' => '[{"goodsid":9,"quantity":"1","soldqty":130,"price":"69.00","goodstatus":"在售","saleType":"普购","cpubtime":"2017-04-20 00:00:00","cshelftime":"2017-03-20 00:00:00","salelimit":null,"saleprice":null,"salePeriod":null,"name":"月牙泉","locateid":271,"image":"http://p8int7f8g.bkt.clouddn.com/%E6%9C%88%E7%89%99%E6%B3%89.jpg","intro":"月牙泉（英文：Crescent Lake）位于月牙泉风景区，古称沙井，俗名药泉，位于甘肃省敦煌市西南5公里鸣沙山北麓。月牙泉南北长近100米，东西宽约25米，泉水东深西浅，最深处约5米..."}]',
+  'ordernote' => 'hhhhhhhhhhhhhhhhh',
+)
+[ info ] [ RUN ] app\index\controller\Goods->placeorder[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003289s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_orders` [ RunTime:0.001624s ]
+[ sql ] [ SQL ] INSERT INTO `t_orders` (`orderid` , `goodsid` , `userid` , `orderprice` , `buytime` , `orderStatus` , `orderqty` , `orderComment` , `ordernote`) VALUES (0 , 9 , 1 , 69 , '2018-05-17 22:05:20' , 1 , 1 , '未评论' , 'hhhhhhhhhhhhhhhhh') [ RunTime:0.004839s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011073s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.002249s ]
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `quantity`=quantity-1  WHERE  `goodsid` = 9 [ RunTime:0.003363s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010286s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `soldqty`=soldqty+1  WHERE  `goodsid` = 9 [ RunTime:0.004558s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001471s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_orders` WHERE  `orderid` = 28 LIMIT 1 [ RunTime:0.000700s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:05:26+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pay
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pay [运行时间：0.067157s][吞吐率：14.89req/s] [内存消耗：1,791.71kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '336',
+  'accept' => '*/*',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'pendingorders' => '[{"orderid":28,"goodsid":9,"userid":1,"orderprice":"69.00","buytime":"2018-05-17 22:05:20","orderStatus":1,"orderqty":1,"orderComment":"未评论","ordernote":"hhhhhhhhhhhhhhhhh"}]',
+  'totalprice' => '69',
+  'password' => '99',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pay[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:26+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：1,907.58kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:26+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.090281s][吞吐率：11.08req/s] [内存消耗：1,790.45kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:28+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.065238s][吞吐率：15.33req/s] [内存消耗：1,907.83kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:29+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.110570s][吞吐率：9.04req/s] [内存消耗：1,791.00kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:32+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9 [运行时间：0.116525s][吞吐率：8.58req/s] [内存消耗：2,582.93kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011171s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.018304s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.001153s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:33+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=9 [运行时间：0.144770s][吞吐率：6.91req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002013s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002402s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.001384s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:33+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.132152s][吞吐率：7.57req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001770s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001260s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.002546s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:34+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html [运行时间：0.068417s][吞吐率：14.62req/s] [内存消耗：1,791.75kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'orderinfoconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'data' => '[{"goodsid":"9","quantity":"1"}]',
+)
+[ info ] [ RUN ] app\index\controller\Goods->orderInfoConfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:34+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.078678s][吞吐率：12.71req/s] [内存消耗：1,907.38kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:34+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.124446s][吞吐率：8.04req/s] [内存消耗：2,471.32kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003340s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.003071s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.002248s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:36+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html [运行时间：0.193782s][吞吐率：5.16req/s] [内存消耗：2,536.27kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'placeorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '1271',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsArr' => '[{"goodsid":9,"quantity":"1","soldqty":131,"price":"69.00","goodstatus":"在售","saleType":"普购","cpubtime":"2017-04-20 00:00:00","cshelftime":"2017-03-20 00:00:00","salelimit":null,"saleprice":null,"salePeriod":null,"name":"月牙泉","locateid":271,"image":"http://p8int7f8g.bkt.clouddn.com/%E6%9C%88%E7%89%99%E6%B3%89.jpg","intro":"月牙泉（英文：Crescent Lake）位于月牙泉风景区，古称沙井，俗名药泉，位于甘肃省敦煌市西南5公里鸣沙山北麓。月牙泉南北长近100米，东西宽约25米，泉水东深西浅，最深处约5米..."}]',
+  'ordernote' => '',
+)
+[ info ] [ RUN ] app\index\controller\Goods->placeorder[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002990s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_orders` [ RunTime:0.002719s ]
+[ sql ] [ SQL ] INSERT INTO `t_orders` (`orderid` , `goodsid` , `userid` , `orderprice` , `buytime` , `orderStatus` , `orderqty` , `orderComment` , `ordernote`) VALUES (0 , 9 , 1 , 69 , '2018-05-17 22:07:36' , 1 , 1 , '未评论' , '') [ RunTime:0.007964s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004538s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.004038s ]
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `quantity`=quantity-1  WHERE  `goodsid` = 9 [ RunTime:0.004371s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002946s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `soldqty`=soldqty+1  WHERE  `goodsid` = 9 [ RunTime:0.007945s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002792s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_orders` WHERE  `orderid` = 29 LIMIT 1 [ RunTime:0.000947s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:07:43+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pay
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pay [运行时间：0.067666s][吞吐率：14.78req/s] [内存消耗：1,791.63kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '319',
+  'accept' => '*/*',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'pendingorders' => '[{"orderid":29,"goodsid":9,"userid":1,"orderprice":"69.00","buytime":"2018-05-17 22:07:36","orderStatus":1,"orderqty":1,"orderComment":"未评论","ordernote":""}]',
+  'totalprice' => '69',
+  'password' => '33',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pay[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:08+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.095158s][吞吐率：10.51req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001628s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.016508s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.001904s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:13+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html [运行时间：0.067461s][吞吐率：14.82req/s] [内存消耗：1,791.75kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'orderinfoconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'data' => '[{"goodsid":"9","quantity":"1"}]',
+)
+[ info ] [ RUN ] app\index\controller\Goods->orderInfoConfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:13+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.079940s][吞吐率：12.51req/s] [内存消耗：1,907.38kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:14+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.133503s][吞吐率：7.49req/s] [内存消耗：2,471.32kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002158s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.006438s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` = 9 LIMIT 1 [ RunTime:0.001255s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:17+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html [运行时间：0.132605s][吞吐率：7.54req/s] [内存消耗：2,536.27kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'placeorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '1271',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsArr' => '[{"goodsid":9,"quantity":"1","soldqty":132,"price":"69.00","goodstatus":"在售","saleType":"普购","cpubtime":"2017-04-20 00:00:00","cshelftime":"2017-03-20 00:00:00","salelimit":null,"saleprice":null,"salePeriod":null,"name":"月牙泉","locateid":271,"image":"http://p8int7f8g.bkt.clouddn.com/%E6%9C%88%E7%89%99%E6%B3%89.jpg","intro":"月牙泉（英文：Crescent Lake）位于月牙泉风景区，古称沙井，俗名药泉，位于甘肃省敦煌市西南5公里鸣沙山北麓。月牙泉南北长近100米，东西宽约25米，泉水东深西浅，最深处约5米..."}]',
+  'ordernote' => '',
+)
+[ info ] [ RUN ] app\index\controller\Goods->placeorder[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010376s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_orders` [ RunTime:0.001110s ]
+[ sql ] [ SQL ] INSERT INTO `t_orders` (`orderid` , `goodsid` , `userid` , `orderprice` , `buytime` , `orderStatus` , `orderqty` , `orderComment` , `ordernote`) VALUES (0 , 9 , 1 , 69 , '2018-05-17 22:10:17' , 1 , 1 , '未评论' , '') [ RunTime:0.017871s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010925s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001265s ]
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `quantity`=quantity-1  WHERE  `goodsid` = 9 [ RunTime:0.003884s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001506s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `soldqty`=soldqty+1  WHERE  `goodsid` = 9 [ RunTime:0.003850s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001981s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_orders` WHERE  `orderid` = 30 LIMIT 1 [ RunTime:0.000691s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:10:27+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pay
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pay [运行时间：0.065065s][吞吐率：15.37req/s] [内存消耗：1,791.63kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '319',
+  'accept' => '*/*',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'pendingorders' => '[{"orderid":30,"goodsid":9,"userid":1,"orderprice":"69.00","buytime":"2018-05-17 22:10:17","orderStatus":1,"orderqty":1,"orderComment":"未评论","ordernote":""}]',
+  'totalprice' => '69',
+  'password' => '22',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pay[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:11:48+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.129479s][吞吐率：7.72req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '9',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001418s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002066s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 9 LIMIT 0,10 [ RunTime:0.000831s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:13:18+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html [运行时间：0.121622s][吞吐率：8.22req/s] [内存消耗：2,715.46kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelmall[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelmall.html [ array (
+  0 => 'sellgoods',
+  1 => 'province',
+  2 => 'newgoods',
+  3 => 'popular',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001422s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_location` [ RunTime:0.001901s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.017258s ]
+[ sql ] [ SQL ] SELECT * FROM `t_location` WHERE  `locateid` IN ( SELECT `locateid` FROM `t_goods` GROUP BY locateid ) [ RunTime:0.001727s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001442s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY soldqty desc LIMIT 0,4 [ RunTime:0.001640s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001889s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY cpubtime desc LIMIT 0,4 [ RunTime:0.001735s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003154s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodsMark` [ RunTime:0.002430s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.000924s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:13:22+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4 [运行时间：0.091744s][吞吐率：10.90req/s] [内存消耗：2,582.93kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001526s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001174s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 4 LIMIT 1 [ RunTime:0.000954s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:13:22+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=4
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=4 [运行时间：0.088618s][吞吐率：11.28req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001850s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002746s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 4 LIMIT 1 [ RunTime:0.002041s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:13:22+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.122034s][吞吐率：8.19req/s] [内存消耗：2,468.49kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001626s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001313s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 4 LIMIT 0,10 [ RunTime:0.000736s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:15:09+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html [运行时间：0.087370s][吞吐率：11.45req/s] [内存消耗：2,529.34kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002804s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.001252s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.001598s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:15:09+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.103072s][吞吐率：9.70req/s] [内存消耗：1,806.21kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:15:11+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.127253s][吞吐率：7.86req/s] [内存消耗：2,468.49kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006067s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001349s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 4 LIMIT 0,10 [ RunTime:0.000849s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:15:12+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html [运行时间：0.118395s][吞吐率：8.45req/s] [内存消耗：2,715.50kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelmall[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelmall.html [ array (
+  0 => 'sellgoods',
+  1 => 'province',
+  2 => 'newgoods',
+  3 => 'popular',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001371s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_location` [ RunTime:0.015515s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001056s ]
+[ sql ] [ SQL ] SELECT * FROM `t_location` WHERE  `locateid` IN ( SELECT `locateid` FROM `t_goods` GROUP BY locateid ) [ RunTime:0.001291s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010009s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY soldqty desc LIMIT 0,4 [ RunTime:0.000864s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010697s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY cpubtime desc LIMIT 0,4 [ RunTime:0.001432s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001209s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodsMark` [ RunTime:0.001127s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.000632s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:15:14+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.126965s][吞吐率：7.88req/s] [内存消耗：2,468.49kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001573s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001405s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 4 LIMIT 0,10 [ RunTime:0.001446s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:00+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1 [运行时间：0.155123s][吞吐率：6.45req/s] [内存消耗：2,582.89kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003582s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.008477s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.003266s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:01+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1 [运行时间：0.131003s][吞吐率：7.63req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002506s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002991s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.001892s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:01+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.109897s][吞吐率：9.10req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001245s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001894s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 1 LIMIT 0,10 [ RunTime:0.001933s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:36+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1 [运行时间：0.090187s][吞吐率：11.09req/s] [内存消耗：2,583.16kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001417s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001114s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.001236s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:36+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1 [运行时间：0.085825s][吞吐率：11.65req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001597s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001418s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.001445s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:36+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.082258s][吞吐率：12.16req/s] [内存消耗：2,467.30kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001277s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001995s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 1 LIMIT 0,10 [ RunTime:0.001741s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:45+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1 [运行时间：0.070568s][吞吐率：14.17req/s] [内存消耗：2,583.41kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002033s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001218s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.000645s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:45+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1 [运行时间：0.097700s][吞吐率：10.24req/s] [内存消耗：2,459.66kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001790s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001223s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.000634s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:22:45+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.113775s][吞吐率：8.79req/s] [内存消耗：2,467.71kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001779s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001378s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 1 LIMIT 0,10 [ RunTime:0.000729s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:05+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1 [运行时间：0.077477s][吞吐率：12.91req/s] [内存消耗：2,583.41kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001330s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001837s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.000664s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:05+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1 [运行时间：0.107332s][吞吐率：9.32req/s] [内存消耗：2,459.66kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001782s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001621s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.000700s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:06+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.076407s][吞吐率：13.09req/s] [内存消耗：2,467.71kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001232s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.000947s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 1 LIMIT 0,10 [ RunTime:0.002887s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:10+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1 [运行时间：0.157096s][吞吐率：6.37req/s] [内存消耗：2,583.41kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002922s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.005842s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.001345s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:10+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=1 [运行时间：0.156500s][吞吐率：6.39req/s] [内存消耗：2,459.66kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003471s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.004900s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.002766s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:11+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.074289s][吞吐率：13.46req/s] [内存消耗：2,467.71kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '1',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002315s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002084s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 1 LIMIT 0,10 [ RunTime:0.001726s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:48+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/orderinfoconfirm.html [运行时间：0.075230s][吞吐率：13.29req/s] [内存消耗：1,791.75kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'orderinfoconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '37',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'data' => '[{"goodsid":"1","quantity":"1"}]',
+)
+[ info ] [ RUN ] app\index\controller\Goods->orderInfoConfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:48+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html [运行时间：0.069780s][吞吐率：14.33req/s] [内存消耗：1,907.38kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelconfirm',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=1',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelconfirm[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelconfirm.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:49+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/payorderinfo.html [运行时间：0.123244s][吞吐率：8.11req/s] [内存消耗：2,471.34kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'payorderinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->payorderinfo[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002336s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001621s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` = 1 LIMIT 1 [ RunTime:0.002843s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:55+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/placeorder.html [运行时间：0.148440s][吞吐率：6.74req/s] [内存消耗：2,536.27kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'placeorder',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '1326',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'goodsArr' => '[{"goodsid":1,"quantity":"1","soldqty":4,"price":"99.00","goodstatus":"在售","saleType":"普购","cpubtime":"2017-03-20 00:00:00","cshelftime":"2017-03-20 00:00:00","salelimit":null,"saleprice":null,"salePeriod":null,"name":"三坊七巷","locateid":161,"image":"http://p8int7f8g.bkt.clouddn.com/%E4%B8%89%E5%9D%8A%E4%B8%83%E5%B7%B7.jpg","intro":"三坊七巷是国家5A级旅游景区，是福州老城区经历了建国后的拆迁建设后仅存下来的一部分。是福州的历史之源、文化之根。三坊七巷自晋、唐形成起，便是贵族和士大夫的聚居地"}]',
+  'ordernote' => '',
+)
+[ info ] [ RUN ] app\index\controller\Goods->placeorder[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010591s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_orders` [ RunTime:0.002376s ]
+[ sql ] [ SQL ] INSERT INTO `t_orders` (`orderid` , `goodsid` , `userid` , `orderprice` , `buytime` , `orderStatus` , `orderqty` , `orderComment` , `ordernote`) VALUES (0 , 1 , 1 , 99 , '2018-05-17 22:23:55' , 1 , 1 , '未评论' , '') [ RunTime:0.005229s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001286s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.001001s ]
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `quantity`=quantity-1  WHERE  `goodsid` = 1 [ RunTime:0.006815s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003534s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `t_goods`  SET `soldqty`=soldqty+1  WHERE  `goodsid` = 1 [ RunTime:0.005427s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002552s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_orders` WHERE  `orderid` = 31 LIMIT 1 [ RunTime:0.005197s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:23:59+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pay
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pay [运行时间：0.080658s][吞吐率：12.40req/s] [内存消耗：1,791.63kb] [文件加载：46]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pay',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '319',
+  'accept' => '*/*',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelconfirm.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'pendingorders' => '[{"orderid":31,"goodsid":1,"userid":1,"orderprice":"99.00","buytime":"2018-05-17 22:23:55","orderStatus":1,"orderqty":1,"orderComment":"未评论","ordernote":""}]',
+  'totalprice' => '99',
+  'password' => '33',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pay[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:25:16+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index [运行时间：0.080911s][吞吐率：12.36req/s] [内存消耗：2,528.91kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001760s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.005184s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000729s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:25:17+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.095768s][吞吐率：10.44req/s] [内存消耗：1,806.08kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:25:20+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/loginout.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginout.html [运行时间：0.092578s][吞吐率：10.80req/s] [内存消耗：2,040.70kb] [文件加载：55]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->loginOut[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:25:23+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html [运行时间：0.114839s][吞吐率：8.71req/s] [内存消耗：1,866.98kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginout.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:25:23+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.088262s][吞吐率：11.33req/s] [内存消耗：1,806.21kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:15+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html [运行时间：0.078774s][吞吐率：12.69req/s] [内存消耗：1,867.40kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginout.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:15+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.101912s][吞吐率：9.81req/s] [内存消耗：1,806.56kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:19+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index/index/login
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login [运行时间：0.118428s][吞吐率：8.44req/s] [内存消耗：1,867.31kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'login',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:19+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/public/static/images/users/default-user-avatar.png
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/public/static/images/users/default-user-avatar.png [运行时间：0.139103s][吞吐率：7.19req/s] [内存消耗：1,507.24kb] [文件加载：45]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'images' => 'users',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:19+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.147467s][吞吐率：6.78req/s] [内存消耗：1,806.05kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:29+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index/index/login
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login [运行时间：0.093036s][吞吐率：10.75req/s] [内存消耗：1,867.32kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'index' => 'login',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:29+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/public/static/images/users/default-user-avatar.png
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/public/static/images/users/default-user-avatar.png [运行时间：0.154948s][吞吐率：6.45req/s] [内存消耗：1,507.24kb] [文件加载：45]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'images' => 'users',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:29+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.160768s][吞吐率：6.22req/s] [内存消耗：1,806.05kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index/index/login',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:42+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/ [运行时间：0.075155s][吞吐率：13.31req/s] [内存消耗：1,861.39kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:42+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/captcha.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/captcha.html [运行时间：0.080502s][吞吐率：12.42req/s] [内存消耗：1,488.75kb] [文件加载：41]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:28:49+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.093990s][吞吐率：10.64req/s] [内存消耗：2,510.58kb] [文件加载：54]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '67',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; user_id=a123; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => 'chcghcnb',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001612s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.003339s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000758s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:29:59+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/loginchk.html [运行时间：0.104750s][吞吐率：9.55req/s] [内存消耗：2,510.54kb] [文件加载：54]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'loginchk',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '67',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'uname' => 'a123',
+  'upassword' => '670b14728ad9902aecba32e22fa4f6bd',
+  'code' => 'chcghcnb',
+)
+[ info ] [ RUN ] app\index\controller\Index->loginChk[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004698s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.018032s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `uname` = 'a123'  AND `upassword` = '670b14728ad9902aecba32e22fa4f6bd' LIMIT 1 [ RunTime:0.000814s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:30:42+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/ [运行时间：0.064008s][吞吐率：15.62req/s] [内存消耗：1,861.65kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:30:42+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/captcha.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/captcha.html [运行时间：0.077760s][吞吐率：12.86req/s] [内存消耗：1,488.90kb] [文件加载：41]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:30:55+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/index
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index [运行时间：0.076269s][吞吐率：13.11req/s] [内存消耗：2,527.40kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\index.html [ array (
+  0 => 'username',
+  1 => 'userHead',
+  2 => 'userBtn0',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001837s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_user` [ RunTime:0.002082s ]
+[ sql ] [ SQL ] SELECT * FROM `t_user` WHERE  `userid` = 1 LIMIT 1 [ RunTime:0.000654s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:30:55+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/index/first.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/first.html [运行时间：0.109973s][吞吐率：9.09req/s] [内存消耗：1,806.08kb] [文件加载：50]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'first',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->first[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\first.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T22:31:05+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html [运行时间：0.336240s][吞吐率：2.97req/s] [内存消耗：2,715.49kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'travelmall',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/index/index',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Goods->travelmall[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\travelmall.html [ array (
+  0 => 'sellgoods',
+  1 => 'province',
+  2 => 'newgoods',
+  3 => 'popular',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003981s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_location` [ RunTime:0.005569s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.003642s ]
+[ sql ] [ SQL ] SELECT * FROM `t_location` WHERE  `locateid` IN ( SELECT `locateid` FROM `t_goods` GROUP BY locateid ) [ RunTime:0.003233s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005778s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY soldqty desc LIMIT 0,4 [ RunTime:0.002245s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012230s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodstatus` = '在售'  AND `saleType` = '普购' ORDER BY cpubtime desc LIMIT 0,4 [ RunTime:0.003563s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003832s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodsMark` [ RunTime:0.007806s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` WHERE  `goodsid` IN ( SELECT `goodsid` FROM `t_goodsMark` GROUP BY goodsid ORDER BY count(goodsid) desc ) LIMIT 0,4 [ RunTime:0.004848s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:31:17+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4 [运行时间：0.100838s][吞吐率：9.92req/s] [内存消耗：2,582.96kb] [文件加载：56]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'traveldetails',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/travelmall.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->traveldetails[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\traveldetails.html [ array (
+  0 => 'goodsdetail',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001555s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goods` [ RunTime:0.017073s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goods` INNER JOIN `t_location` `b` ON `t_goods`.`locateid`=`b`.`locateid` WHERE  `goodsid` = 4 LIMIT 1 [ RunTime:0.000861s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:31:17+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=4
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/getcounts.html?goodsid=4 [运行时间：0.091723s][吞吐率：10.90req/s] [内存消耗：2,459.20kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'getcounts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->getcounts[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001849s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.002439s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `t_goodscomments` WHERE  `goodsid` = 4 LIMIT 1 [ RunTime:0.000972s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T22:31:17+08:00 ] ::1 ::1 POST /hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/pageturning.html [运行时间：0.104545s][吞吐率：9.57req/s] [内存消耗：2,468.49kb] [文件加载：52]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goods',
+    2 => 'pageturning',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'content-length' => '28',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:8000',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/index/goods/traveldetails?goodsid=4',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; PHPSESSID=2lttdjfp9e2pgl3ell2jc1qol2; user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'nowpage' => '1',
+  'limit' => '10',
+  'goodsid' => '4',
+)
+[ info ] [ RUN ] app\index\controller\Goods->pageTurning[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Goods.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001255s ] mysql:dbname=justgo;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `t_goodscomments` [ RunTime:0.001055s ]
+[ sql ] [ SQL ] SELECT * FROM `t_goodscomments` INNER JOIN `t_user` `t_user` ON `t_user`.`userid`=`t_goodscomments`.`userid` WHERE  `goodsid` = 4 LIMIT 0,10 [ RunTime:0.000697s ]
+
+---------------------------------------------------------------
+[ 2018-05-17T23:17:56+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/ [运行时间：1.195344s][吞吐率：0.84req/s] [内存消耗：1,861.50kb] [文件加载：51]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_id=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\public/../application/index\view\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2018-05-17T23:17:56+08:00 ] ::1 ::1 GET /hf171029-stage4/Git/justgozyh/public/captcha.html
+[ log ] localhost:8000/hf171029-stage4/Git/justgozyh/public/captcha.html [运行时间：0.146479s][吞吐率：6.83req/s] [内存消耗：1,488.79kb] [文件加载：41]
+[ info ] [ LANG ] C:\AppServ\www\hf171029-stage4\Git\justgozyh\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:8000',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost:8000/hf171029-stage4/Git/justgozyh/public/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_id=1',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ C:\AppServ\www\hf171029-stage4\Git\justgozyh\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
