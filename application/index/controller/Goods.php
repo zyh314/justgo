@@ -131,10 +131,10 @@ class Goods extends Controller
     	$goodsid = input('?get.goodsid')?input('get.goodsid'):'';
     	$goodsdetail = db('t_goods')->join('t_location b','t_goods.locateid=b.locateid')->where('goodsid',$goodsid)->find();
     	$mark = db('t_goodsmark')->where(['goodsid'=>$goodsid,'userid'=>Session::get('onlineUser')['userid']])->find();
-    	$mark=$mark?true:false;
+    	// $mark=$mark?true:false;
     	
     	$this->assign('goodsdetail',$goodsdetail);
-    	$mark->assign('mark',$mark);
+    	$this->assign('mark',$mark);
     	return $this->fetch('/traveldetails');
     }
     
