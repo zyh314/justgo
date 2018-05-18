@@ -140,6 +140,7 @@ class Goods extends Controller
     	$mark = db('t_goodsmark')->where(['goodsid'=>$goodsid,'userid'=>Session::get('onlineUser')['userid']])->find();
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     	$mark=$mark?true:false;
     	
     	$this->assign('goodsdetail',$goodsdetail);
@@ -162,6 +163,12 @@ class Goods extends Controller
 >>>>>>> parent of 1b59046... 518
 =======
 >>>>>>> parent of 1b59046... 518
+=======
+    	$mark=$mark?true:false;
+    	
+    	$this->assign('goodsdetail',$goodsdetail);
+    	$mark->assign('mark',$mark);
+>>>>>>> parent of 8312a21... 518
     	return $this->fetch('/traveldetails');
     }
     
