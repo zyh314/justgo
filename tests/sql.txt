@@ -1,0 +1,31 @@
+drop database if exists justgo;
+create database justgo default CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+use justgo;
+
+create table if not exists t_menu -- 权限
+( 
+	pid int primary key auto_increment,
+	pname varchar(15) not null,
+	pfid int not null,
+	purl varchar(50)
+)engine=innodb;
+
+INSERT INTO t_menu VALUES -- (主页列表)
+(1,'游记管理',0,null),
+(2,'组队管理',0,null),
+(3,'商品管理',0,null),
+(4,'其他管理',0,null),
+(5,'报表统计',0,null),
+(default,'游记管理',1,'travels.html'),
+(default,'评论管理',1,'comment.html'),
+(default,'组队方案管理',2,'zudui.html'),
+(default,'组队成员管理',2,'chengyuan.html'),
+(default,'商品发布',3,'fabu.html'),
+(default,'商品列表',3,'goodsInfo.html'),
+(default,'未支付订单',3,'pendingPage.html'),
+(default,'已支付订单',3,'boughtPage.html'),
+(default,'员工管理',4,'admin.html'),
+(default,'角色管理',4,'role.html'),
+(default,'客户管理',4,'user.html'),
+(default,'用户统计',5,'yongHuTongJi.html'),
+(default,'营销统计',5,'yinXiao.html');

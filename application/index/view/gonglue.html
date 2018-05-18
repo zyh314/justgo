@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wangEditor demo list</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/gonglue.css">
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+</head>
+<body>
+<!--导航开始-->
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo layui-layout-left">
+            <a href="#" class="nav_logo"></a>
+        </div>
+        <ul class="layui-nav layui-layout-left"  lay-filter="demo">
+            <li class="layui-nav-item"><a href="#">首页</a></li>
+            <li class="layui-nav-item "><a href="#">目的地</a></li>
+            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">社区</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="#">结伴</a></dd>
+                    <dd><a href="#">游记</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="#" id="loginOut">注销</a></li>
+        </ul>
+    </div>
+</div>
+<!--导航结束-->
+<div class="main">
+    <!--游记展示-->
+    <div id="loadMore">
+
+    </div>
+</div>
+</body>
+<script>
+    // 导航
+    layui.use('element', function(){
+        var element = layui.element;
+        element.on('nav(demo)', function(elem){
+            console.log(elem); //得到当前点击的DOM对象
+        });
+        element.on('navDelete(nav_user)',function (elem) {
+            console.log(elem);
+        });
+    });
+
+    //加载更多
+    layui.use('flow', function(){
+        var flow = layui.flow;
+        flow.load({
+            elem: '#loadMore' //流加载容器
+            ,done: function(page, next){ //执行下一页的回调
+                var limit = 5;
+                var pages;
+                var data;
+                var content;
+                //limit 一页显示条数；page 当前页；pages 总页数
+                $.ajax({
+                    url:"../travels/countTravel",
+                    dataType:"json",
+                    type:"post",
+                    data:{limit:limit,page:page},
+                    success:function (res) {
+                        console.log(res);
+                        pages = res.pages;//总页数
+                        data = res.data;//游记data
+                        dingArr = res.dingArr;
+                    }
+                });
+                //模拟数据插入
+                setTimeout(function(){
+                    var lis = [];
+                    for(var i = 0; i < data.length; i++){
+                        //简介 - content里的第一个P标签
+                        //content = data[i].content;
+                        var p = $( data[i].content).first("p")[0].innerText;
+
+                        lis.push('<div class="feed-item test" onclick="jumpDetail('+data[i].travelsid+')" >\n' +
+                            '            <div class="clearfix">\n' +
+                            '                <span class="stat"><span class="num">'+dingArr[i]+'</span> 顶<i class="icon-hand"></i></span>\n' +
+                            '            </div>\n' +
+                            '            <div class="title">\n' +
+                            '               '+data[i].title+'\n' +
+                            '            </div>\n' +
+                            '            <dl class="art clearfix">\n' +
+                            '                <dt>\n' +
+                            '                    <img src=" '+data[i].image+' " style="width: 220px;">\n' +
+                            '                </dt>\n' +
+                            '                <dd>\n' +
+                            '                    <div class="info">'+p+'</div>\n' +
+                            '                </dd>\n' +
+                            '            </dl>\n' +
+                            '        </div>\n' +
+                            '        <div class="hr"></div>')
+                    }
+
+                    //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+                    //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+                    next(lis.join(''), page < pages); //假设总页数为 10
+                }, 500);
+
+
+            }
+        });
+    });
+
+    //游记点击跳转
+    function jumpDetail(travelsid) {
+        //点击游记的id
+        // var travelsid = $(event.target).parents(".feed-item").attr("id");
+        // $.ajax({
+        //     url:"{:url('index/index/showTravels')}?id="+travelsid+""
+        // });
+        location.href="{:url('index/index/showTravels')}?id="+travelsid+"";
+    }
+</script>
+</html>
