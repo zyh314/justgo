@@ -19,20 +19,6 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
-            $where = [
-                'userid' => $id
-            ];
-            $res = db('t_user')->where($where)->find();
-            $this->assign('username',$res['uname']);
-            $this->assign('userHead',$res['uIcon']);
-            $this->assign('userBtn0','注销');
-        }else{
-            $this->assign('username','请登录');
-            $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
-            $this->assign('userBtn0','注册');
-        }
-        return $this->fetch('/index');
-    }
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -71,24 +57,6 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
-            $where = [
-                'userid' => $id
-            ];
-            $res = db('t_user')->where($where)->find();
-            $this->assign('username',$res['uname']);
-            $this->assign('userHead',$res['uIcon']);
-            $this->assign('userBtn0','注销');
-        }else{
-            $this->assign('username','请登录');
-            $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
-            $this->assign('userBtn0','注册');
-        }
-        if($id){
-            $res0 = db('t_user_menu')->select();
-            $this->assign('user_menu',$res0);
-            return $this->fetch('/user_center');
-        }else{
-            echo json_encode('false');
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -153,10 +121,6 @@ class Index extends Controller
         }else{
             echo json_encode('false');
         }
-    }
-    public function backend()
-    {
-        return $this->fetch('/backend');
     }
     public function login()
     {
