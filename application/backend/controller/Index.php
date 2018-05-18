@@ -9,10 +9,21 @@ use \think\Redis;
 class Index extends Controller
 {
 	protected $beforeActionList = [
+<<<<<<< HEAD
 		'checkSession' => ['except' => 'del,user']
 	];
 	function checkSession(){
 		return '进行验证';
+=======
+		'checkSession' => ['only' => 'del,user']
+	];
+	function checkSession(){
+		return '进行验证';
+//		$onlineUser = Session::get('onlineUser');
+//		if(empty($onlineUser)){
+//  		$this->error('登录过期，请重新登录','index/index/login');
+//		}
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 	}
     public function index()
     {
@@ -38,9 +49,12 @@ class Index extends Controller
         // return $this->fetch('/index');
         // echo $res;
     }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     public function login_chk(){
   //   	$username = isset($_POST['username']);
     	// $psw = isset($_POST['psw']);
@@ -101,6 +115,11 @@ class Index extends Controller
     }
     public function fabu()
     {
+<<<<<<< HEAD
+=======
+    	$res = db('t_location')->where('fid',0)->select();
+        $this->assign('location',$res);
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
         return $this->fetch('/fabu');
     }
     public function goodsInfo()
@@ -109,11 +128,19 @@ class Index extends Controller
     }
     public function pendingPage()
     {
+<<<<<<< HEAD
         return $this->fetch('/pendingPage');
     }
     public function boughtPage()
     {
         return $this->fetch('/boughtPage');
+=======
+        return $this->fetch('/pending');
+    }
+    public function boughtPage()
+    {
+        return $this->fetch('/paid');
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     }
     public function admin()
     {

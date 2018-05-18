@@ -35,9 +35,15 @@ class User extends Controller
     	echo $res;
     }
     function getUserOne(){
+<<<<<<< HEAD
         $uid = Session::get('user_id');
        	$where = [
     		'uname' => $uid
+=======
+        $userid = Session::get('user_id');
+       	$where = [
+    		'userid' => $userid
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     	];
     	$res = db('t_user')->where($where)->find();
     	// $this->assign('res0',$res);
@@ -45,4 +51,49 @@ class User extends Controller
     	echo $res;
         // return $this->fetch('/user');
     }
+<<<<<<< HEAD
+=======
+    function editUser(){
+        $userid = Session::get('user_id');
+    	// $userid = input('?post.userid')?input('post.userid'):'';
+    	$nickname = input('?post.nickname')?input('post.nickname'):'';
+    	$uphoneNo = input('?post.uphoneNo')?input('post.uphoneNo'):'';
+    	$uemail = input('?post.uemail')?input('post.uemail'):'';
+       	$where = [
+    		'userid' => $userid
+    	];
+       	$data = [
+    		'nickname' => $nickname,
+    		'uphoneNo' => $uphoneNo,
+    		'uemail' => $uemail
+    	];
+    	$res = db('t_user')->where($where)->update($data);
+    	echo $res;
+    }
+    function editUserPsw(){
+        $userid = Session::get('user_id');
+    	// $userid = input('?post.userid')?input('post.userid'):'';
+    	$upassword = input('?post.upassword')?input('post.upassword'):'';
+       	$where = [
+    		'userid' => $userid
+    	];
+       	$data = [
+    		'upassword' => $upassword
+    	];
+    	$res = db('t_user')->where($where)->update($data);
+    	echo $res;
+    }
+    function editUserMoney(){
+        $userid = Session::get('user_id');
+    	$money = input('?post.money')?input('post.money'):'';
+       	$where = [
+    		'userid' => $userid
+    	];
+       	$data = [
+    		'umoney' => $money
+    	];
+    	$res = db('t_user')->where($where)->setInc('umoney',$money);
+    	echo $res;
+    }
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 }

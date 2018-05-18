@@ -5,10 +5,14 @@ use \think\Db;
 use \think\Config;
 use \think\Session;
 use \think\Redis;
+<<<<<<< HEAD
 //引用七牛CDN的命名空间
 use Qiniu\Auth; //七牛云上传文件头部
 use Qiniu\Storage\UploadManager;
 //前端前端管理
+=======
+
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 class Travels extends Controller
 {
 	protected $beforeActionList = [
@@ -17,6 +21,7 @@ class Travels extends Controller
 	public function checkSession(){
 		return '进行验证';
 	}
+<<<<<<< HEAD
 
 
     //接收头图，返回给隐藏的input
@@ -300,4 +305,10 @@ class Travels extends Controller
 
 
 
+=======
+    public function index()
+    {
+        return $this->fetch('/travels');
+    }
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 }

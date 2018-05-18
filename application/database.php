@@ -27,7 +27,11 @@ return [
     // 数据库连接参数
     'params'          => [],
     // 数据库编码默认采用utf8
+<<<<<<< HEAD
     'charset'         => 'utf8mb4',
+=======
+    'charset'         => 'utf8',
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     // 数据库表前缀
     'prefix'          => '',
     // 数据库调试模式

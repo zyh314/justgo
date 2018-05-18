@@ -8,8 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
+<<<<<<< HEAD
     <script src="__STATIC__/layui/layui.js"></script>
     <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+=======
+<style type="text/css">
+#frm1{
+    width: 99%;
+    min-height: 100vh;
+    border: 0;
+}
+</style>
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 </head>
 <body>
 <!--导航开始-->
@@ -21,7 +31,11 @@
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
+<<<<<<< HEAD
             <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+=======
+            <li class="layui-nav-item"><a href="{:url('index/goods/travelmall')}">旅行商城<span class="layui-badge-dot"></span></a></li>
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -33,7 +47,11 @@
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
                 {if condition = '$username == "请登录"'}
+<<<<<<< HEAD
                 <a href="#" id="login">
+=======
+                <a id="login">
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
                     <img src="{$userHead}" class="layui-nav-img">
                     请登录
                 </a>
@@ -43,10 +61,17 @@
                     <img src="{$userHead}" class="layui-nav-img">{$username}
                 </a>
                 {/if}
+<<<<<<< HEAD
                 <!--     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
                         <dd><a href="">安全设置</a></dd>
                     </dl> -->
+=======
+            <!--     <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl> -->
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
             </li>
             <li class="layui-nav-item">
                 {if condition = '$userBtn0 == "注销"'}
@@ -61,6 +86,7 @@
 </div>
 <!--导航结束-->
 <div id="main">
+<<<<<<< HEAD
     <!--轮播-->
     <div class="layui-carousel" id="test2" style="margin-top: 15px;">
         <div carousel-item="">
@@ -73,6 +99,11 @@
 </div>
 <a  href="{:url('index/index/showTravels')}?id=4">click me</a>
 <button id="testBtn">点我</button>
+=======
+    <iframe id = 'frm1' name = 'ifr' src = "{:url('index/index/first')}"></iframe>
+
+</div>
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 <!--页脚-->
 <div id="footer">
     <div class="ft_content">
@@ -118,6 +149,7 @@
 </div>
 <!--页脚结束-->
 </body>
+<<<<<<< HEAD
 <script>
     layui.use('element', function(){
         var element = layui.element;
@@ -180,6 +212,43 @@
         });
     }
 
+=======
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+<script>
+
+//注册
+document.getElementById('register').onclick = function(){
+    layui.use(['layer','table'], function(){ 
+    var layer = layui.layer;
+        layer.open({
+            type: 2,
+            title: '注册',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['380px', '90%'],
+            content: '../index/register' //iframe的url
+        });
+      //触发事件
+    });
+}
+//登录
+document.getElementById('login').onclick = function(){
+    layui.use(['layer','table'], function(){ 
+    var layer = layui.layer;
+        layer.open({
+            type: 2,
+            title: '登录',
+            shadeClose: true,
+            shade: 0.8,
+            area: ['380px', '90%'],
+            content: "{:url('index/index/login')}" //iframe的url
+            // content: 'index/index/login' //iframe的url
+        });
+      //触发事件
+    });
+}
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 
 </script>
 </html>
