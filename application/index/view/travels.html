@@ -2,6 +2,18 @@
 <html>
 <head>
     <meta charset="UTF-8">
+<<<<<<< HEAD
+    <title>wangEditor demo list</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/travels.css">
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/wangEditor.js'></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+=======
     <title>说走就走</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,6 +22,7 @@
     <link rel="stylesheet" href="__CSS__/public.css">
     <script src="__JS__/layui.js"></script>
     <script src="__JS__/jquery.js"></script>
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 </head>
 <body>
 <!--导航开始-->
@@ -46,6 +59,206 @@
     </div>
 </div>
 <!--导航结束-->
+<<<<<<< HEAD
+
+<!--上传头图-->
+<div id="topic">
+    <div class="set_index "  style="height: 506.333px;">
+        <div class="set_bg">
+            <div class="layui-upload-list" id="headPicDiv1">
+                <img class="layui-upload-img" id="headPic1">
+                <p id="demoText"></p>
+            </div>
+        </div>
+        <div class="set_page">
+            <a role="button" class="set_add headPicBtn"></a>
+            <h2>设置游记头图</h2>
+            <p>图片建议选择尺寸大于1680px的高清大图，如相机原图</p>
+            <div class="clear"></div>
+        </div>
+        <div class="set_title ">
+            <input type="text" id="travelsTitle" value="" placeholder="填写游记标题" maxlength="48">
+            <span>可输入<strong>48</strong>字</span>
+            <input type="text" id="hidePath" style="display: none">
+            <div class="clear"></div>
+        </div>
+        <div class="set_btn">
+            <a role="button" title="重新上传头图" class="a_set headPicBtn"><i></i><span>重新上传头图</span></a>
+            <!--<ul>-->
+                <!--<li><a><i></i><span>重新上传头图</span></a></li>-->
+            <!--</ul>-->
+        </div>
+    </div>
+</div>
+<!--富文本-->
+<div id="editor">
+
+</div>
+
+<div class="layui-collapse">
+    <div class="layui-colla-item">
+        <h2 class="layui-colla-title">还差一步，让你的游记更容易被搜出</h2>
+        <div class="layui-colla-content ">
+            <div class="layui-form-item">
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">出发时间</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input type="text" class="layui-input" id="startTime" style="display: inline-block;width:90% ">
+                        <i class="layui-icon">&#xe637;</i>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">目的地</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input type="text" class="layui-input"  id="destination" style="display: inline-block;width:90% ">
+                        <i class="layui-icon">&#xe715;</i>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">出行天数</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input type="number" class="layui-input" id="days" style="display: inline-block;width:90% ">
+                        <i class="layui-icon">&#xe62e;</i>
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">人均花费</label>
+                    <div class="layui-input-inline" style="width: 200px;">
+                        <input type="number" class="layui-input" id="cost" style="display: inline-block;width:90% ">
+                        <i class="layui-icon">&#xe65e;</i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<button class="layui-btn layui-btn-fluid" id="btn1"> <i class="layui-icon">&#xe642;</i>发表游记</button>
+</body>
+<script type="text/javascript">
+    //出行天数和人均花费屏蔽负数
+    document.getElementById("days").addEventListener("input",function(event){
+        event.target.value = event.target.value.replace(/\-/g,"");
+    });
+    document.getElementById("cost").addEventListener("input",function(event){
+        event.target.value = event.target.value.replace(/\-/g,"");
+    });
+
+    //导航
+    layui.use('element', function(){
+        var element = layui.element;
+        element.on('nav(demo)', function(elem){
+            console.log(elem); //得到当前点击的DOM对象
+        });
+        element.on('navDelete(nav_user)',function (elem) {
+            console.log(elem);
+        });
+    });
+
+
+    $("#loginOut").click(function () {
+        $("#nav_user").hide();
+    });
+
+    //富文本
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    //editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
+    editor.customConfig.uploadImgServer = '{:url("index/travels/uploadContent")}';//上传到服务器
+    editor.customConfig.uploadFileName = 'yourFileName';//设置后端接收名
+
+
+    editor.customConfig.uploadImgHooks = {
+        before: function (xhr, editor, files) {
+            // 图片上传之前触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+            // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+            // return {
+            //     prevent: true,
+            //     msg: '放弃上传'
+            // }
+        },
+        success: function (xhr, editor, result) {
+            // 图片上传并返回结果，图片插入成功之后触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            //console.log("成功啦",result);
+        },
+        fail: function (xhr, editor, result) {
+            // 图片上传并返回结果，但图片插入错误时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            //console.log("失败啦",result);
+        },
+        error: function (xhr, editor) {
+            // 图片上传出错时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+        timeout: function (xhr, editor) {
+            // 图片上传超时时触发
+            // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+        },
+
+        // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+        // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+        customInsert: function (insertImg, result, editor) {
+            // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+            // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+            // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+            var url = result.data.path;
+            insertImg(url);
+            console.log(result);
+
+            // result 必须是一个 JSON 格式字符串！！！否则报错
+        }
+    };
+    editor.create();
+
+    //获取富文本框内容
+    document.getElementById('btn1').addEventListener('click', function () {
+        // 读取 html
+        var content = editor.txt.html();//html内容标签
+        var path = $("#hidePath").val();//头图
+        var title = $("#travelsTitle").val();//获取游记标题
+        var startTime = $("#startTime").val();//出发时间
+        var destination = $("#destination").val();//目的地
+        var days = $("#days").val();//天数
+        var cost = $("#cost").val();//人均花费
+        console.log(title,content,path,startTime,destination,days,cost);
+        if (title){
+            if (content !== "<p><br></p>"){
+                if (path){
+                    $.ajax({
+                        url:"../travels/uploadTravels",
+                        type:"post",
+                        dataType:"json",
+                        data:{title:title,content:content,path:path,startTime:startTime,destination:destination,days:days,cost:cost},
+                        success:function (res) {
+                            if (res.code==204){
+                                location.href="../index/gonglue"
+                            }else if (res.code==404){
+                                layer.msg(res.message);
+                            }
+
+                        }
+                    });
+                }else {
+                    layer.msg("请上传头图");
+                }
+            }else{
+                layer.msg("请填写内容");
+            }
+        }else{
+            layer.msg("请填写标题");
+        }
+    }, false);
+=======
 <div class="layui-upload">
     <button type="button" class="layui-btn" id="test1">上传图片</button>
     <div class="layui-upload-list">
@@ -72,6 +285,7 @@
         alert(editor.txt.html())
     }, false);
     //上传图片
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 
 
     //图片上传
@@ -81,20 +295,42 @@
 
         //普通图片上传
         var uploadInst = upload.render({
+<<<<<<< HEAD
+            elem: '.headPicBtn'
+            ,url: '{:url("index/travels/uploadHeadPic")}'
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    //$('.set_index').attr('src', result); //图片链接（base64）
+                    $('.set_index').css("background",'url('+result+')');
+=======
             elem: '#test1'
             ,url: '/upload/'
             ,before: function(obj){
                 //预读本地文件示例，不支持ie8
                 obj.preview(function(index, file, result){
                     $('#demo1').attr('src', result); //图片链接（base64）
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
                 });
             }
             ,done: function(res){
                 //如果上传失败
+<<<<<<< HEAD
+                if(res.state !== 1){
+                    return layer.msg('上传失败');
+                }else{
+                    //上传成功
+                    $('.set_page').hide();
+                    layer.msg('上传成功，提交确认');
+                    $("#hidePath").attr('value', res.path); //将图片路径放进隐藏input
+                    $(".set_btn").show();
+                }
+=======
                 if(res.code > 0){
                     return layer.msg('上传失败');
                 }
                 //上传成功
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
             }
             ,error: function(){
                 //演示失败状态，并实现重传
@@ -105,7 +341,28 @@
                 });
             }
         });
+<<<<<<< HEAD
+    });
+
+    //出发时间
+    layui.use('laydate', function(){
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#startTime' //指定元素
+        });
+    });
+
+    $("#btn2").click(function () {
+        var time = $("#startTime").val();
+        console.log(time);
+    });
+
+
+=======
     })
+>>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 
 </script>
 </html>
