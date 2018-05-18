@@ -1,10 +1,7 @@
 <?php
 namespace app\index\controller;
 use \think\Controller;
-<<<<<<< HEAD
 use think\Cookie;
-=======
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 use \think\Db;
 use \think\Config;
 use \think\Session;
@@ -22,7 +19,6 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
-<<<<<<< HEAD
             $where = [
                 'userid' => $id
             ];
@@ -37,7 +33,6 @@ class Index extends Controller
         }
         return $this->fetch('/index');
     }
-=======
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -72,12 +67,10 @@ class Index extends Controller
     {
         return $this->fetch('/travelmall');
     }
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     public function user_center()
     {
         $id = Session::get('user_id');
         if($id){
-<<<<<<< HEAD
             $where = [
                 'userid' => $id
             ];
@@ -96,7 +89,6 @@ class Index extends Controller
             return $this->fetch('/user_center');
         }else{
             echo json_encode('false');
-=======
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -116,18 +108,14 @@ class Index extends Controller
         }else{
         	echo json_encode('false');
             return $this->fetch('/index');
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
         }
     }
     public function loginChk(){
         $uname = input('?post.uname')?input('post.uname'):'';
         $upassword = input('?post.upassword')?input('post.upassword'):'';
         $code = input('?post.code')?input('post.code'):'';
-<<<<<<< HEAD
         //$res =  captcha_check($code);//调用check方法进行验证
-=======
         $res =  captcha_check($code);//调用check方法进行验证
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
         $res = true;
         if($res == false){
             echo json_encode('codeErr');
@@ -137,14 +125,12 @@ class Index extends Controller
                 'uname' => $uname,
                 'upassword' => $upassword
             ];
-<<<<<<< HEAD
             $res1 = db('t_user')->where($where)->find();
             if ($res1) {
                 $time=3600*24*7;
                 Cookie::set('user_id',$res1['userid'],$time);
                 Session::set("user_id", $res1['userid']);
                 echo json_encode('true');
-=======
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
@@ -153,16 +139,12 @@ class Index extends Controller
                 session("onlineUser", $res);
                 echo json_encode('true');
                 // return $this->fetch('/index');
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
             }else{
                 echo json_encode('false');
             }
         }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     }
     function loginSessionChk(){
         $id = Session::get('user_id');
@@ -172,7 +154,6 @@ class Index extends Controller
             echo json_encode('false');
         }
     }
-<<<<<<< HEAD
     public function backend()
     {
         return $this->fetch('/backend');
@@ -275,8 +256,6 @@ class Index extends Controller
         return $this->fetch('/index');
     }
 
-=======
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
     public function search(){
     	$word = input('?post.word')?input('post.word'):'';
     	$where = [
@@ -303,10 +282,8 @@ class Index extends Controller
     	// echo Db::table('admin')->getLastSql();
     	// var_dump($res);
     }
-<<<<<<< HEAD
 
 
-=======
     public function myTravels()
     {
         return $this->fetch('/myTravels');
@@ -379,5 +356,4 @@ class Index extends Controller
         //退出后重定向回登录界面
         return $this->success('注销成功','index/Index/index');
     }
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
 }
