@@ -23,7 +23,7 @@
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
-            <li class="layui-nav-item layui-this"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+            <li class="layui-nav-item"><a href="{:url('index/goods/travelmall')}">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
@@ -34,16 +34,30 @@
         </ul>
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    贤心
+                {if condition = '$username == "请登录"'}
+                <a id="login">
+                    <img src="{$userHead}" class="layui-nav-img">
+                    请登录
                 </a>
-                <dl class="layui-nav-child">
+                {/if}
+                {if condition = '$username != "请登录"'}
+                <a href = "{:url('index/index/user_center')}">
+                    <img src="{$userHead}" class="layui-nav-img">{$username}
+                </a>
+                {/if}
+            <!--     <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
                     <dd><a href="">安全设置</a></dd>
-                </dl>
+                </dl> -->
             </li>
-            <li class="layui-nav-item"><a href="#" id="loginOut">注销</a></li>
+            <li class="layui-nav-item">
+                {if condition = '$userBtn0 == "注销"'}
+                <a href="{:url('index/index/loginOut')}" id="loginOut">注销</a>
+                {/if}
+                {if condition = '$userBtn0 == "注册"'}
+                <a href="#" id="register">注册</a>
+                {/if}
+            </li>
         </ul>
     </div>
 </div>
@@ -88,19 +102,17 @@
 			<img style="width: 465px;" src="{$goodsdetail.image}" />
 			<div class="spaceAround"  style="margin: 5px;">
 				<div id="markdiv">
-					{if condirui}
-					<img goodsid="{$goodsdetail.goodsid}" id="mark" src="http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F%20%281%29.png" />
+					<img goodsid="{$goodsdetail.goodsid}" id="mark" src="{$marksrc}" />
 					<span>收藏</span>
 					<span>{$goodsdetail.markqty}</span>
 				</div>
-				<div>
+				<div id="share">
 					<i style="font-size: 21px;" class="layui-icon layui-icon-login-wechat"></i>
 					<i style="font-size: 21px;" class="layui-icon layui-icon-login-qq"></i>
 					<i style="font-size: 21px;" class="layui-icon layui-icon-login-weibo"></i>
 					分享
 				</div>
 			</div>
-			
 		</div>
 		<div class="layui-col-md4">
 			<p class="goodsname">{$goodsdetail.name}</p>
@@ -128,19 +140,10 @@
 	
 	<div class="layui-row">
 		<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
-			<ul class="layui-tab-title" id="theScroll" style="position: sticky; top: 0;">
-				<li class="layui-this">
-					产品介绍
-					<!--<a href="#one">产品介绍</a>-->
-				</li>
-				<li>
-					购买须知
-					<!--<a href="#two">购买须知</a>-->
-				</li>
-				<li>
-					用户点评
-					<!--<a href="#three">用户点评</a>-->
-				</li>
+			<ul class="layui-tab-title" id="theScroll" style="position: sticky; top: 0; background-color:white">
+				<li class="layui-this">产品介绍</li>
+				<li>购买须知</li>
+				<li>用户点评</li>
 			</ul>
 			<!--购买须知-->
 			<div class="layui-tab-content">
@@ -172,9 +175,7 @@
 				
 				<!--用户评论-->
 				<div class="layui-tab-item">
-					<div id="goodsComments">
-						
-					</div>
+					<div id="goodsComments"></div>
 					<div id="page"></div>
 				</div>
 			</div>
@@ -346,12 +347,29 @@
 	  	
 	  	//收藏商品
 	  	$('#markdiv').click(function(){
-	  		$('#mark').attr('src','http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F.png');
+	  		if($('#mark').attr('src')=='http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F.png'){
+	  			$markStatus = 1 //已收藏，取消收藏
+	  		}else{
+	  			$markStatus = 0 //未收藏，点击收藏
+	  		}
 	  		$goodsid = $(event.target).attr('goodsid')
-	  		获取商品id
-	  		修改收藏表/商品表
-	  		弹出提示
+	  		$.ajax({
+		    	type:"post",
+		    	url:"{:url('index/goods/markable')}",
+		    	data:{'goodsid':$goodsid,'markStatus':$markStatus},
+		    	dataType:'json',
+		    	success:function(res){
+		    		layer.msg(res.message, function(){
+					  location.reload(true);
+					});
+		    	}
+		    });
 	  	})
+
+	  	//分享
+	  	/*$('#share').click(function(){
+	  		layer.tips('333');
+	  	})*/
     });
 	
     

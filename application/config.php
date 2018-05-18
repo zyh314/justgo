@@ -261,6 +261,8 @@ return [
     	'PLACEORDER_SUCCESSED'=>'添加成功',
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
-    	'PAID_SUCCESS'=>'付款成功'
+    	'PAID_SUCCESS'=>'付款成功',
+        'COLLECT_SUCCESSED'=>'收藏成功',
+        'COLLECT_CANCELLED'=>'取消收藏'
     ],
 ];
