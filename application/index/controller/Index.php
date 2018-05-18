@@ -33,20 +33,6 @@ class Index extends Controller
         }
         return $this->fetch('/index');
     }
-	        $where = [
-	            'userid' => $id
-	        ];
-	        $res = db('t_user')->where($where)->find();
-	        $this->assign('username',$res['uname']);
-	        $this->assign('userHead',$res['uIcon']);
-	        $this->assign('userBtn0','注销');
-        }else{
-        	$this->assign('username','请登录');
-        	$this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
-	        $this->assign('userBtn0','注册');
-        }
-        return $this->fetch('/index');
-    }
     public function login()
     {
         return $this->fetch('/login');

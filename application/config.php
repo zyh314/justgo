@@ -20,11 +20,8 @@ return [
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
-<<<<<<< HEAD
     'app_trace'              => false,
-=======
-    'app_trace'              => true,
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+    // 'app_trace'              => true,
     // 应用模式状态
     'app_status'             => '',
     // 是否支持多模块
@@ -241,7 +238,6 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
-<<<<<<< HEAD
 
     'Message' => [
         'LOGIN_FAILED' => '400 登录失败，请稍后再试',
@@ -260,11 +256,7 @@ return [
         'DING_FAILED'=>'405 顶过就不能再顶了老哥',
         'NO_LOGIN'=>'406 请先登录哦(づ￣ 3￣)づ',
         'PINGLUN_SUCCESSED' => '207 评论成功',
-        'PINGLUN_FAILED' => '407 评论失败'
-=======
-    
-    //提示信息配置
-    'Message' => [
+        'PINGLUN_FAILED' => '407 评论失败',
     	'LOGIN_FAILED' => '登录失败，请稍后再试',
     	'CODE_ERROR' =>'验证码输入错误，请重输',
     	'FILL_IN_ERROR'=>'填写错误',
@@ -286,7 +278,6 @@ return [
     	'PLACEORDER_SUCCESSED'=>'添加成功',
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
-    	'PAID_SUCCESS'=>'付款成功'
->>>>>>> 7295d01f57da9a80ec538b34fc09136edce62711
+    	// 'PAID_SUCCESS'=>'付款成功'
     ],
 ];
