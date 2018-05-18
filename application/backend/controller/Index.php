@@ -13,10 +13,7 @@ class Index extends Controller
 	];
 	function checkSession(){
 		return '进行验证';
-		'checkSession' => ['only' => 'del,user']
-	];
-	function checkSession(){
-		return '进行验证';
+		// 'checkSession' => ['only' => 'del,user'];
 //		$onlineUser = Session::get('onlineUser');
 //		if(empty($onlineUser)){
 //  		$this->error('登录过期，请重新登录','index/index/login');
@@ -124,10 +121,6 @@ class Index extends Controller
     public function boughtPage()
     {
         return $this->fetch('/pending');
-    }
-    public function boughtPage()
-    {
-        return $this->fetch('/paid');
     }
     public function admin()
     {
