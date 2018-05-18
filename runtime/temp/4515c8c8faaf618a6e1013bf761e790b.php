@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"D:\WEB\PHP\JustGo0\public/../application/index\view\orders_all.html";i:1526549485;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"D:\WEB\PHP\JustGo0\public/../application/index\view\orders_all.html";i:1526606338;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,6 +66,7 @@ layui.use(['layer','table'], function(){
             ,{field:'orderprice',title:'单价'}
             ,{field:'orderqty',title:'购买数量'}
             ,{field:'allPrice',title:'总价'}
+            ,{field:'buytime',title:'下单时间'}
             ,{field:'osname',title:'订单状态'}
             ,{fixed:'right',title:'操作',toolbar:'#barDemo'}
           ]] 
@@ -170,6 +171,7 @@ layui.use(['layer','table'], function(){
   {{#  } }}
   {{#  if(d.orderStatus == '1'){ }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="orderFakeDel">取消订单</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="orderFakeDel">支付</a>
   {{#  }else if(d.orderStatus == '5') { }}
   <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="orderDel">删除</a>
   {{#  } }}

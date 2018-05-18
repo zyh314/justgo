@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html";i:1526550763;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:68:"D:\WEB\PHP\JustGo0\public/../application/index\view\user_center.html";i:1526571020;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@
             <a href="#" class="nav_logo"></a>
         </div>
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
-            <li class="layui-nav-item"><a href="#">首页</a></li>
+            <li class="layui-nav-item"><a href="<?php echo url('index/index/index'); ?>">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
             <li class="layui-nav-item"><a href="<?php echo url('index/goods/travelmall'); ?>">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
