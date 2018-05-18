@@ -13,6 +13,13 @@ class Index extends Controller
 	];
 	function checkSession(){
 		return '进行验证';
+<<<<<<< HEAD
+=======
+		'checkSession' => ['only' => 'del,user']
+	];
+	function checkSession(){
+		return '进行验证';
+>>>>>>> parent of 046bf6e... 518
 //		$onlineUser = Session::get('onlineUser');
 //		if(empty($onlineUser)){
 //  		$this->error('登录过期，请重新登录','index/index/login');
