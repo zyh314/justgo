@@ -112,6 +112,14 @@ class Index extends Controller
     }
     public function pendingPage()
     {
+<<<<<<< HEAD
+=======
+        return $this->fetch('/pendingPage');
+    }
+    public function boughtPage()
+    {
+        return $this->fetch('/boughtPage');
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
         return $this->fetch('/pending');
     }
     public function boughtPage()

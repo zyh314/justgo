@@ -261,11 +261,14 @@ return [
         'NO_LOGIN'=>'406 请先登录哦(づ￣ 3￣)づ',
         'PINGLUN_SUCCESSED' => '207 评论成功',
         'PINGLUN_FAILED' => '407 评论失败',
+<<<<<<< HEAD
 =======
     
     //提示信息配置
     'Message' => [
 >>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     	'LOGIN_FAILED' => '登录失败，请稍后再试',
     	'CODE_ERROR' =>'验证码输入错误，请重输',
     	'FILL_IN_ERROR'=>'填写错误',
@@ -285,6 +288,7 @@ return [
     	'ADD_SUCCESSED'=>'添加成功',
     	'ADD_FAILED'=>'添加失败',
     	'PLACEORDER_SUCCESSED'=>'添加成功',
+<<<<<<< HEAD
 <<<<<<< HEAD
     	'PLACEORDER_FAILED'=>'添加失败',
     	'INSUFFICIENT_BALANCE'=>'余额不足',
@@ -318,5 +322,10 @@ return [
         'COLLECT_SUCCESSED'=>'收藏成功',
         'COLLECT_CANCELLED'=>'取消收藏'
 >>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
+=======
+    	'PLACEORDER_FAILED'=>'添加失败',
+    	'INSUFFICIENT_BALANCE'=>'余额不足',
+    	// 'PAID_SUCCESS'=>'付款成功'
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
     ],
 ];

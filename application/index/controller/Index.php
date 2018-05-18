@@ -56,6 +56,27 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
+<<<<<<< HEAD
+=======
+            $where = [
+                'userid' => $id
+            ];
+            $res = db('t_user')->where($where)->find();
+            $this->assign('username',$res['uname']);
+            $this->assign('userHead',$res['uIcon']);
+            $this->assign('userBtn0','注销');
+        }else{
+            $this->assign('username','请登录');
+            $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+            $this->assign('userBtn0','注册');
+        }
+        if($id){
+            $res0 = db('t_user_menu')->select();
+            $this->assign('user_menu',$res0);
+            return $this->fetch('/user_center');
+        }else{
+            echo json_encode('false');
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -91,6 +112,15 @@ class Index extends Controller
                 'uname' => $uname,
                 'upassword' => $upassword
             ];
+<<<<<<< HEAD
+=======
+            $res1 = db('t_user')->where($where)->find();
+            if ($res1) {
+                $time=3600*24*7;
+                Cookie::set('user_id',$res1['userid'],$time);
+                Session::set("user_id", $res1['userid']);
+                echo json_encode('true');
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
@@ -311,6 +341,7 @@ class Index extends Controller
         //退出后重定向回登录界面
         return $this->success('注销成功','index/Index/index');
     }
+<<<<<<< HEAD
     //个人中心
     public function myCenter()
     {
@@ -322,4 +353,6 @@ class Index extends Controller
         }
 
     };
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 }
