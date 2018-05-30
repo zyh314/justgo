@@ -1,7 +1,6 @@
 <?php
 namespace app\index\controller;
 use \think\Controller;
-use think\Cookie;
 use \think\Db;
 use \think\Config;
 use \think\Session;
@@ -19,6 +18,49 @@ class Index extends Controller
     {
         $id = Session::get('user_id');
         if($id){
+	        $where = [
+	            'userid' => $id
+	        ];
+	        $res = db('t_user')->where($where)->find();
+	        $this->assign('username',$res['uname']);
+	        $this->assign('userHead',$res['uIcon']);
+	        $this->assign('userBtn0','注销');
+        }else{
+        	$this->assign('username','请登录');
+        	$this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
+	        $this->assign('userBtn0','注册');
+        }
+        return $this->fetch('/index');
+    }
+    public function login()
+    {
+        return $this->fetch('/login');
+    }
+    public function register()
+    {
+        return $this->fetch('/register');
+    }
+    public function first()
+    {
+        return $this->fetch('/first');
+    }
+    public function travels()
+    {
+        return $this->fetch('/travels');
+    }
+    public function travelmall()
+    {
+        return $this->fetch('/travelmall');
+    }
+    public function user_center()
+    {
+        $id = Session::get('user_id');
+        if($id){
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $where = [
                 'userid' => $id
             ];
@@ -31,26 +73,16 @@ class Index extends Controller
             $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
             $this->assign('userBtn0','注册');
         }
-        return $this->fetch('/index');
-    }
-    public function register()
-    {
-        return $this->fetch('/register');
-    }
-    public function first()
-    {
-        return $this->fetch('/first');
-    }
-    public function travelmall()
-    {
-        return $this->fetch('/travelmall');
-    }
-    public function user_center()
-    {
-        $id = Session::get('user_id');
         if($id){
             $res0 = db('t_user_menu')->select();
             $this->assign('user_menu',$res0);
+            return $this->fetch('/user_center');
+        }else{
+            echo json_encode('false');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 	        $where = [
 	            'userid' => $id
 	        ];
@@ -58,19 +90,24 @@ class Index extends Controller
 	        $this->assign('username',$res['uname']);
 	        $this->assign('userHead',$res['uIcon']);
 	        $this->assign('userBtn0','注销');
-            return $this->fetch('/user_center');
         }else{
-            echo json_encode('false');
         	$this->assign('username','请登录');
         	$this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
 	        $this->assign('userBtn0','注册');
+        }
+        if($id){
+	        $res0 = db('t_user_menu')->select();
+	        $this->assign('user_menu',$res0);
+	        return $this->fetch('/user_center');
+        }else{
+        	echo json_encode('false');
+            return $this->fetch('/index');
         }
     }
     public function loginChk(){
         $uname = input('?post.uname')?input('post.uname'):'';
         $upassword = input('?post.upassword')?input('post.upassword'):'';
         $code = input('?post.code')?input('post.code'):'';
-        //$res =  captcha_check($code);//调用check方法进行验证
         $res =  captcha_check($code);//调用check方法进行验证
         $res = true;
         if($res == false){
@@ -81,7 +118,21 @@ class Index extends Controller
                 'uname' => $uname,
                 'upassword' => $upassword
             ];
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+            $res1 = db('t_user')->where($where)->find();
+            if ($res1) {
+                $time=3600*24*7;
+                Cookie::set('user_id',$res1['userid'],$time);
+                Session::set("user_id", $res1['userid']);
+                echo json_encode('true');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             $res = db('t_user')->where($where)->find();
             if ($res) {
                 $time=3600*24*7;
@@ -94,8 +145,6 @@ class Index extends Controller
                 echo json_encode('false');
             }
         }
-
-
     }
     function loginSessionChk(){
         $id = Session::get('user_id');
@@ -105,10 +154,7 @@ class Index extends Controller
             echo json_encode('false');
         }
     }
-    public function backend()
-    {
-        return $this->fetch('/backend');
-    }
+<<<<<<< HEAD
     public function login()
     {
         return $this->fetch('/login');
@@ -203,6 +249,8 @@ class Index extends Controller
         return $this->fetch('/index');
     }
 
+=======
+>>>>>>> parent of bdcb9b2... Merge branch 'master' of https://github.com/zyh314/justgo
     public function search(){
     	$word = input('?post.word')?input('post.word'):'';
     	$where = [
@@ -229,8 +277,6 @@ class Index extends Controller
     	// echo Db::table('admin')->getLastSql();
     	// var_dump($res);
     }
-
-
     public function myTravels()
     {
         return $this->fetch('/myTravels');
@@ -297,4 +343,31 @@ class Index extends Controller
         $this->assign('umoney',$res['umoney']);
         return $this->fetch('/edit_money');
     }
+<<<<<<< HEAD
 }
+=======
+    public function loginOut(){
+        cookie(null);
+        session(null);
+        //退出后重定向回登录界面
+        return $this->success('注销成功','index/Index/index');
+    }
+<<<<<<< HEAD
+<<<<<<< HEAD
+    //个人中心
+    public function myCenter()
+    {
+        $userid = Session::get('user_id');
+        if ($userid){
+            return $this->fetch('/myCenter');
+        }else{
+            $this->error('请先登录',"/justgo/public/index/index/myCenter");
+        }
+
+    };
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+}
+>>>>>>> b08317171fb1fb13137c05c0657c13ee6b73d437

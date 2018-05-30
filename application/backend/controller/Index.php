@@ -9,11 +9,17 @@ use \think\Redis;
 class Index extends Controller
 {
 	protected $beforeActionList = [
-		'checkSession' => ['except' => 'del,user']
+		'checkSession' => ['only' => 'del,user']
 	];
 	function checkSession(){
 		return '进行验证';
-		// 'checkSession' => ['only' => 'del,user'];
+<<<<<<< HEAD
+=======
+		'checkSession' => ['only' => 'del,user']
+	];
+	function checkSession(){
+		return '进行验证';
+>>>>>>> parent of 046bf6e... 518
 //		$onlineUser = Session::get('onlineUser');
 //		if(empty($onlineUser)){
 //  		$this->error('登录过期，请重新登录','index/index/login');
@@ -43,9 +49,6 @@ class Index extends Controller
         // return $this->fetch('/index');
         // echo $res;
     }
-
-
-
     public function login_chk(){
   //   	$username = isset($_POST['username']);
     	// $psw = isset($_POST['psw']);
@@ -116,11 +119,22 @@ class Index extends Controller
     }
     public function pendingPage()
     {
+<<<<<<< HEAD
+=======
         return $this->fetch('/pendingPage');
     }
     public function boughtPage()
     {
+        return $this->fetch('/boughtPage');
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
         return $this->fetch('/pending');
+    }
+    public function boughtPage()
+    {
+        return $this->fetch('/paid');
     }
     public function admin()
     {

@@ -104,17 +104,27 @@ class Goods extends Controller
           $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
           $this->assign('userBtn0','注册');
         }
-        
     	$province = db('t_location')->where('locateid','IN',function($query){
     	    $query->table('t_goods')->field('locateid')->group('locateid');
     	})->select();
     	
     	/*热销*/
     	$sellgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('soldqty desc')->limit(0,4)->select();
+    	
     	/*新品*/
     	$newgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('cpubtime desc')->limit(0,4)->select();
     	/*人气*/
+<<<<<<< HEAD
+    	$popular = db('t_goods')->where('goodsid','IN',function($query){
+    		$query->table('t_goodsMark')->field('goodsid')->group('goodsid')->order('count(goodsid) desc');
+    	})->limit(0,4)->select();
+=======
     	$popular = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('markqty desc')->limit(0,4)->select();
+<<<<<<< HEAD
+>>>>>>> parent of 1b59046... 518
+=======
+>>>>>>> parent of 1b59046... 518
+    	
     	$this->assign('sellgoods',$sellgoods);
     	$this->assign('province',$province);
     	$this->assign('newgoods',$newgoods);
@@ -125,59 +135,41 @@ class Goods extends Controller
     
     /*商品详情*/
     public function traveldetails(){
-      $id = Session::get('user_id');
-        if($id){
-          $where = [
-              'userid' => $id
-          ];
-          $res = db('t_user')->where($where)->find();
-          $this->assign('username',$res['uname']);
-          $this->assign('userHead',$res['uIcon']);
-          $this->assign('userBtn0','注销');
-        }else{
-          $this->assign('username','请登录');
-          $this->assign('userHead','../../../public/static/images/users/default-user-avatar.png');
-          $this->assign('userBtn0','注册');
-        }
-
-
     	$goodsid = input('?get.goodsid')?input('get.goodsid'):'';
     	$goodsdetail = db('t_goods')->join('t_location b','t_goods.locateid=b.locateid')->where('goodsid',$goodsid)->find();
     	$mark = db('t_goodsmark')->where(['goodsid'=>$goodsid,'userid'=>Session::get('onlineUser')['userid']])->find();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    	$mark=$mark?true:false;
+    	
+    	$this->assign('goodsdetail',$goodsdetail);
+    	$mark->assign('mark',$mark);
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 1b59046... 518
     	$marksrc=$mark?"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F.png":"http://p8int7f8g.bkt.clouddn.com/%E6%94%B6%20%E8%97%8F%20%281%29.png";
+    	
     	$this->assign('goodsdetail',$goodsdetail);
     	$this->assign('marksrc',$marksrc);
+=======
+    	// $mark=$mark?true:false;
+    	
+    	$this->assign('goodsdetail',$goodsdetail);
+    	$this->assign('mark',$mark);
+>>>>>>> 8312a21778f249e28bcea9446143b82f5c50b51a
+<<<<<<< HEAD
+>>>>>>> parent of 1b59046... 518
+=======
+>>>>>>> parent of 1b59046... 518
+=======
+    	$mark=$mark?true:false;
+    	
+    	$this->assign('goodsdetail',$goodsdetail);
+    	$mark->assign('mark',$mark);
+>>>>>>> parent of 8312a21... 518
     	return $this->fetch('/traveldetails');
-    }
-
-    //收藏和取消收藏
-    public function markable(){
-      $goodsid = input('?post.goodsid')?input('post.goodsid'):'';
-      $markStatus = input('?post.markStatus')?input('post.markStatus'):'';
-      if($markStatus==0){
-        /*收藏表添加*/
-        db('t_goodsmark')->data(['goodsmarkid'=>"default",'userid'=>Session::get('onlineUser')['userid'],'goodsid'=>$goodsid])->insert();
-        /*商品表加数量*/
-        db('t_goods')->where('goodsid', $goodsid)->setInc('markqty');
-        /*反馈*/
-        $feedback = [
-          'code'=>235,
-          'message'=>Config::get('Message')['COLLECT_SUCCESSED'], 
-          'data'=>[]
-        ];
-      }else{
-        /*收藏表删除*/
-        db('t_goodsmark')->where(['userid'=>Session::get('onlineUser')['userid'],'goodsid'=>$goodsid])->delete();
-        /*商品表减数量*/
-        db('t_goods')->where('goodsid', $goodsid)->setDec('markqty');
-        /*反馈*/
-        $feedback = [
-          'code'=>436,
-          'message'=>Config::get('Message')['COLLECT_CANCELLED'], 
-          'data'=>[]
-        ];
-      }
-      echo json_encode($feedback);
     }
     
     /*获取评论分页总条数*/
@@ -214,7 +206,9 @@ class Goods extends Controller
     				$travelgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('cpubtime desc')->paginate(10,false,['query' => ['key' => $key]]);
     			}
     			else{
-    				$travelgoods = db('t_goods')->where(['goodstatus'=>'在售','saleType'=>'普购'])->order('markqty desc')->paginate(10,false,['query' => ['key' => $key]]);
+    				$travelgoods = db('t_goods')->where('goodsid','IN',function($query){
+			    		$query->table('t_goodsMark')->field('goodsid')->group('goodsid')->order('count(goodsid) desc');
+			    	})->paginate(10,false,['query' => ['key' => $key]]);
     			}
     		}
     	}else{

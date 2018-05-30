@@ -8,9 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
+<<<<<<< HEAD
+=======
     <script src="__STATIC__/layui/layui.js"></script>
     <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
-
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 <style type="text/css">
 #frm1{
     width: 99%;
@@ -29,7 +34,14 @@
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
-            <!-- <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li> -->
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+            <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li>
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
             <li class="layui-nav-item"><a href="{:url('index/goods/travelmall')}">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
@@ -42,7 +54,14 @@
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
                 {if condition = '$username == "请登录"'}
+<<<<<<< HEAD
+=======
                 <a href="#" id="login">
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+                <a id="login">
                     <img src="{$userHead}" class="layui-nav-img">
                     请登录
                 </a>
@@ -52,10 +71,20 @@
                     <img src="{$userHead}" class="layui-nav-img">{$username}
                 </a>
                 {/if}
+<<<<<<< HEAD
+=======
                 <!--     <dl class="layui-nav-child">
                         <dd><a href="">基本资料</a></dd>
                         <dd><a href="">安全设置</a></dd>
                     </dl> -->
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+            <!--     <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl> -->
             </li>
             <li class="layui-nav-item">
                 {if condition = '$userBtn0 == "注销"'}
@@ -70,7 +99,20 @@
 </div>
 <!--导航结束-->
 <div id="main">
+    <!--轮播-->
+    <div class="layui-carousel" id="test2" style="margin-top: 15px;">
+        <div carousel-item="">
+            <div>条目1</div>
+            <div>条目2</div>
+            <div>条目3</div>
+            <div>条目4</div>
+        </div>
+    </div>
+</div>
+<a  href="{:url('index/index/showTravels')}?id=4">click me</a>
+<button id="testBtn">点我</button>
     <iframe id = 'frm1' name = 'ifr' src = "{:url('index/index/first')}"></iframe>
+
 </div>
 <!--页脚-->
 <div id="footer">
@@ -117,8 +159,14 @@
 </div>
 <!--页脚结束-->
 </body>
-<script src="__STATIC__/layui/layui.js"></script>
-<script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+<script>
+=======
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 <script>
     layui.use('element', function(){
         var element = layui.element;
@@ -181,7 +229,13 @@
         });
     }
 
-
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+<script>
+<<<<<<< HEAD
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
+=======
+>>>>>>> parent of 7074158... Revert "Merge branch 'master' of https://github.com/zyh314/justgo"
 
 //注册
 document.getElementById('register').onclick = function(){
@@ -214,5 +268,6 @@ document.getElementById('login').onclick = function(){
       //触发事件
     });
 }
+
 </script>
 </html>

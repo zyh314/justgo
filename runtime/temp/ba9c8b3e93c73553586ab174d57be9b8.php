@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526623845;}*/ ?>
+=======
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:62:"D:\WEB\PHP\JustGo0\public/../application/index\view\index.html";i:1526607259;}*/ ?>
+>>>>>>> b08317171fb1fb13137c05c0657c13ee6b73d437
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="__STATIC__/layui/css/layui.css">
     <link rel="stylesheet" type="text/css" href="__CSS__/public.css">
-    <script src="__STATIC__/layui/layui.js"></script>
-    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
-
 <style type="text/css">
 #frm1{
     width: 99%;
@@ -30,7 +31,6 @@
         <ul class="layui-nav layui-layout-left"  lay-filter="demo">
             <li class="layui-nav-item"><a href="#">首页</a></li>
             <li class="layui-nav-item "><a href="#">目的地</a></li>
-            <!-- <li class="layui-nav-item"><a href="#">旅行商城<span class="layui-badge-dot"></span></a></li> -->
             <li class="layui-nav-item"><a href="<?php echo url('index/goods/travelmall'); ?>">旅行商城<span class="layui-badge-dot"></span></a></li>
             <li class="layui-nav-item">
                 <a href="javascript:;">社区</a>
@@ -43,7 +43,7 @@
         <ul class="layui-nav layui-layout-right" id="nav_user"  lay-filter="nav_user">
             <li class="layui-nav-item">
                 <?php if($username == "请登录"): ?>
-                <a href="#" id="login">
+                <a id="login">
                     <img src="<?php echo $userHead; ?>" class="layui-nav-img">
                     请登录
                 </a>
@@ -52,10 +52,10 @@
                     <img src="<?php echo $userHead; ?>" class="layui-nav-img"><?php echo $username; ?>
                 </a>
                 <?php endif; ?>
-                <!--     <dl class="layui-nav-child">
-                        <dd><a href="">基本资料</a></dd>
-                        <dd><a href="">安全设置</a></dd>
-                    </dl> -->
+            <!--     <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl> -->
             </li>
             <li class="layui-nav-item">
                 <?php if($userBtn0 == "注销"): ?>
@@ -70,6 +70,7 @@
 <!--导航结束-->
 <div id="main">
     <iframe id = 'frm1' name = 'ifr' src = "<?php echo url('index/index/first'); ?>"></iframe>
+
 </div>
 <!--页脚-->
 <div id="footer">
@@ -116,71 +117,9 @@
 </div>
 <!--页脚结束-->
 </body>
-<script src="__STATIC__/layui/layui.js"></script>
-<script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
+    <script src="__STATIC__/layui/layui.js"></script>
+    <script type="text/javascript" src = '__JS__/jquery-3.2.1.min.js'></script>
 <script>
-    layui.use('element', function(){
-        var element = layui.element;
-        element.on('nav(demo)', function(elem){
-            console.log(elem); //得到当前点击的DOM对象
-        });
-        element.on('navDelete(nav_user)',function (elem) {
-            console.log(elem);
-        });
-    });
-
-    $("#loginOut").click(function () {
-        $("#nav_user").hide();
-    });
-
-    //轮播
-    layui.use(['carousel', 'form'], function() {
-        var carousel = layui.carousel
-            , form = layui.form;
-
-        carousel.render({
-            elem: '#test2'
-            ,interval: 1800
-            ,anim: 'fade'
-            ,height: '500px'
-            ,width:'100%'
-        });
-    });
-    $("#testBtn").click(function () {
-        console.log(location.port);
-    });
-
-    document.getElementById('register').onclick = function(){
-        layui.use(['layer','table'], function(){
-            var layer = layui.layer;
-            layer.open({
-                type: 2,
-                title: '注册',
-                shadeClose: true,
-                shade: 0.8,
-                area: ['380px', '90%'],
-                content: '../index/register' //iframe的url
-            });
-            //触发事件
-        });
-    }
-    //登录
-    document.getElementById('login').onclick = function(){
-        layui.use(['layer','table'], function(){
-            var layer = layui.layer;
-            layer.open({
-                type: 2,
-                title: '登录',
-                shadeClose: true,
-                shade: 0.8,
-                area: ['380px', '90%'],
-                content: '../index/login' //iframe的url
-            });
-            //触发事件
-        });
-    }
-
-
 
 //注册
 document.getElementById('register').onclick = function(){
@@ -213,5 +152,6 @@ document.getElementById('login').onclick = function(){
       //触发事件
     });
 }
+
 </script>
 </html>
